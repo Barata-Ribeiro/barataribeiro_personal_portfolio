@@ -23,16 +23,24 @@ const Header = () => {
         {/* menu */}
         <ul className='hidden sm:flex'>
           <li>
-            <a href='#'>Home</a>
+            <a className='navlink' href='#'>
+              Home
+            </a>
           </li>
           <li>
-            <a href='#about'>About</a>
+            <a className='navlink' href='#about'>
+              About
+            </a>
           </li>
           <li>
-            <a href='#projects'>Projects</a>
+            <a className='navlink' href='#projects'>
+              Projects
+            </a>
           </li>
           <li>
-            <a href='#contact'>Contact</a>
+            <a className='navlink' href='#contact'>
+              Contact
+            </a>
           </li>
         </ul>
 
