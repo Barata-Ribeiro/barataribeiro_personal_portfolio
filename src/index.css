@@ -4,17 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply font-Roboto;
-  }
-  li {
-    @apply px-5;
-    @apply font-Kanit;
-    @apply cursor-pointer;
-  }
-}
-
 /***
     The new CSS reset - version 1.8.4 (last updated 14.2.2023)
     GitHub page: https://github.com/elad2412/the-new-css-reset
@@ -123,4 +112,20 @@ meter {
 /* Revert Modal native behavior */
 :where(dialog:modal) {
   all: revert;
+}
+
+/* MAIN CUSTOM CSS */
+
+@layer base {
+  body {
+    @apply font-Roboto;
+  }
+  li {
+    @apply px-5;
+    @apply font-Kanit;
+    @apply cursor-pointer;
+  }
+  p {
+    @apply leading-7;
+  }
 }
