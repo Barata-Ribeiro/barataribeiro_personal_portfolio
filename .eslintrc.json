@@ -22,6 +22,7 @@
     "no-unsafe-finally": "off",
     "no-unused-vars": "off",
     "react-refresh/only-export-components": "off",
-    "react/jsx-key": "off"
+    "react/jsx-key": "off",
+    "react/no-unescaped-entities": "off"
   }
 }
