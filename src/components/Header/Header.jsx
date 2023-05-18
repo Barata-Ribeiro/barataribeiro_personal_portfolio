@@ -9,7 +9,7 @@ const Header = () => {
   const handleClick = () => setNav(!nav);
 
   // Styles that are too large
-  const navStyle = `fixed z-10 w-full h-[102px] top-0  flex justify-between items-center m-auto md:px-[120px] bg-mistGray-50 text-mistGray-900`;
+  const navStyle = `fixed w-full h-[102px] top-0  flex justify-between items-center m-auto md:px-[120px] bg-mistGray-50 text-mistGray-900`;
 
   const mobileStyle = `absolute top-0 left-0 w-full h-screen bg-mistGray-50 flex flex-col justify-center items-center`;
 

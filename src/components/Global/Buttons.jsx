@@ -1,11 +1,13 @@
 import React from 'react';
 
 const Buttons = ({ btnText }) => {
-  // const btnStyle =
-  //   'flex justify-between items-center bg-royalBlue-500 border border-royalBlue-600 rounded-lg px-8 py-3 mt-6 shadow font-Kanit text-sm font-semibold text-mistGray-50';
+  const baseStyle =
+    'flex justify-between items-center bg-royalBlue-500 border-2 border-royalBlue-600 rounded-lg py-2 px-6 mt-6 shadow font-Kanit text-sm font-semibold tracking-widest text-mistGray-50 cursor-pointer';
 
-  const btnStyle =
-    'flex justify-between items-center bg-royalBlue-500 border-2 border-royalBlue-600 rounded-lg py-2 px-6 mt-6 shadow font-Kanit text-sm font-semibold tracking-widest text-mistGray-50 hover:text-royalBlue-500 hover:border-royalBlue-500 hover:bg-mistGray-50 transition duration-600 transform hover:scale-x-105';
+  const hoverStyle =
+    'hover:text-royalBlue-500 hover:border-royalBlue-500 hover:bg-mistGray-50';
+
+  const btnStyle = `${baseStyle} ${hoverStyle}`;
 
   return (
     <button className={btnStyle}>
