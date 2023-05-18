@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCode, FaPlayCircle } from 'react-icons/fa';
-import bgImage from '../assets/neom-anozjF6uqI0-unsplash.jpg';
+import bgImage from '../../assets/neom-anozjF6uqI0-unsplash.jpg';
 import ImageCard from './ImageCard';
 
 const Projects = () => {
