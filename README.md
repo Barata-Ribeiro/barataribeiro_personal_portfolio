@@ -4,6 +4,12 @@
 
 I'm an aspiring front-end developer and UI designer. I have a background with a Bachelor's in Business Administration and graduate courses in Strategic People Management and Project Management. I'm passionate about bridging the gap between strategy and execution, creating visually engaging and effective projects.
 
+## 👨‍💻 Demo
+
+[Click here](https://github.com/Barata-Ribeiro/barataribeiro_personal_portfolio/) to see a live demo of the website.
+
+![Personal Portfolio](./public/screenshot.gif)
+
 ## 🚀 Portfolio Built With
 
 This portfolio has been built using:
@@ -19,7 +25,7 @@ You'll need to have [Node.js](https://nodejs.org/en/download/) and [npm](https:/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Barata-Ribeiro/personal_portfolio.git
+git clone https://github.com/Barata-Ribeiro/barataribeiro_personal_portfolio.git
 ```
 
 2. Navigate to the project folder:
@@ -39,6 +45,10 @@ npm install
 ```bash
 npm run dev
 ```
+
+## 🤝 Contributing
+
+If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
 ## 🔮 Future Goals
 
