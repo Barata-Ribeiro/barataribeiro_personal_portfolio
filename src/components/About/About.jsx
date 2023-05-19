@@ -1,7 +1,8 @@
 import React from 'react';
-import Illustration from '../../assets/illustration.jpg';
-import SocialButton from '../Global/SocialButton';
+import aboutImage from '../../assets/illustration.jpg';
+import SocialButtons from '../Global/SmallButton';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { SiMaildotru } from 'react-icons/si';
 
 const About = () => {
   return (
@@ -19,7 +20,7 @@ const About = () => {
           </span>
         </div>
         <div className='flex justify-between items-center'>
-          <img className='h-[500px]' src={Illustration} alt='' />
+          <img className='h-[500px]' src={aboutImage} alt='' />
           <div className='flex flex-col items-end'>
             <div>
               <div className='text-right'>
@@ -40,9 +41,21 @@ const About = () => {
                 innovative teams' success.
               </p>
             </div>
-            <div>
-              <SocialButton social={<FaLinkedinIn />} />
-              <SocialButton social={<FaGithub />} />
+            <div className='flex justify-end items-center gap-2'>
+              <SocialButtons
+                href={
+                  'https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/'
+                }
+                icon={<FaLinkedinIn />}
+              />
+              <SocialButtons
+                href={'http://barataribeiro.com/'}
+                icon={<FaGithub />}
+              />
+              <SocialButtons
+                href={'mailto:j.mendes1920@gmail.com'}
+                icon={<SiMaildotru />}
+              />
             </div>
           </div>
         </div>
