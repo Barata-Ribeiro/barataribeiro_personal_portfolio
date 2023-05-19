@@ -1,47 +1,35 @@
 import React from 'react';
 import Decorator from '../../assets/decorator.svg';
-import Buttons from '../Global/Buttons';
+import Button from '../Global/MainButton';
 
 const Hero = () => {
-  const mainStyle = `
-    flex justify-between items-start w-full h-screen flex-row max-md:flex-col
-    mt-12 md:mt-24 md:px-[330px] max-md:px-6 md:pt-[200px] max-md:pt-[180px]
-    gradient-background
-  `;
-
   return (
-    <main className={mainStyle}>
-      <style>
-        {`
-          .gradient-background {
-            background: linear-gradient(180deg, #f7f7f5 50%, #272623 100%);
-          }
-        `}
-      </style>
-      <div className='max-md:self-center'>
-        <h3
-          className={`
-          before:content-["I'm"] before:text-[16px] before:font-roboto before:font-normal before:normal-case before:text-mistGray-700 
-          uppercase font-Kanit text-5xl font-semibold
-          `}>
-          Barata Ribeiro
-        </h3>
-        <p className='font-Kanit text-2xl font-light mb-1'>
-          An aspiring Front-End Developer.
-        </p>
-        <p className='leading-7 text-sm max-w-md'>
-          Business grad passionate about bridging strategy and execution,
-          expanding into front-end development and UI design for visually
-          appealing, user-friendly interfaces.
-        </p>
-        <Buttons btnText='Check Work' />
-      </div>
-      <div className='hidden md:block'>
-        <img
-          className='fill-current text-black w-[442px] h-[256px] ml-14'
-          src={Decorator}
-          alt='Code decorator'
-        />
+    <main
+      id='home'
+      className='h-screen w-full bg-gradient-to-b from-mistGray-50 from-50% to-mistGray-950'>
+      <div className='container sm:pt-32 max-sm:pt-16 max-xs:pt-6 flex justify-between items-center flex-wrap'>
+        {/* Hero info */}
+        <div className='leading-none text-mistGray-950'>
+          <h1 className='uppercase font-Kanit font-semibold tracking-wider text-5xl'>
+            <span className='normal-case font-Robot text-[1.25rem] font-normal tracking-normal -mr-2'>
+              I'm
+            </span>{' '}
+            Barata Ribeiro
+          </h1>
+          <p className='font-Kanit font-light text-3xl'>
+            an aspiring Front-End Developer.
+          </p>
+          <p className='leading-relaxed max-w-lg'>
+            Business grad passionate about bridging strategy and execution,
+            expanding into front-end development and UI design for visually
+            appealing, user-friendly interfaces.
+          </p>
+          <Button buttonText={'Check Work'} />
+        </div>
+        {/* Hero image */}
+        <div>
+          <img src={Decorator} alt='Decorator' className='' />
+        </div>
       </div>
     </main>
   );
