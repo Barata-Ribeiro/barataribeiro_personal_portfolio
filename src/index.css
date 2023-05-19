@@ -9,15 +9,10 @@
 @layer base {
   body {
     @apply font-Roboto;
-    @apply bg-mistGray-50;
   }
   li {
     @apply px-5;
     @apply font-Kanit;
-    @apply cursor-pointer;
-  }
-  p {
-    @apply leading-7;
   }
 }
 

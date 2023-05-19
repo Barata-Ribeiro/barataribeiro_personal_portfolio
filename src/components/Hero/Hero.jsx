@@ -1,37 +1,47 @@
 import React from 'react';
+import Decorator from '../../assets/decorator.svg';
 import Buttons from '../Global/Buttons';
 
 const Hero = () => {
-  const mainStyle =
-    'container flex justify-between items-center flex-wrap w-10/12 h-screen mx-auto md:flex-row my-12 md:my-24';
-  const textStyle =
-    'max-w-content mx-auto px-8 flex flex-col justify-center h-full lg:w-1/2';
-  const nameStyle = 'uppercase font-Kanit text-5xl font-semibold leading-4';
-  const titleStyle = 'font-Kanit text-2xl font-light leading-5 mb-1';
-  const descStyle = 'leading-7 text-sm max-w-md';
-  const svgStyle = 'fill-current text-black w-52';
+  const mainStyle = `
+    flex justify-between items-start w-full h-screen flex-row max-md:flex-col
+    mt-12 md:mt-24 md:px-[330px] max-md:px-6 md:pt-[200px] max-md:pt-[180px]
+    gradient-background
+  `;
 
   return (
-    <main name='home' className={mainStyle}>
-      <div className={textStyle}>
-        <p className='leading-5'>
-          I'm
-          <span className={nameStyle}> Barata Ribeiro </span>
+    <main className={mainStyle}>
+      <style>
+        {`
+          .gradient-background {
+            background: linear-gradient(180deg, #f7f7f5 50%, #272623 100%);
+          }
+        `}
+      </style>
+      <div className='max-md:self-center'>
+        <h3
+          className={`
+          before:content-["I'm"] before:text-[16px] before:font-roboto before:font-normal before:normal-case before:text-mistGray-700 
+          uppercase font-Kanit text-5xl font-semibold
+          `}>
+          Barata Ribeiro
+        </h3>
+        <p className='font-Kanit text-2xl font-light mb-1'>
+          An aspiring Front-End Developer.
         </p>
-        <p className={titleStyle}>An aspiring Front-End Developer.</p>
-        <p className={descStyle}>
+        <p className='leading-7 text-sm max-w-md'>
           Business grad passionate about bridging strategy and execution,
           expanding into front-end development and UI design for visually
           appealing, user-friendly interfaces.
         </p>
-        <div>
-          <Buttons btnText='Check Work' />
-        </div>
+        <Buttons btnText='Check Work' />
       </div>
-      <div className='w-full lg:w-1/2 lg:py-6 text-center'>
-        <svg className={svgStyle} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'>
-          <path d='M17 6V5h-2V2H3v14h5v4h3.25H11a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6zm-5.75 14H3a2 2 0 0 1-2-2V2c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5.75zM11 8v8h6V8h-6zm3 11a1 1 0 1 0 0-2 1 1 0 0 0 0 2z' />
-        </svg>
+      <div className='hidden md:block'>
+        <img
+          className='fill-current text-black w-[442px] h-[256px] ml-14'
+          src={Decorator}
+          alt='Code decorator'
+        />
       </div>
     </main>
   );

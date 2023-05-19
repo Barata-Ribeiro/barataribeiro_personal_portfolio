@@ -1,8 +1,10 @@
 import React from 'react';
 
 const Buttons = ({ btnText }) => {
-  const baseStyle =
-    'flex justify-between items-center bg-royalBlue-500 border-2 border-royalBlue-600 rounded-lg py-2 px-6 mt-6 shadow font-Kanit text-sm font-semibold tracking-widest text-mistGray-50 cursor-pointer';
+  const baseStyle = `
+    flex justify-between items-center bg-royalBlue-500 border-2 border-royalBlue-600 
+    rounded-lg py-2 px-6 mt-6 shadow font-Kanit text-sm font-semibold tracking-widest 
+    text-mistGray-50 cursor-pointer`;
 
   const hoverStyle =
     'hover:text-royalBlue-500 hover:border-royalBlue-500 hover:bg-mistGray-50';

@@ -9,6 +9,7 @@ function App() {
     <>
       <Header />
       <Hero />
+      <section className='h-screen bg-mistGray-950'></section>
       <Projects />
       <Footer />
     </>
