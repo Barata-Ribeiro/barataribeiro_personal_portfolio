@@ -11,6 +11,7 @@ export default {
       fontFamily: {
         Roboto: ['Roboto', 'sans-serif'],
         Kanit: ['Kanit', 'sans-serif'],
+        Comfortaa: ['Comfortaa', 'sans-serif'],
       },
       fontSize: {
         xs: '0.75em',
@@ -26,10 +27,6 @@ export default {
         '7xl': '5em',
         '8xl': '6em',
         '9xl': '7em',
-      },
-      fontWeight: {
-        normal: 400,
-        bold: 700,
       },
       colors: {
         rioGrande: {

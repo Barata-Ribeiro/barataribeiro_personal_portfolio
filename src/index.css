@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;400;600;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Kanit:wght@100;400;600&family=Roboto:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,21 +9,24 @@
 @layer base {
   body {
     @apply font-Roboto;
-  }
-  li {
-    @apply px-5;
-    @apply font-Kanit;
+    @apply bg-mistGray-50;
   }
 }
 
-@layer utilities {
-  .navlink {
-    @apply relative;
-  }
-  .navlink::after {
-    @apply content-[''] bg-royalBlue-500 h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300;
-  }
-  .navlink:hover::after {
-    @apply w-[100%];
-  }
+.navlink::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 10px;
+  left: 0;
+  background: linear-gradient(270deg, #2b81e3 0%, transparent 100%);
+  transform-origin: bottom right;
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.navlink:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
