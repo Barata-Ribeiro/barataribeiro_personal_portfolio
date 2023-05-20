@@ -1,18 +1,18 @@
 import React from 'react';
 import Hamburger from 'hamburger-react';
 
+export const menuItems = [
+  { text: 'Home', url: '#home' },
+  { text: 'About', url: '#about' },
+  { text: 'Projects', url: '#projects' },
+  { text: 'Contact', url: '#contact' },
+];
+
 const Header = () => {
   // State for the burger menu
   const [nav, setNav] = React.useState(false);
   const [isOpen, setOpen] = React.useState(false);
   const handleClick = () => setNav(!nav);
-
-  const menuItems = [
-    { text: 'Home', url: '#home' },
-    { text: 'About', url: '#about' },
-    { text: 'Projects', url: '#projects' },
-    { text: 'Contact', url: '#contact' },
-  ];
 
   return (
     <header className='w-full box-border'>
