@@ -3,7 +3,8 @@ import React from 'react';
 const SmallButton = ({
   href,
   icon,
-  type = '_blank',
+  title,
+  target = '_blank',
   rel = 'noopener noreferrer',
 }) => {
   return (
@@ -16,7 +17,8 @@ const SmallButton = ({
       hover:text-royalBlue-600 hover:mx-2 hover:px-6 transition-all
 `}
       href={href}
-      type={type}
+      title={title}
+      target={target}
       rel={rel}>
       {icon}
     </a>

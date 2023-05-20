@@ -6,7 +6,7 @@ import { SiMaildotru } from 'react-icons/si';
 
 const About = () => {
   return (
-    <section className='bg-mistGray-950'>
+    <section aria-label='About section' className='bg-mistGray-950'>
       <div className='container sm:py-[72px] max-sm:py-[36px]'>
         <div className='flex justify-start items-center text-5xl'>
           <span className='font-Comfortaa font-bold text-rioGrande-600 tracking-normal'>
@@ -20,7 +20,11 @@ const About = () => {
           </span>
         </div>
         <div className='flex justify-between items-center'>
-          <img className='h-[500px]' src={aboutImage} alt='' />
+          <img
+            className='h-[500px]'
+            src={aboutImage}
+            alt='Photograph of a computer screen showing javascript code'
+          />
           <div className='flex flex-col items-end'>
             <div>
               <div className='text-right'>
@@ -46,14 +50,17 @@ const About = () => {
                 href={
                   'https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/'
                 }
+                title={'LinkedIn profile'}
                 icon={<FaLinkedinIn />}
               />
               <SocialButtons
                 href={'http://barataribeiro.com/'}
+                title={'GitHub profile'}
                 icon={<FaGithub />}
               />
               <SocialButtons
                 href={'mailto:j.mendes1920@gmail.com'}
+                title={'Send Email'}
                 icon={<SiMaildotru />}
               />
             </div>

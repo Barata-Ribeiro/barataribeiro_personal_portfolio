@@ -1,9 +1,19 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 
-const Button = ({ buttonText }) => {
+const Button = ({
+  buttonText,
+  href,
+  title,
+  target = '_blank',
+  rel = 'noopener noreferrer',
+}) => {
   return (
-    <button
+    <a
+      href={href}
+      title={title}
+      rel={rel}
+      target={target}
       className={`
       flex justify-between items-center
       gap-x-1 mt-6 py-3 px-8
@@ -13,7 +23,7 @@ const Button = ({ buttonText }) => {
       hover:bg-mistGray-50 hover:border-royalBlue-600 hover:text-royalBlue-600 hover:gap-x-4 transition-all
     `}>
       {buttonText} <HiArrowNarrowRight size={20} />
-    </button>
+    </a>
   );
 };
 

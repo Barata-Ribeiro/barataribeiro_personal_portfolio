@@ -16,10 +16,14 @@ const Header = () => {
 
   return (
     <header className='w-full box-border'>
-      <nav className='container flex justify-between items-center'>
+      <nav
+        aria-label='Site main navigation'
+        className='container flex justify-between items-center'>
         {/* logo */}
         <a className='p-5' href='./'>
-          <h1 className='uppercase font-Kanit font-semibold text-4xl text-mistGray-950 tracking-widest max-md:text-2xl max-sm:text-xl'>
+          <h1
+            alt='Barata Ribeiro Logo'
+            className='uppercase font-Kanit font-semibold text-4xl text-mistGray-950 tracking-widest max-md:text-2xl max-sm:text-xl'>
             Barata{' '}
             <span className='font-Comfortaa font-bold text-rioGrande-600 tracking-normal'>
               &#60;/&#62;
@@ -40,7 +44,7 @@ const Header = () => {
         </ul>
 
         {/* Hamburger */}
-        <div onClick={handleClick} className='sm:hidden z-10'>
+        <div onClick={handleClick} className='sm:hidden z-10' tabIndex={0}>
           <Hamburger
             rounded
             size={25}

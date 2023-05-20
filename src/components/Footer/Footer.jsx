@@ -5,7 +5,7 @@ import { FaLinkedinIn, FaGithub, FaMailBulk } from 'react-icons/fa';
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className='bg-mistGray-900'>
+    <footer aria-label='Footer, the end' className='bg-mistGray-900'>
       <div className='container flex flex-col items-center py-16 sm:px-6 lg:px-8'>
         <a
           href='http://barataribeiro.com/'
@@ -25,7 +25,7 @@ const Footer = () => {
           fellow professionals in the industry.
         </p>
 
-        <nav className='mt-6'>
+        <nav aria-label='Footer menu' className='mt-6'>
           <ul className='flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12'>
             {menuItems.map((item, index) => (
               <li key={index}>
@@ -39,7 +39,9 @@ const Footer = () => {
           </ul>
         </nav>
 
-        <ul className='mt-6 flex justify-center gap-6 md:gap-8'>
+        <ul
+          aria-label='Social and email'
+          className='mt-6 flex justify-center gap-6 md:gap-8'>
           <li>
             <a
               href='https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/'
