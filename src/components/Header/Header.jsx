@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import Hamburger from 'hamburger-react';
 
 export const menuItems = [
-  { text: 'Home', url: '#home' },
-  { text: 'About', url: '#about' },
-  { text: 'Projects', url: '#projects' },
-  { text: 'Contact', url: '#contact' },
+  { text: 'Home', url: 'home' },
+  { text: 'About', url: 'about' },
+  { text: 'Projects', url: 'projects' },
+  { text: 'Contact', url: 'contact' },
 ];
 
 const Header = () => {
@@ -18,9 +19,9 @@ const Header = () => {
     <header className='w-full box-border'>
       <nav
         aria-label='Site main navigation'
-        className='container flex justify-between items-center'>
+        className='container max-w-[1440px] flex justify-between items-center'>
         {/* logo */}
-        <a className='p-5' href='./'>
+        <a className='py-5' href='./'>
           <h1
             alt='Barata Ribeiro Logo'
             className='uppercase font-Kanit font-semibold text-4xl text-mistGray-950 tracking-widest max-md:text-2xl max-sm:text-xl'>
@@ -36,9 +37,14 @@ const Header = () => {
         <ul className='hidden sm:flex'>
           {menuItems.map((item, index) => (
             <li className='my-0 ml-2 font-Kanit text-2xl' key={index}>
-              <a className='relative p-3 navlink' href={item.url}>
+              <Link
+                className='relative p-3 navlink cursor-pointer'
+                to={item.url}
+                spy={true}
+                smooth={true}
+                duration={500}>
                 {item.text}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -65,9 +71,15 @@ const Header = () => {
             <li
               className='m-2 p-3 font-Kanit text-3xl font-semibold'
               key={index}>
-              <a className='relative pb-4 navlink' href={item.url}>
+              <Link
+                className='relative pb-4 navlink cursor-pointer'
+                to={item.url}
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={() => setNav(!nav)}>
                 {item.text}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
