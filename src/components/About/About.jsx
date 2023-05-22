@@ -41,6 +41,7 @@ const About = () => {
                 <p className='max-w-xl text-mistGray-500 text-left sm:text-right leading-relaxed mt-3 max-sm:text-center'>
                   As a business administration graduate with graduate courses in
                   <span className='text-mistGray-50'>
+                    {' '}
                     Strategic People Management
                   </span>{' '}
                   and{' '}
@@ -49,6 +50,7 @@ const About = () => {
                   well-managed, visually engaging, and practical projects.
                   Currently, I am broadening my expertise by diving into
                   <span className='text-mistGray-50'>
+                    {' '}
                     Front-end Development
                   </span>{' '}
                   and <span className='text-mistGray-50'>UI Design</span>,
