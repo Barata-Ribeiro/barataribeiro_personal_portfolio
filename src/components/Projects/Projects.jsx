@@ -9,17 +9,6 @@ const Projects = () => {
     <Element name='projects'>
       <section aria-label='Project section' className='bg-mistGray-900'>
         <div className='container max-w-[1440px] sm:py-32 max-sm:py-16 max-xs:py-6'>
-          <div className='flex justify-start items-center text-5xl max-sm:justify-center'>
-            <span className='font-Comfortaa font-bold text-rioGrande-600 tracking-normal'>
-              &#60;
-            </span>
-            <h1 className='font-Kanit font-semibold text-mistGray-50 px-1'>
-              Projects
-            </h1>
-            <span className='font-Comfortaa font-bold text-rioGrande-600 tracking-normal'>
-              /&#62;
-            </span>
-          </div>
           <div className='p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5'>
             <ProjectCard imgSrc={ImageOne} alt='Mountain'>
               <h3 className='font-Kanit font-semibold text-xl text-mistGray-950 mb-2'>

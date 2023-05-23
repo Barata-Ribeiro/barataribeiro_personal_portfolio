@@ -9,18 +9,7 @@ const About = () => {
   return (
     <Element name='about'>
       <section aria-label='About section' className='bg-mistGray-950'>
-        <div className='container max-w-[1440px] sm:py-[72px] max-sm:py-[36px]'>
-          <div className='flex justify-start items-center text-5xl max-sm:justify-center'>
-            <span className='font-Comfortaa font-bold text-rioGrande-600 tracking-normal'>
-              &#60;
-            </span>
-            <h1 className='font-Kanit font-semibold text-mistGray-50 px-1'>
-              About
-            </h1>
-            <span className='font-Comfortaa font-bold text-rioGrande-600 tracking-normal'>
-              /&#62;
-            </span>
-          </div>
+        <div className='container max-w-[1440px] sm:py-32 max-sm:py-16 max-xs:py-6'>
           <div className='flex justify-between items-center flex-col sm:flex-row'>
             <img
               className='h-auto w-full max-w-md sm:h-[500px] sm:w-auto'
