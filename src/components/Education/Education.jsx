@@ -8,7 +8,7 @@ const Education = () => {
       <section aria-label='Education section' className='bg-mistGray-950'>
         <div className='container max-w-[1440px] sm:py-32 max-sm:py-16 max-xs:py-6'>
           {/* Education */}
-          <div className='flex flex-wrap -m-4'>
+          <div className='flex flex-wrap justify-center'>
             <div className='p-4 md:w-1/3'>
               <div className='flex rounded-lg h-full bg-mistGray-50 p-8 flex-col shadow-lg'>
                 <div className='flex items-center gap-2 mb-3'>
