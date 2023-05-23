@@ -6,7 +6,7 @@ export const menuItems = [
   { text: 'Home', url: 'home' },
   { text: 'About', url: 'about' },
   { text: 'Projects', url: 'projects' },
-  { text: 'Contact', url: 'contact' },
+  { text: 'Education', url: 'education' },
 ];
 
 const Header = () => {
