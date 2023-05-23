@@ -2,7 +2,8 @@ import React from 'react';
 import { Element } from 'react-scroll';
 import ProjectCard from './ProjectCard';
 import { FaCode, FaRegPlayCircle } from 'react-icons/fa';
-import ImageOne from '../../assets/neom-anozjF6uqI0-unsplash.jpg';
+import ProjectOne from '../../assets/img/projectsImages/steelManeMotors.jpg';
+import ProjectTwo from '../../assets/img/projectsImages/surfbot.jpg';
 
 const Projects = () => {
   return (
@@ -10,67 +11,66 @@ const Projects = () => {
       <section aria-label='Project section' className='bg-mistGray-900'>
         <div className='container max-w-[1440px] sm:py-32 max-sm:py-16 max-xs:py-6'>
           <div className='p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5'>
-            <ProjectCard imgSrc={ImageOne} alt='Mountain'>
+            {/* CARD 1 */}
+            <ProjectCard imgSrc={ProjectOne} alt='SteelMane Motorcycles'>
               <h3 className='font-Kanit font-semibold text-xl text-mistGray-950 mb-2'>
-                Mountain
+                SteelMane Motorcycles
               </h3>
               <p className='text-mistGray-950 '>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, Nonea! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
+                This website was developed during the "UI Design for Beginners"
+                and the "HTML and CSS for Beginners" courses from Origamid. The
+                brand is entirely fictional, with the purpose of showcasing
+                customized and totally original motorcycles.
               </p>
               <div className='px-6 pt-4 pb-2'>
-                <span className='block bg-mistGray-200 rounded-full px-3 py-1 text-sm font-semibold text-mistGray-700 mr-2 mb-2 hover:bg-royalBlue-500 hover:text-mistGray-50'>
-                  <a className='flex justify-center items-center gap-2 cursor-pointer'>
+                <span className='block bg-royalBlue-700 rounded-full px-3 py-1 text-sm font-semibold text-mistGray-50 border-2 border-mistGray-50 mr-2 mb-2 hover:bg-mistGray-50 hover:text-royalBlue-700 hover:border-2 hover:border-royalBlue-700'>
+                  <a
+                    href='https://github.com/Barata-Ribeiro/steelmane-motorcycles'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='flex justify-center items-center gap-2 cursor-pointer'>
                     Repository <FaCode />
                   </a>
                 </span>
-                <span className='block bg-mistGray-200 rounded-full px-3 py-1 text-sm font-semibold text-mistGray-700 mr-2 mb-2 hover:bg-royalBlue-500 hover:text-mistGray-50'>
-                  <a className='flex justify-center items-center gap-2 cursor-pointer'>
+                <span className='block bg-royalBlue-700 rounded-full px-3 py-1 text-sm font-semibold text-mistGray-50 border-2 border-mistGray-50 mr-2 mb-2 hover:bg-mistGray-50 hover:text-royalBlue-700 hover:border-2 hover:border-royalBlue-700'>
+                  <a
+                    href='https://barata-ribeiro.github.io/steelmane-motorcycles/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='flex justify-center items-center gap-2 cursor-pointer'>
                     Demo <FaRegPlayCircle />
                   </a>
                 </span>
               </div>
             </ProjectCard>
-            <ProjectCard imgSrc={ImageOne} alt='Mountain'>
+
+            {/* CARD 2 */}
+            <ProjectCard imgSrc={ProjectTwo} alt='Surfbot'>
               <h3 className='font-Kanit font-semibold text-xl text-mistGray-950 mb-2'>
-                Mountain
+                Surfbot
               </h3>
               <p className='text-mistGray-950 '>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, Nonea! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
+                This is a website developed from scratch for a fictional surfing
+                school. The design of the website was created during the
+                "Advanced UI Design" course from Origamid. I wrote the code on
+                my own to consolidate the learning process from other courses.
               </p>
               <div className='px-6 pt-4 pb-2'>
-                <span className='block bg-mistGray-200 rounded-full px-3 py-1 text-sm font-semibold text-mistGray-700 mr-2 mb-2 hover:bg-royalBlue-500 hover:text-mistGray-50'>
-                  <a className='flex justify-center items-center gap-2 cursor-pointer'>
+                <span className='block bg-royalBlue-700 rounded-full px-3 py-1 text-sm font-semibold text-mistGray-50 border-2 border-mistGray-50 mr-2 mb-2 hover:bg-mistGray-50 hover:text-royalBlue-700 hover:border-2 hover:border-royalBlue-700'>
+                  <a
+                    href='https://github.com/Barata-Ribeiro/surfbot'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='flex justify-center items-center gap-2 cursor-pointer'>
                     Repository <FaCode />
                   </a>
                 </span>
-                <span className='block bg-mistGray-200 rounded-full px-3 py-1 text-sm font-semibold text-mistGray-700 mr-2 mb-2 hover:bg-royalBlue-500 hover:text-mistGray-50'>
-                  <a className='flex justify-center items-center gap-2 cursor-pointer'>
-                    Demo <FaRegPlayCircle />
-                  </a>
-                </span>
-              </div>
-            </ProjectCard>
-            <ProjectCard imgSrc={ImageOne} alt='Mountain'>
-              <h3 className='font-Kanit font-semibold text-xl text-mistGray-950 mb-2'>
-                Mountain
-              </h3>
-              <p className='text-mistGray-950 '>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, Nonea! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
-              <div className='px-6 pt-4 pb-2'>
-                <span className='block bg-mistGray-200 rounded-full px-3 py-1 text-sm font-semibold text-mistGray-700 mr-2 mb-2 hover:bg-royalBlue-500 hover:text-mistGray-50'>
-                  <a className='flex justify-center items-center gap-2 cursor-pointer'>
-                    Repository <FaCode />
-                  </a>
-                </span>
-                <span className='block bg-mistGray-200 rounded-full px-3 py-1 text-sm font-semibold text-mistGray-700 mr-2 mb-2 hover:bg-royalBlue-500 hover:text-mistGray-50'>
-                  <a className='flex justify-center items-center gap-2 cursor-pointer'>
+                <span className='block bg-royalBlue-700 rounded-full px-3 py-1 text-sm font-semibold text-mistGray-50 border-2 border-mistGray-50 mr-2 mb-2 hover:bg-mistGray-50 hover:text-royalBlue-700 hover:border-2 hover:border-royalBlue-700'>
+                  <a
+                    href='https://barata-ribeiro.github.io/surfbot/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='flex justify-center items-center gap-2 cursor-pointer'>
                     Demo <FaRegPlayCircle />
                   </a>
                 </span>
