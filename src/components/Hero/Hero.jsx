@@ -9,7 +9,7 @@ const Hero = () => {
       <main
         aria-label='Site home page'
         className='h-screen w-full bg-gradient-to-b from-mistGray-50 from-50% to-mistGray-950'>
-        <div className='container max-w-[1440px] sm:pt-32 max-sm:pt-16 max-xs:pt-6 flex justify-between items-center flex-wrap max-sm:justify-center max-sm:flex-col'>
+        <div className='container max-w-[1440px] mt-16 sm:pt-32 max-sm:pt-16 max-xs:pt-6 flex justify-between items-center flex-wrap max-sm:justify-center max-sm:flex-col'>
           {/* Hero info */}
           <div className='flex flex-col items-start leading-none text-mistGray-950 max-sm:items-center max-sm:text-center'>
             <div>

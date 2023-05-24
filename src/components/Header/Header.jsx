@@ -13,15 +13,25 @@ const Header = () => {
   // State for the burger menu
   const [nav, setNav] = React.useState(false);
   const [isOpen, setOpen] = React.useState(false);
-  const handleClick = () => setNav(!nav);
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    setNav(!nav);
+    setOpen(!isOpen);
+  };
+
+  React.useEffect(() => {
+    if (isOpen) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'unset';
+  }, [isOpen]);
 
   return (
-    <header className='w-full box-border'>
+    <header className='fixed top-0 bg-mistGray-50 w-full'>
       <nav
         aria-label='Site main navigation'
         className='container max-w-[1440px] flex justify-between items-center'>
         {/* logo */}
-        <a className='py-5' href='./'>
+        <a className='py-5 max-sm:pl-3' href='./'>
           <h1
             alt='Barata Ribeiro Logo'
             className='uppercase font-Kanit font-semibold text-4xl text-mistGray-950 tracking-widest max-md:text-2xl max-sm:text-xl'>
@@ -38,7 +48,7 @@ const Header = () => {
           {menuItems.map((item, index) => (
             <li className='my-0 ml-2 font-Kanit text-2xl' key={index}>
               <Link
-                className='relative p-3 navlink cursor-pointer'
+                className='navlink relative p-3 cursor-pointer'
                 to={item.url}
                 spy={true}
                 smooth={true}
@@ -72,12 +82,12 @@ const Header = () => {
               className='m-2 p-3 font-Kanit text-3xl font-semibold'
               key={index}>
               <Link
-                className='relative pb-4 navlink cursor-pointer'
+                className='navlink relative pb-4 cursor-pointer'
                 to={item.url}
                 spy={true}
                 smooth={true}
                 duration={500}
-                onClick={() => setNav(!nav)}>
+                onClick={handleClick}>
                 {item.text}
               </Link>
             </li>
