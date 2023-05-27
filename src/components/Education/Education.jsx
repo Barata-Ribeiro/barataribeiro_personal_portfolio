@@ -7,6 +7,21 @@ const Education = () => {
     <Element name='education'>
       <section aria-label='Education section' className='bg-mistGray-950'>
         <div className='container max-w-[1440px] sm:py-32 max-sm:py-16 max-xs:py-6'>
+          <div className='flex justify-center'>
+            <p className='max-w-2xl text-mistGray-500 leading-relaxed mb-4 text-center text-xl'>
+              With a bachelor's in{' '}
+              <span className='text-mistGray-50'>Business Administration</span>,
+              with two{' '}
+              <span className='text-mistGray-50'>graduate courses</span> in the
+              field, I am currently specializing in{' '}
+              <span className='text-mistGray-50'>UI Design</span> and{' '}
+              <span className='text-mistGray-50'>Front-end</span> development
+              through online courses. I aim to combine analytical and strategic
+              skills with creative abilities to create efficient and intuitive
+              user interfaces.
+            </p>
+          </div>
+
           {/* Education */}
           <div className='flex flex-wrap justify-center'>
             <div className='p-4 md:w-1/3'>
@@ -75,17 +90,17 @@ const Education = () => {
           <h1 className='sm:text-3xl text-2xl font-semibold text-center text-mistGray-50 mt-8 mb-4'>
             Intensive Courses
           </h1>
-          <div className='flex flex-wrap-reverse lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2'>
+          <div className='flex flex-wrap-reverse lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2 px-4'>
             {/* UI Design for Beginners */}
             <div className='p-2 sm:w-1/2 w-full'>
               <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex'>
+                <div className='flex flex items-center'>
                   <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
                   <span className='font-semibold tracking-wide'>
                     UI Design for Beginners
                   </span>
                 </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide'>
+                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
                   Origamid
                 </span>
               </div>
@@ -94,13 +109,13 @@ const Education = () => {
             {/* HTML & CSS for Beginners */}
             <div className='p-2 sm:w-1/2 w-full'>
               <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex'>
+                <div className='flex items-center'>
                   <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
                   <span className='font-semibold tracking-wide'>
                     HTML & CSS for Beginners
                   </span>
                 </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide'>
+                <span className='text-mistGray-300 font-semibold tracking-wide  max-xs:hidden'>
                   Origamid
                 </span>
               </div>
@@ -109,13 +124,13 @@ const Education = () => {
             {/* CSS Grid Layout & CSS Flexbox */}
             <div className='p-2 sm:w-1/2 w-full'>
               <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex'>
+                <div className='flex items-center'>
                   <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
                   <span className='font-semibold tracking-wide'>
                     CSS Grid Layout & CSS Flexbox
                   </span>
                 </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide'>
+                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
                   Origamid
                 </span>
               </div>
@@ -124,28 +139,13 @@ const Education = () => {
             {/* Advanced UI Design */}
             <div className='p-2 sm:w-1/2 w-full'>
               <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex'>
+                <div className='flex items-center'>
                   <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
                   <span className='font-semibold tracking-wide'>
                     Advanced UI Design
                   </span>
                 </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide'>
-                  Origamid
-                </span>
-              </div>
-            </div>
-
-            {/* Complete JavaScript ES6+ */}
-            <div className='p-2 sm:w-1/2 w-full'>
-              <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex'>
-                  <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
-                  <span className='font-semibold tracking-wide'>
-                    JavaScript ES6+
-                  </span>
-                </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide'>
+                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
                   Origamid
                 </span>
               </div>
@@ -154,13 +154,13 @@ const Education = () => {
             {/* Responsive Web Design */}
             <div className='p-2 sm:w-1/2 w-full'>
               <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex'>
+                <div className='flex items-center'>
                   <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
                   <span className='font-semibold tracking-wide'>
                     Responsive Web Design
                   </span>
                 </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide'>
+                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
                   freeCodeCamp
                 </span>
               </div>
@@ -169,13 +169,13 @@ const Education = () => {
             {/* Programming Logic */}
             <div className='p-2 sm:w-1/2 w-full'>
               <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex'>
+                <div className='flex items-center'>
                   <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
                   <span className='font-semibold tracking-wide'>
                     Programming Logic
                   </span>
                 </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide'>
+                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
                   Udemy
                 </span>
               </div>
@@ -184,14 +184,29 @@ const Education = () => {
             {/* Algorithms */}
             <div className='p-2 sm:w-1/2 w-full'>
               <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex'>
+                <div className='flex items-center'>
                   <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
                   <span className='font-semibold tracking-wide'>
                     Algorithms
                   </span>
                 </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide'>
+                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
                   Curso em Video
+                </span>
+              </div>
+            </div>
+
+            {/* Complete JavaScript ES6+ */}
+            <div className='p-2 sm:w-1/2 w-full'>
+              <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
+                <div className='flex items-center'>
+                  <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
+                  <span className='font-semibold tracking-wide'>
+                    JavaScript ES6+
+                  </span>
+                </div>
+                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
+                  Origamid
                 </span>
               </div>
             </div>
