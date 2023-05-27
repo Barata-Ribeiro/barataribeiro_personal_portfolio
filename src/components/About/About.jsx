@@ -56,17 +56,20 @@ const About = () => {
                     'https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/'
                   }
                   title={'LinkedIn profile'}
-                  icon={<FaLinkedinIn />}
+                  icon={<FaLinkedinIn size={25} />}
+                  text={'LinkedIn'}
                 />
                 <SocialButtons
                   href={'http://barataribeiro.com/'}
                   title={'GitHub profile'}
-                  icon={<FaGithub />}
+                  icon={<FaGithub size={25} />}
+                  text={'GitHub'}
                 />
                 <SocialButtons
                   href={'mailto:j.mendes1920@gmail.com'}
                   title={'Send Email'}
-                  icon={<SiMaildotru />}
+                  icon={<SiMaildotru size={25} />}
+                  text={'Email'}
                 />
               </div>
             </div>
