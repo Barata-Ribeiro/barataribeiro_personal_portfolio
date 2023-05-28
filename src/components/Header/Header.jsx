@@ -12,21 +12,36 @@ export const menuItems = [
 const Header = () => {
   // State for the burger menu
   const [nav, setNav] = React.useState(false);
-  const [isOpen, setOpen] = React.useState(false);
+
+  const [shadow, setShadow] = React.useState(false);
 
   const handleClick = (event) => {
     event.preventDefault();
     setNav(!nav);
-    setOpen(!isOpen);
   };
 
   React.useEffect(() => {
-    if (isOpen) document.body.style.overflow = 'hidden';
-    else document.body.style.overflow = 'unset';
-  }, [isOpen]);
+    document.body.style.overflow = nav ? 'hidden' : 'unset';
+  }, [nav]);
+
+  React.useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY > 90) setShadow(true);
+      else setShadow(false);
+    };
+    window.addEventListener('scroll', handleShadow);
+    return () => {
+      window.removeEventListener('scroll', handleShadow);
+    };
+  }, []);
 
   return (
-    <header className='fixed top-0 bg-mistGray-50 w-full'>
+    <header
+      className={
+        shadow
+          ? 'fixed top-0 bg-mistGray-50 shadow-lg w-full z-50'
+          : 'fixed top-0 bg-mistGray-50 w-full z-50'
+      }>
       <nav
         aria-label='Site main navigation'
         className='container max-w-[1440px] flex justify-between items-center'>
@@ -45,13 +60,14 @@ const Header = () => {
 
         {/* menu */}
         <ul className='hidden sm:flex'>
-          {menuItems.map((item, index) => (
-            <li className='my-0 ml-2 font-Kanit text-2xl' key={index}>
+          {menuItems.map((item) => (
+            <li className='my-0 ml-2 font-Kanit text-2xl' key={item.url}>
               <Link
                 className='navlink relative p-3 cursor-pointer'
                 to={item.url}
                 spy={true}
                 smooth={true}
+                offset={-90}
                 duration={500}>
                 {item.text}
               </Link>
@@ -60,15 +76,15 @@ const Header = () => {
         </ul>
 
         {/* Hamburger */}
-        <div onClick={handleClick} className='sm:hidden z-10' tabIndex={0}>
+        <button onClick={handleClick} className='sm:hidden z-50'>
           <Hamburger
             rounded
             size={25}
-            toggled={isOpen}
-            toggle={setOpen}
+            toggled={nav}
+            toggle={setNav}
             label='Show menu'
           />
-        </div>
+        </button>
 
         {/* Mobile Menu */}
         <ul
@@ -77,16 +93,17 @@ const Header = () => {
               ? 'absolute top-0 left-0 w-full h-screen bg-mistGray-50 flex flex-col justify-center items-center'
               : 'hidden'
           }>
-          {menuItems.map((item, index) => (
+          {menuItems.map((item) => (
             <li
               className='m-2 p-3 font-Kanit text-3xl font-semibold'
-              key={index}>
+              key={item.url}>
               <Link
                 className='navlink relative pb-4 cursor-pointer'
                 to={item.url}
                 spy={true}
                 smooth={true}
                 duration={500}
+                offset={-90}
                 onClick={handleClick}>
                 {item.text}
               </Link>
@@ -98,4 +115,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default React.memo(Header);
