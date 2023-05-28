@@ -3,6 +3,17 @@ import { Element } from 'react-scroll';
 import { FaGraduationCap, FaCheckCircle } from 'react-icons/fa';
 
 const Education = () => {
+  const intensiveCourses = [
+    { course: 'UI Design for Beginners', place: 'Origamid' },
+    { course: 'HTML & CSS for Beginners', place: 'Origamid' },
+    { course: 'CSS Grid Layout & CSS Flexbox', place: 'Origamid' },
+    { course: 'Programming Logic', place: 'Udemy' },
+    { course: 'Responsive Web Design', place: 'freeCodeCamp' },
+    { course: 'Algorithms', place: 'Curso em Video' },
+    { course: 'Advanced UI Design', place: 'Origamid' },
+    { course: 'JavaScript ES6+', place: 'Origamid' },
+  ];
+
   return (
     <Element name='education'>
       <section aria-label='Education section' className='bg-mistGray-950'>
@@ -91,125 +102,21 @@ const Education = () => {
             Intensive Courses
           </h1>
           <div className='flex flex-wrap-reverse lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2 px-4'>
-            {/* UI Design for Beginners */}
-            <div className='p-2 sm:w-1/2 w-full'>
-              <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex flex items-center'>
-                  <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
-                  <span className='font-semibold tracking-wide'>
-                    UI Design for Beginners
+            {intensiveCourses.map((course, index) => (
+              <div className='p-2 sm:w-1/2 w-full' key={index}>
+                <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
+                  <div className='flex items-center'>
+                    <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
+                    <span className='font-semibold tracking-wide'>
+                      {course.course}
+                    </span>
+                  </div>
+                  <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
+                    {course.place}
                   </span>
                 </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
-                  Origamid
-                </span>
               </div>
-            </div>
-
-            {/* HTML & CSS for Beginners */}
-            <div className='p-2 sm:w-1/2 w-full'>
-              <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex items-center'>
-                  <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
-                  <span className='font-semibold tracking-wide'>
-                    HTML & CSS for Beginners
-                  </span>
-                </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide  max-xs:hidden'>
-                  Origamid
-                </span>
-              </div>
-            </div>
-
-            {/* CSS Grid Layout & CSS Flexbox */}
-            <div className='p-2 sm:w-1/2 w-full'>
-              <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex items-center'>
-                  <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
-                  <span className='font-semibold tracking-wide'>
-                    CSS Grid Layout & CSS Flexbox
-                  </span>
-                </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
-                  Origamid
-                </span>
-              </div>
-            </div>
-
-            {/* Advanced UI Design */}
-            <div className='p-2 sm:w-1/2 w-full'>
-              <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex items-center'>
-                  <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
-                  <span className='font-semibold tracking-wide'>
-                    Advanced UI Design
-                  </span>
-                </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
-                  Origamid
-                </span>
-              </div>
-            </div>
-
-            {/* Responsive Web Design */}
-            <div className='p-2 sm:w-1/2 w-full'>
-              <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex items-center'>
-                  <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
-                  <span className='font-semibold tracking-wide'>
-                    Responsive Web Design
-                  </span>
-                </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
-                  freeCodeCamp
-                </span>
-              </div>
-            </div>
-
-            {/* Programming Logic */}
-            <div className='p-2 sm:w-1/2 w-full'>
-              <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex items-center'>
-                  <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
-                  <span className='font-semibold tracking-wide'>
-                    Programming Logic
-                  </span>
-                </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
-                  Udemy
-                </span>
-              </div>
-            </div>
-
-            {/* Algorithms */}
-            <div className='p-2 sm:w-1/2 w-full'>
-              <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex items-center'>
-                  <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
-                  <span className='font-semibold tracking-wide'>
-                    Algorithms
-                  </span>
-                </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
-                  Curso em Video
-                </span>
-              </div>
-            </div>
-
-            {/* Complete JavaScript ES6+ */}
-            <div className='p-2 sm:w-1/2 w-full'>
-              <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
-                <div className='flex items-center'>
-                  <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
-                  <span className='font-semibold tracking-wide'>
-                    JavaScript ES6+
-                  </span>
-                </div>
-                <span className='text-mistGray-300 font-semibold tracking-wide max-xs:hidden'>
-                  Origamid
-                </span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
