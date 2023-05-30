@@ -17,7 +17,7 @@ const Education = () => {
   return (
     <Element name='education'>
       <section aria-label='Education section' className='bg-mistGray-950'>
-        <div className='container max-w-[1440px] sm:py-32 max-sm:py-16 max-xs:py-6'>
+        <div className='container max-w-[1440px] sm:py-32 max-sm:py-16 max-xs:py-6 px-4'>
           <div className='flex justify-center'>
             <p className='max-w-2xl text-mistGray-500 leading-relaxed mb-4 text-center text-xl'>
               With a bachelor's in{' '}
@@ -101,7 +101,7 @@ const Education = () => {
           <h1 className='sm:text-3xl text-2xl font-semibold text-center text-mistGray-50 mt-8 mb-4'>
             Intensive Courses
           </h1>
-          <div className='flex flex-wrap-reverse lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2 px-4'>
+          <div className='flex flex-wrap-reverse lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2'>
             {intensiveCourses.map((course, index) => (
               <div className='p-2 sm:w-1/2 w-full' key={index}>
                 <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>

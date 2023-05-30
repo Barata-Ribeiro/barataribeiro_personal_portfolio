@@ -9,10 +9,10 @@ const About = () => {
   return (
     <Element name='about'>
       <section aria-label='About section' className='bg-mistGray-950'>
-        <div className='container max-w-[1440px] sm:py-32 max-sm:py-16 max-xs:py-6'>
+        <div className='container max-w-[1440px] sm:py-32 max-sm:py-16 max-xs:py-6 px-4'>
           <div className='flex justify-between items-center flex-col sm:flex-row'>
             <img
-              className='h-auto w-full max-w-md sm:h-[500px] sm:w-auto'
+              className='h-auto w-full max-w-md sm:h-[500px] sm:w-auto rounded-lg'
               src={aboutImage}
               alt='Photograph of a computer screen showing javascript code'
             />
@@ -27,30 +27,36 @@ const About = () => {
                     Front-end Developer & UI Designer
                   </h3>
                 </div>
-                <p className='max-w-xl text-mistGray-500 text-left sm:text-right leading-relaxed mt-3 max-sm:text-center'>
-                  As a business administration graduate with graduate courses in
+                <p className='max-w-xl text-mistGray-500 sm:text-right xs:text-justify leading-relaxed mt-4 text-center'>
+                  As a someone possessing a robust academic background in{' '}
+                  <span className='text-mistGray-50'>
+                    Business Administration
+                  </span>
+                  , complemented by graduate courses in
                   <span className='text-mistGray-50'>
                     {' '}
                     Strategic People Management
                   </span>{' '}
                   and{' '}
                   <span className='text-mistGray-50'>Project Management</span>,
-                  I'm passionate about merging strategy and execution to deliver
-                  well-managed, visually engaging, and practical projects.
-                  Currently, I am broadening my expertise by diving into
+                  my professional ethos revolves around fusing strategy and
+                  execution. My ambition is to craft and deliver projects that
+                  are not only visually impressive but also pragmatically
+                  efficient. Currently, I am delving deeper into the realms of
                   <span className='text-mistGray-50'>
                     {' '}
                     Front-end Development
                   </span>{' '}
                   and <span className='text-mistGray-50'>UI Design</span>,
-                  intending to craft visually appealing and user-friendly
-                  interfaces that elevate user experiences. In addition, I am
-                  eager to leverage my unique skill set to contribute to the
-                  success of innovative teams and organizations.
+                  intending to architect visually compelling and user-centric
+                  interfaces that enhance user interaction and satisfaction. In
+                  addition, I am enthusiastic about utilizing my distinctive
+                  capabilities to drive the success of forward-thinking teams
+                  and organizations.
                 </p>
               </div>
               <span className='text-mistGray-50'></span>
-              <div className='flex justify-start sm:justify-end items-center gap-2 mt-4'>
+              <div className='flex justify-start sm:justify-end items-center gap-2'>
                 <SocialButtons
                   href={
                     'https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/'

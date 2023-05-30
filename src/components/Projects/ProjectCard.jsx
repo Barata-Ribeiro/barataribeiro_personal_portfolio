@@ -16,7 +16,7 @@ const ProjectCard = ({
         <img
           alt={projectAlt}
           src={projectImg}
-          className='max-h-50 w-full object-cover'
+          className='md:max-h-52 max-h-96 w-full object-cover'
         />
         <div className='bg-mistGray-50 w-full p-4'>
           <h3 className='font-Kanit text-mistGray-950 text-2xl font-semibold tracking-wide'>

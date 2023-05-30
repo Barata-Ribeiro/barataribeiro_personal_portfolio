@@ -7,12 +7,12 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer aria-label='Footer, the end' className='bg-mistGray-900'>
-      <div className='container max-w-[1440px] flex flex-col items-center py-16 sm:px-6 lg:px-8'>
+      <div className='container max-w-[1440px] flex flex-col items-center py-16 sm:px-6 lg:px-8 px-4'>
         <a
           href='http://barataribeiro.com/'
           target='_blank'
           rel='noopener noreferrer'
-          className='flex items-center flex-wrap uppercase font-Kanit font-semibold text-2xl tracking-widest text-mistGray-50'>
+          className='flex items-center flex-wrap uppercase font-Kanit font-semibold xs:text-2xl tracking-widest text-mistGray-50 text-xl'>
           Barata
           <span className='font-Comfortaa font-bold text-rioGrande-600 tracking-normal px-1'>
             &#60;/&#62;
@@ -29,7 +29,7 @@ const Footer = () => {
 
         {/* Footer nav */}
         <nav aria-label='Footer menu' className='mt-6'>
-          <ul className='flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12'>
+          <ul className='flex xs:flex-wrap justify-center gap-2 sm:gap-6 md:gap-8 lg:gap-12 max-xs:text-sm'>
             {menuItems.map((item, index) => (
               <li key={index}>
                 <Link

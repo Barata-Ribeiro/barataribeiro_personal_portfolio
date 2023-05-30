@@ -12,7 +12,7 @@ export const menuItems = [
 const Header = () => {
   // State for the burger menu
   const [nav, setNav] = React.useState(false);
-
+  const [miniLogo, setMiniLogo] = React.useState(false);
   const [shadow, setShadow] = React.useState(false);
 
   const handleClick = (event) => {
@@ -35,6 +35,18 @@ const Header = () => {
     };
   }, []);
 
+  React.useEffect(() => {
+    const handleLogo = () => {
+      if (window.innerWidth < 315) setMiniLogo(true);
+      else setMiniLogo(false);
+    };
+    handleLogo();
+    window.addEventListener('resize', handleLogo);
+    return () => {
+      window.removeEventListener('resize', handleLogo);
+    };
+  }, []);
+
   return (
     <header
       className={
@@ -44,19 +56,36 @@ const Header = () => {
       }>
       <nav
         aria-label='Site main navigation'
-        className='container max-w-[1440px] flex justify-between items-center'>
+        className='container max-w-[1440px] flex justify-between items-center px-4'>
         {/* logo */}
-        <a className='py-5 max-sm:pl-3' href='./'>
-          <h1
-            alt='Barata Ribeiro Logo'
-            className='uppercase font-Kanit font-semibold text-4xl text-mistGray-950 tracking-widest max-md:text-2xl max-sm:text-xl'>
-            Barata{' '}
-            <span className='font-Comfortaa font-bold text-rioGrande-600 tracking-normal'>
+        {miniLogo ? (
+          <a
+            className='py-5 uppercase font-Kanit font-semibold flex items-center text-2xl'
+            href='./'>
+            <span className='font-Comfortaa font-bold text-rioGrande-600 tracking-normal mr-2 border-r-2 border-rioGrande-600 pr-2'>
               &#60;/&#62;
-            </span>{' '}
-            Ribeiro
-          </h1>
-        </a>
+            </span>
+            <h1
+              alt='Barata Ribeiro Logo'
+              className='text-mistGray-950 tracking-wider leading-none'>
+              Barata
+              <br />
+              Ribeiro
+            </h1>
+          </a>
+        ) : (
+          <a className='py-5' href='./'>
+            <h1
+              alt='Barata Ribeiro Logo'
+              className='uppercase font-Kanit font-semibold md:text-4xl text-mistGray-950 tracking-widest sm:text-2xl text-xl'>
+              Barata{' '}
+              <span className='font-Comfortaa font-bold text-rioGrande-600 tracking-normal'>
+                &#60;/&#62;
+              </span>{' '}
+              Ribeiro
+            </h1>
+          </a>
+        )}
 
         {/* menu */}
         <ul className='hidden sm:flex'>
