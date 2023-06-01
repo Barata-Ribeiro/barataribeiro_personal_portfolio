@@ -1,6 +1,5 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import Decorator from '../../assets/decorator.svg';
 import Button from '../Global/MainButton';
 
 const Hero = () => {
@@ -8,23 +7,22 @@ const Hero = () => {
     <Element name='home'>
       <main
         aria-label='Site home page'
-        className='h-screen w-full bg-gradient-to-b from-mistGray-50 from-50% to-mistGray-950'>
+        className='bg-mistGray-950 bg-heroBackground bg-center bg-cover bg-no-repeat h-screen w-full'>
         <div
-          className={`container max-w-[1440px] xs:mt-16 mt-[120px] px-4
-          sm:pt-32 xs:pt-16 pt-6 flex sm:justify-between items-center justify-center max-sm:flex-col`}>
+          className={`container max-w-[1440px] sm:mt-[95px] mt-[70px] sm:py-64 py-40 px-4`}>
           {/* Hero info */}
           <div className='flex flex-col items-start leading-none text-mistGray-950 max-sm:items-center max-sm:text-center'>
             <div>
-              <h1 className='uppercase font-Kanit font-semibold tracking-wider text-5xl'>
+              <h1 className='uppercase font-Kanit font-semibold tracking-wider text-5xl text-mistGray-50'>
                 <span className='normal-case font-Robot text-[1.25rem] font-normal tracking-normal -mr-2'>
                   I'm
                 </span>{' '}
                 Barata Ribeiro
               </h1>
-              <p className='font-Kanit font-light text-3xl'>
+              <p className='font-Kanit text-mistGray-200 font-light text-2xl mb-1'>
                 an aspiring Front-End Developer.
               </p>
-              <p className='leading-relaxed max-w-lg'>
+              <p className='leading-relaxed max-w-lg text-mistGray-600'>
                 Business grad passionate about bridging strategy and execution,
                 expanding into front-end development and UI design for visually
                 appealing, user-friendly interfaces.
@@ -35,10 +33,6 @@ const Hero = () => {
               href={'https://github.com/Barata-Ribeiro'}
               title={'Check GitHub'}
             />
-          </div>
-          {/* Hero image */}
-          <div className='max-sm:hidden'>
-            <img src={Decorator} alt='Decorator' />
           </div>
         </div>
       </main>

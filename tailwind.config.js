@@ -8,6 +8,9 @@ export default {
       container: {
         center: true,
       },
+      backgroundImage: {
+        heroBackground: "url('src/assets/img/background.jpg')",
+      },
       fontFamily: {
         Roboto: ['Roboto', 'sans-serif'],
         Kanit: ['Kanit', 'sans-serif'],
