@@ -9,7 +9,7 @@ const About = () => {
   return (
     <Element name='about'>
       <section aria-label='About section' className='bg-mistGray-950'>
-        <div className='container max-w-[1440px] sm:py-32 max-sm:py-16 max-xs:py-6 px-4'>
+        <div className='container max-w-[1440px] sm:py-32 xs:py-16 py-6 px-4'>
           <div className='flex justify-between items-center flex-col sm:flex-row'>
             <img
               className='h-auto w-full max-w-md sm:h-[500px] sm:w-auto rounded-lg'

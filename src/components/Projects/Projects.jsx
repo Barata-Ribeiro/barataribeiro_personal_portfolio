@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <Element name='projects'>
       <section aria-label='Project section' className='bg-mistGray-900'>
-        <div className='container max-w-[1440px] sm:py-32 max-sm:py-16 max-xs:py-6'>
+        <div className='container max-w-[1440px] sm:py-32 xs:py-16 py-6'>
           <div className='flex justify-evenly items-center flex-wrap gap-8'>
             <ProjectCard
               projectTitle={'Fantastic Beasts'}
