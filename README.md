@@ -2,7 +2,7 @@
 
 ## 🎨 Front-End Developer & UI Designer
 
-I'm an aspiring front-end developer and UI designer. I have a background with a Bachelor's in Business Administration and graduate courses in Strategic People Management and Project Management. I'm passionate about bridging the gap between strategy and execution, creating visually engaging and effective projects.
+I developed this portfolio starting with the UI Design using Figma, and then the code was written using React + Vite with Tailwind CSS as the style framework. I've used a combination of fonts, such as `Roboto` and `Kanit`, with `Comfortaa` for the decorator. I chose the color palette using the following as a base: ![#838073](https://placehold.co/15x15/838073/838073.png) `#838073`, ![#2b81e3](https://placehold.co/15x15/2b81e3/2b81e3.png) `#2b81e3`, ![#d2d904](https://placehold.co/15x15/d2d904/d2d904.png) `#d2d904`. The images used in both the hero and about sections are from Unsplash. Check out my projects and education, and let's discuss working together!
 
 ## 👨‍💻 Demo
 
@@ -31,7 +31,7 @@ git clone https://github.com/Barata-Ribeiro/barataribeiro_personal_portfolio.git
 2. Navigate to the project folder:
 
 ```bash
-cd portfolio
+cd barataribeiro_personal_portfolio
 ```
 
 3. Install dependencies:
