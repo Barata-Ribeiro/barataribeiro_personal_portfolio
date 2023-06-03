@@ -9,7 +9,7 @@ export default {
         center: true,
       },
       backgroundImage: {
-        heroBackground: "url('src/assets/img/background.jpg')",
+        heroBackground: "url('../src/assets/img/cloudsBackground.jpg')",
       },
       fontFamily: {
         Roboto: ['Roboto', 'sans-serif'],
