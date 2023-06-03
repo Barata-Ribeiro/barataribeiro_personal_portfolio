@@ -6,7 +6,7 @@ I developed this portfolio starting with the UI Design using Figma, and then the
 
 ## 👨‍💻 Demo
 
-[Click here](https://github.com/Barata-Ribeiro/barataribeiro_personal_portfolio/) to see a live demo of the website.
+[Click here](https://barata-ribeiro.github.io/barataribeiro_personal_portfolio/) to see a live demo of the website.
 
 ![Personal Portfolio](./public/screenshot.gif)
 
