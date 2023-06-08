@@ -4,6 +4,7 @@ import ProjectCard from './ProjectCard';
 import ProjectOne from '../../assets/img/projectsImages/steelManeMotors.jpg';
 import ProjectTwo from '../../assets/img/projectsImages/surfbot.jpg';
 import ProjectThree from '../../assets/img/projectsImages/animais-fantasticos.jpg';
+import ProjectFour from '../../assets/img/projectsImages/gitpop.jpg';
 
 const Projects = () => {
   return (
@@ -11,6 +12,17 @@ const Projects = () => {
       <section aria-label='Project section' className='bg-mistGray-900'>
         <div className='container max-w-[1440px] sm:py-32 xs:py-16 py-6'>
           <div className='flex justify-evenly items-center flex-wrap gap-8'>
+            <ProjectCard
+              projectTitle={'GitPop'}
+              projectDesc={
+                'GitPop is a user-friendly web application that leverages the GitHub API to display the most popular repositories of any GitHub user and their profile stats. Using GitPop, users can explore trending projects and gain insights into their coding prowess or that of others.'
+              }
+              projectImg={ProjectFour}
+              projectAlt={'gitpop'}
+              projectTech={['React', 'Vite.js', 'Tailwind CSS']}
+              projectRepo={'https://github.com/Barata-Ribeiro/GitPop'}
+              projectDemo={'https://barata-ribeiro.github.io/GitPop/'}
+            />
             <ProjectCard
               projectTitle={'Fantastic Beasts'}
               projectDesc={
