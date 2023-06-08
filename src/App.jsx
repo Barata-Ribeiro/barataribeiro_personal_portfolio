@@ -6,10 +6,12 @@ import Projects from './components/Projects/Projects';
 import Education from './components/Education/Education';
 import Footer from './components/Footer/Footer';
 
+const HeaderMemo = React.memo(Header);
+
 function App() {
   return (
     <>
-      <Header />
+      <HeaderMemo />
       <Hero />
       <About />
       <Projects />
