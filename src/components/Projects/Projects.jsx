@@ -5,6 +5,7 @@ import ProjectOne from '../../assets/img/projectsImages/steelManeMotors.jpg';
 import ProjectTwo from '../../assets/img/projectsImages/surfbot.jpg';
 import ProjectThree from '../../assets/img/projectsImages/animais-fantasticos.jpg';
 import ProjectFour from '../../assets/img/projectsImages/gitpop.jpg';
+import ProjectFive from '../../assets/img/projectsImages/spectre_band.jpg';
 
 const Projects = () => {
   return (
@@ -12,6 +13,17 @@ const Projects = () => {
       <section aria-label='Project section' className='bg-mistGray-900'>
         <div className='container max-w-[1440px] sm:py-32 xs:py-16 py-6'>
           <div className='flex justify-evenly items-center flex-wrap gap-8'>
+            <ProjectCard
+              projectTitle={'Spectre'}
+              projectDesc={
+                'Website developed for a fictional rock band called Spectre. This project showcases an engaging and essential website, leveraging contemporary web technologies, including HTML5, CSS3, and vanilla JavaScript.'
+              }
+              projectImg={ProjectFive}
+              projectAlt={'spectre band'}
+              projectTech={['HTML', 'CSS', 'JavaScript', 'Vite.js']}
+              projectRepo={'https://github.com/Barata-Ribeiro/spectre_band'}
+              projectDemo={'https://barata-ribeiro.github.io/spectre_band/'}
+            />
             <ProjectCard
               projectTitle={'GitPop'}
               projectDesc={
