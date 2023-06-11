@@ -11,6 +11,7 @@
     @apply font-Roboto;
     @apply text-mistGray-950;
     @apply bg-mistGray-50;
+    @apply pt-[100px];
   }
 }
 
