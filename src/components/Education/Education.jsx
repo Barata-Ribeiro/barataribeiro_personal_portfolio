@@ -12,6 +12,8 @@ const Education = () => {
     { course: 'Algorithms', place: 'Curso em Video' },
     { course: 'Advanced UI Design', place: 'Origamid' },
     { course: 'JavaScript ES6+', place: 'Origamid' },
+    { course: 'Advanced Typography', place: 'Origamid' },
+    { course: 'Complete React JS', place: 'Origamid' },
   ];
 
   return (
@@ -104,10 +106,10 @@ const Education = () => {
           <ol className='flex flex-wrap-reverse lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2'>
             {intensiveCourses.map((course, index) => (
               <li
-                data-course={`${index + 1}º`}
+                data-course={`${index + 1}`}
                 className='relative courses p-2 sm:w-1/2 w-full'
                 key={index}>
-                <div className='flex justify-between bg-gray-100 rounded p-4 h-full items-center'>
+                <div className='flex justify-between bg-mistGray-50 rounded p-4 h-full items-center'>
                   <div className='flex items-center'>
                     <FaCheckCircle className='text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4' />
                     <span className='font-semibold tracking-wide'>

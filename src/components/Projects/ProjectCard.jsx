@@ -10,20 +10,40 @@ const ProjectCard = ({
   projectRepo,
   projectDemo,
 }) => {
+  const [hover, setHover] = React.useState(false);
+
+  const handleMouseEnter = () => {
+    if (window.innerWidth > 1060) setHover(true);
+  };
+  const handleMouseLeave = () => {
+    setHover(false);
+  };
   return (
     <div className='flex flex-wrap items-center max-md:px-4'>
-      <div className='overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl rounded-lg md:w-80 w-full'>
+      <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className='overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl rounded-lg md:w-80 sm:max-w-xs max-w-sm'>
         <img
           alt={projectAlt}
           src={projectImg}
-          className='md:max-h-52 max-h-96 w-full object-cover'
+          className={
+            hover
+              ? 'md:max-h-[500px] max-h-96 w-full object-cover'
+              : 'md:max-h-52 max-h-96 w-full object-cover'
+          }
         />
         <div className='bg-mistGray-50 w-full p-4'>
           <h3 className='font-Kanit text-mistGray-950 text-2xl font-semibold tracking-wide'>
             <span className='text-rioGrande-600 mr-1'>.</span>
             {projectTitle}
           </h3>
-          <p className='text-mistGray-700 font-light text-sm leading-relaxed'>
+          <p
+            className={
+              hover
+                ? 'hidden text-mistGray-700 font-light text-sm leading-relaxed'
+                : 'text-mistGray-700 font-light text-sm leading-relaxed'
+            }>
             {projectDesc}
           </p>
           <div className='flex flex-wrap justify-starts items-center py-3 border-b-2 text-xs text-white font-medium'>

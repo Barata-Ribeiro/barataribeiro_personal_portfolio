@@ -12,7 +12,7 @@ const About = () => {
         <div className='container max-w-[1440px] sm:py-32 xs:py-16 py-6 px-4'>
           <div className='flex justify-between items-center flex-col sm:flex-row'>
             <img
-              className='md:h-[740px] md:w-[500px] sm:h-96 sm:w-96 h-fit w-full object-cover'
+              className='md:h-[740px] md:w-[500px] sm:h-96 sm:w-96 h-fit w-full object-cover max-sm:hidden'
               src={aboutImage}
               alt='Photograph of a computer screen showing javascript code'
             />
