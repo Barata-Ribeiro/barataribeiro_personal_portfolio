@@ -5,9 +5,6 @@ export default {
   darkMode: 'media',
   theme: {
     extend: {
-      container: {
-        center: true,
-      },
       backgroundImage: {
         heroBackground: "url('../src/assets/img/cloudsBackground.jpg')",
       },
@@ -39,7 +36,7 @@ export default {
           300: '#d9fd47',
           400: '#d6fa15',
           500: '#d1ea08',
-          600: '#d2d904',
+          600: '#d2d904', // main
           700: '#a19907',
           800: '#85770e',
           900: '#716112',
@@ -52,7 +49,7 @@ export default {
           300: '#97d4f9',
           400: '#66bcf4',
           500: '#429fef',
-          600: '#2b81e3',
+          600: '#2b81e3', // main
           700: '#246cd1',
           800: '#2458a9',
           900: '#224b86',
@@ -65,7 +62,7 @@ export default {
           300: '#c4c4bb',
           400: '#a2a195',
           500: '#908e7f',
-          600: '#838073',
+          600: '#838073', // main
           700: '#6e6b60',
           800: '#5b5951',
           900: '#4b4943',
@@ -73,12 +70,26 @@ export default {
         },
       },
       screens: {
-        xs: '480px',
-        ss: '620px',
-        sm: '768px',
-        md: '1060px',
-        lg: '1200px',
-        xl: '1700px',
+        xs: { max: '759px' },
+        ss: { min: '760px', max: '979px' },
+        sm: { min: '980px', max: '1279px' },
+        md: { min: '1280px', max: '1599px' },
+        lg: { min: '1600px', max: '1939px' },
+        xl: { min: '1940px', max: '2539px' },
+        '2xl': { min: '2540px' },
+      },
+      container: {
+        center: true,
+        padding: '0.75rem',
+        screens: {
+          xs: '100%',
+          ss: '720px',
+          sm: '960px',
+          md: '1200px',
+          lg: '1560px',
+          xl: '1920px',
+          '2xl': '100%',
+        },
       },
     },
   },

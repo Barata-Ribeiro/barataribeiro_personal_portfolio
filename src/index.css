@@ -7,9 +7,15 @@
 /* MAIN CUSTOM CSS */
 
 @layer base {
-  body {
+  html {
     @apply font-Roboto;
     @apply text-mistGray-950;
+    @apply bg-mistGray-100;
+  }
+  body {
     @apply bg-mistGray-50;
+    @apply max-w-[960px];
+    @apply mx-auto;
+    @apply shadow-lg;
   }
 }
