@@ -11,10 +11,10 @@ export const menuItems = [
 const Header = () => {
   const [nav, setNav] = React.useState(false);
   return (
-    <header className='fixed top-0 z-50 bg-mistGray-600 w-[1220px] mt-4 rounded-lg shadow-md'>
+    <header className='fixed top-0 z-50 bg-mistGray-600 w-[76.25rem] mt-4 rounded-lg shadow-md'>
       <nav
         aria-label='Site main navigation'
-        className='flex justify-between items-center py-[10px]'>
+        className='flex justify-between items-center py-[0.625rem]'>
         <a className='p-3 self-center' href='./'>
           <h1
             alt='Barata Ribeiro Logo'
