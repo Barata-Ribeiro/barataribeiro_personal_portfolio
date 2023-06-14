@@ -1,10 +1,10 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import ProjectOne from '/public/assets/img/projects/surfbot.jpg';
-import ProjectTwo from '/public/assets/img/projects/steelManeMotors.jpg';
-import ProjectThree from '/public/assets/img/projects/animaisFantasticos.jpg';
-import ProjectFour from '/public/assets/img/projects/gitpop.jpg';
-import ProjectFive from '/public/assets/img/projects/spectreBand.jpg';
+import ProjectOne from '/assets/img/projects/surfbot.jpg';
+import ProjectTwo from '/assets/img/projects/steelManeMotors.jpg';
+import ProjectThree from '/assets/img/projects/animaisFantasticos.jpg';
+import ProjectFour from '/assets/img/projects/gitpop.jpg';
+import ProjectFive from '/assets/img/projects/spectreBand.jpg';
 import Slider from './Slider';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -42,7 +42,7 @@ const Projects = () => {
                   alt={slide.alt}
                   height={600}
                   width={1400}
-                  className='max-w-[1400px] flex-shrink-0 rounded-2xl'
+                  className='max-w-[1400px] flex-shrink-0'
                   style={{
                     boxShadow: 'inset 0px 0px 50px -5px rgba(39, 38, 35, 0.25)',
                   }}

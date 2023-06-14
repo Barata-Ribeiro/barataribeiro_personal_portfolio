@@ -1,6 +1,6 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import AboutPicture from '/public/assets/img/about-picture.jpg';
+import AboutPicture from '/assets/img/about-picture.jpg';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import SocialButton from './utils/SocialButton';

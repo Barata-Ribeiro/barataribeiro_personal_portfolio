@@ -1,6 +1,6 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import Avatar from '/public/assets/img/avatar.jpg';
+import Avatar from '/assets/img/avatar.jpg';
 import MainButton from './utils/Button';
 
 const Hero = () => {
