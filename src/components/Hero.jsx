@@ -1,6 +1,6 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import Avatar from '/public/assets/img/avatar.jpg';
+import Avatar from '/assets/img/avatar.jpg';
 import MainButton from './utils/Button';
 
 const Hero = () => {
@@ -28,7 +28,7 @@ const Hero = () => {
               <p className='font-Kanit text-mistGray-800 font-light text-3xl mb-1'>
                 an aspiring Front-End Developer.
               </p>
-              <p className='leading-7 max-w-lg text-mistGray-600'>
+              <p className='leading-relaxed max-w-lg text-mistGray-600'>
                 Business grad passionate about bridging strategy and execution,
                 expanding into front-end development and UI design for visually
                 appealing, user-friendly interfaces.
