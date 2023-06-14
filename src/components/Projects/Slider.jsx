@@ -58,15 +58,29 @@ const Slider = ({ slides }) => {
 
       {/* PROJECT INFO */}
       <div className='flex flex-col items-center my-6 gap-3'>
+        {/* project info */}
         <div>
-          <h2 className='font-Kanit font-semibold text-4xl text-center'>
-            {slides[currentSlide].title}
-          </h2>
+          <div className='mb-3 flex flex-col justify-center items-center gap-2'>
+            <h2 className='font-Kanit font-semibold text-4xl text-center leading-none'>
+              {slides[currentSlide].title}
+            </h2>
+            <div>
+              {slides[currentSlide].tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className='inline-block whitespace-nowrap rounded-[0.27rem] bg-mistGray-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-mistGray-700 mx-1 opacity-50'>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
           <p className='max-w-[28.75rem] leading-relaxed text-center text-mistGray-600'>
             {slides[currentSlide].description}
           </p>
         </div>
-        <div className='flex flex-col items-center gap-1'>
+
+        {/* repo buttons */}
+        <div className='flex items-center gap-2'>
           <button
             className={smallButtonClasses}
             onClick={() =>

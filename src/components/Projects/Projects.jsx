@@ -15,8 +15,8 @@ const Projects = () => {
       src: ProjectOne,
       alt: 'Surfbot',
       title: 'Surfbot',
-      description:
-        'This website was developed from scratch for a fictional surfing school. The design of the website was created during the "Advanced UI Design" course from Origamid. The course\'s instructor created the design to teach advanced UI design techniques. I wrote the code on my own to consolidate the learning process from other classes.',
+      description: `Developed a surfing school website from scratch, based on the "Advanced UI Design" course. Implemented the instructor's design to enhance UI skills and solidify coding proficiency.`,
+      tags: ['HTML', 'CSS', 'JavaScript'],
       repositoryUrl: 'https://github.com/Barata-Ribeiro/surfbot',
       liveDemoUrl: 'https://barata-ribeiro.github.io/surfbot/',
     },
@@ -26,7 +26,8 @@ const Projects = () => {
       alt: 'SteelMane Motorcycles',
       title: 'SteelMane Motorcycles',
       description:
-        'This website was developed during the "UI Design for Beginners" and the "HTML and CSS for Beginners" courses from Origamid. The brand is entirely fictional, with the purpose of showcasing customized and totally original motorcycles.',
+        'Created a fictional brand website, showcasing custom and original motorcycles. Developed during the "UI Design for Beginners" and "HTML and CSS for Beginners" courses.',
+      tags: ['JavaScript', 'HTML', 'CSS'],
       repositoryUrl: 'https://github.com/Barata-Ribeiro/steelmane-motorcycles',
       liveDemoUrl: 'https://barata-ribeiro.github.io/steelmane-motorcycles/',
     },
@@ -36,8 +37,9 @@ const Projects = () => {
       alt: 'Animais Fantásticos',
       title: 'Animais Fantásticos',
       description:
-        'Animais Fantásticos (Fantastic Beasts) is a website project developed during the JavaScript ES6+ course at Origamid. This project showcases a variety of skills learned by creating various effects from scratch using JavaScript.',
+        'Fantastic Beasts website project demonstrating advanced JavaScript skills. Effects and features were created from scratch during the JavaScript ES6+ course at Origamid.',
       repositoryUrl: 'https://github.com/Barata-Ribeiro/animais-fantasticos',
+      tags: ['JavaScript', 'HTML', 'CSS'],
       liveDemoUrl: 'https://barata-ribeiro.github.io/animais-fantasticos/',
     },
     {
@@ -46,7 +48,8 @@ const Projects = () => {
       alt: 'GitPop',
       title: 'GitPop',
       description:
-        "A web application designed for those who want to explore GitHub user's most popular repositories and their profile stats. Leveraging the power of GitHub's API, GitPop allows you to dive into the world of trending projects and discover coding prowess.",
+        "Web app to explore popular GitHub repositories and user profiles. Leveraging GitHub's API, GitPop provides insights into trending projects and showcases coding expertise.",
+      tags: ['React', 'Vite.js', 'Tailwind CSS'],
       repositoryUrl: 'https://github.com/Barata-Ribeiro/GitPop',
       liveDemoUrl: 'https://barata-ribeiro.github.io/GitPop/',
     },
@@ -56,7 +59,8 @@ const Projects = () => {
       alt: 'Spectre',
       title: 'Spectre Band',
       description:
-        'This project is the official website of Spectre, a fictional rock band. It showcases using technologies such as HTML5, CSS3, and vanilla JavaScript. Primarily, this endeavor served as a personal hands-on training experience to sharpen my skills, and the project seamlessly integrates Vite.js to accelerate development.',
+        'Official website for Spectre, a fictional rock band. Utilized HTML5, CSS3, and vanilla JavaScript. Integrated Vite.js for accelerated development and personal skill enhancement.',
+      tags: ['HTML', 'CSS', 'Vite.js', 'JavaScript'],
       repositoryUrl: 'https://github.com/Barata-Ribeiro/spectre_band',
       liveDemoUrl: 'https://barata-ribeiro.github.io/spectre_band/',
     },
