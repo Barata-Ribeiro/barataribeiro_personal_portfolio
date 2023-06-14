@@ -6,7 +6,6 @@ import ProjectThree from '/assets/img/projects/animaisFantasticos.jpg';
 import ProjectFour from '/assets/img/projects/gitpop.jpg';
 import ProjectFive from '/assets/img/projects/spectreBand.jpg';
 import Slider from './Slider';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Projects = () => {
@@ -47,7 +46,7 @@ const Projects = () => {
       alt: 'GitPop',
       title: 'GitPop',
       description:
-        "web application designed for those who want to explore GitHub user's most popular repositories and their profile stats. Leveraging the power of GitHub's API, GitPop allows you to dive into the world of trending projects and discover coding prowess.",
+        "A web application designed for those who want to explore GitHub user's most popular repositories and their profile stats. Leveraging the power of GitHub's API, GitPop allows you to dive into the world of trending projects and discover coding prowess.",
       repositoryUrl: 'https://github.com/Barata-Ribeiro/GitPop',
       liveDemoUrl: 'https://barata-ribeiro.github.io/GitPop/',
     },
@@ -79,22 +78,7 @@ const Projects = () => {
             </p>
           </div>
           <div className='max-w-[1400px]'>
-            <Slider>
-              {slides.map((slide) => (
-                <LazyLoadImage
-                  key={slide.id}
-                  src={slide.src}
-                  alt={slide.alt}
-                  height={600}
-                  width={1400}
-                  className='max-w-[1400px] flex-shrink-0'
-                  style={{
-                    boxShadow: 'inset 0px 0px 50px -5px rgba(39, 38, 35, 0.25)',
-                  }}
-                  effect='blur'
-                />
-              ))}
-            </Slider>
+            <Slider slides={slides} />
           </div>
         </section>
       </Element>
