@@ -1,6 +1,11 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 import AboutPicture from '/public/assets/img/about-picture.jpg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import SocialButton from './utils/SocialButton';
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { SiMaildotru } from 'react-icons/si';
 
 const About = () => {
   const shadowEffect = {
@@ -12,10 +17,12 @@ const About = () => {
     <Element name='about'>
       <section style={shadowEffect} className='bg-mistGray-950 px-[50px]'>
         <div className='flex justify-between items-center gap-5'>
-          <img
+          <LazyLoadImage
+            key='about-picture'
             className='max-w-[460px] rounded-2xl'
             src={AboutPicture}
             alt='Photograph of a computer screen with JavaScript code'
+            effect='blur'
           />
           <div>
             <div className='text-left'>
@@ -45,6 +52,28 @@ const About = () => {
               contribute to the success of forward-thinking teams and
               organizations. Let's make great things happen!
             </p>
+            <div className='flex justify-start sm:justify-end items-center gap-2'>
+              <SocialButton
+                href={
+                  'https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/'
+                }
+                title={'LinkedIn profile'}
+                icon={<FaLinkedinIn size={25} />}
+                text={'LinkedIn'}
+              />
+              <SocialButton
+                href={'http://barataribeiro.com/'}
+                title={'GitHub profile'}
+                icon={<FaGithub size={25} />}
+                text={'GitHub'}
+              />
+              <SocialButton
+                href={'mailto:j.mendes1920@gmail.com'}
+                title={'Send Email'}
+                icon={<SiMaildotru size={25} />}
+                text={'Email'}
+              />
+            </div>
           </div>
         </div>
       </section>
