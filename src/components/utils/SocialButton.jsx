@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SmallButton = ({
+const SocialButton = ({
   href,
   icon,
   title,
@@ -37,4 +37,4 @@ const SmallButton = ({
   );
 };
 
-export default SmallButton;
+export default SocialButton;
