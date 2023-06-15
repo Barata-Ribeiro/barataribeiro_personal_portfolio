@@ -74,14 +74,14 @@ const Projects = () => {
             <h1 className='font-Kanit text-mistGray-950 text-6xl text-center'>
               <span className='text-rioGrande-600'>.</span>My projects
             </h1>
-            <p className='text-mistGray-600 max-w-[460px] text-center leading-relaxed'>
+            <p className='text-mistGray-600 max-w-[28.75rem] text-center leading-relaxed'>
               Through these projects, I am determined to hone my skills in
               designing visually striking and intuitive interfaces, and
               ultimately establish myself as a competent professional in the
               field.
             </p>
           </div>
-          <div className='max-w-[1400px]'>
+          <div className='max-w-[87.5rem]'>
             <Slider slides={slides} />
           </div>
         </section>
