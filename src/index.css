@@ -13,9 +13,7 @@
     @apply bg-mistGray-100;
   }
   body {
-    @apply bg-mistGray-50;
-    @apply max-w-[960px];
-    @apply mx-auto;
-    @apply shadow-lg;
+    @apply bg-mistGray-100;
   }
 }
+
