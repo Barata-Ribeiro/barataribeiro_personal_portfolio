@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects/Projects';
 import Footer from './components/Footer';
+import Education from './components/Education';
 
 const HeaderMemo = React.memo(Header);
 
@@ -15,6 +16,7 @@ function App() {
         <Hero />
         <About />
         <Projects />
+        <Education />
       </div>
       <Footer />
     </div>
