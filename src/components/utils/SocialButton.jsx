@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const SocialButton = ({
   href,
@@ -35,6 +36,15 @@ const SocialButton = ({
       </p>
     </a>
   );
+};
+
+SocialButton.propTypes = {
+  href: PropTypes.string.isRequired,
+  icon: PropTypes.element.isRequired,
+  title: PropTypes.string.isRequired,
+  target: PropTypes.string,
+  rel: PropTypes.string,
+  text: PropTypes.string.isRequired,
 };
 
 export default SocialButton;

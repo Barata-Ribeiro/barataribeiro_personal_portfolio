@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FaGithub } from 'react-icons/fa';
 
 const Button = ({
@@ -23,6 +24,14 @@ const Button = ({
       <FaGithub /> {buttonText}
     </a>
   );
+};
+
+Button.propTypes = {
+  buttonText: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  target: PropTypes.string,
+  rel: PropTypes.string,
 };
 
 export default Button;
