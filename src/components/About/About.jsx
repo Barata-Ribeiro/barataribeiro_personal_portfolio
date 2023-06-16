@@ -1,6 +1,6 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import aboutImage from '../../assets/img/illustration.jpg';
+import aboutImage from '/public/assets/img/illustration.jpg';
 import SocialButtons from '../Global/SmallButton';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { SiMaildotru } from 'react-icons/si';

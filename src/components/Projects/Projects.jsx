@@ -1,11 +1,11 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 import ProjectCard from './ProjectCard';
-import ProjectOne from '../../assets/img/projectsImages/steelManeMotors.jpg';
-import ProjectTwo from '../../assets/img/projectsImages/surfbot.jpg';
-import ProjectThree from '../../assets/img/projectsImages/animais-fantasticos.jpg';
-import ProjectFour from '../../assets/img/projectsImages/gitpop.jpg';
-import ProjectFive from '../../assets/img/projectsImages/spectre_band.jpg';
+import ProjectOne from '/public/assets/img/projectsImages/steelManeMotors.jpg';
+import ProjectTwo from '/public/assets/img/projectsImages/surfbot.jpg';
+import ProjectThree from '/public/assets/img/projectsImages/animais-fantasticos.jpg';
+import ProjectFour from '/public/assets/img/projectsImages/gitpop.jpg';
+import ProjectFive from '/public/assets/img/projectsImages/spectre_band.jpg';
 
 const Projects = () => {
   return (
