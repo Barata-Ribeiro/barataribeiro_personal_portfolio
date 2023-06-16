@@ -1,7 +1,7 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 import aboutImage from '/public/assets/img/illustration.jpg';
-import SocialButtons from '../Global/SmallButton';
+import SocialButtons from '../Global/SocialButton';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { SiMaildotru } from 'react-icons/si';
 
