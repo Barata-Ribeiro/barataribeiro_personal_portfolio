@@ -1,12 +1,13 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import PropTypes from 'prop-types';
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi2';
 import { FaCode, FaRegPlayCircle } from 'react-icons/fa';
 
 const Slider = ({ slides }) => {
-  const buttonClasses = `p-5 rounded-full shadow-lg bg-royalBlue-600 text-royalBlue-950 hover:bg-mistGray-50 transition-colors pointer-events-auto`;
+  const mainButtonStyle = `p-5 rounded-full shadow-lg bg-royalBlue-600 text-royalBlue-950 hover:bg-mistGray-50 transition-colors pointer-events-auto`;
 
-  const smallButtonClasses = `flex items-center gap-1 px-2 py-1 bg-royalBlue-500 text-mistGray-50 rounded-lg text-sm font-semibold border-2 border-royalBlue-600
+  const repoButtonStyle = `flex items-center gap-1 px-2 py-1 bg-royalBlue-500 text-mistGray-50 rounded-lg text-sm font-semibold border-2 border-royalBlue-600
   hover:bg-mistGray-50 hover:border-royalBlue-500 hover:text-royalBlue-500`;
 
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -47,10 +48,10 @@ const Slider = ({ slides }) => {
 
         {/* MAIN CONTROLLERS */}
         <div className='absolute flex items-center justify-between inset-0 p-28 pointer-events-none'>
-          <button onClick={prevSlide} className={buttonClasses}>
+          <button onClick={prevSlide} className={mainButtonStyle}>
             <HiOutlineChevronLeft size={40} />
           </button>
-          <button onClick={nextSlide} className={buttonClasses}>
+          <button onClick={nextSlide} className={mainButtonStyle}>
             <HiOutlineChevronRight size={40} />
           </button>
         </div>
@@ -81,20 +82,20 @@ const Slider = ({ slides }) => {
 
         {/* repo buttons */}
         <div className='flex items-center gap-2'>
-          <button
-            className={smallButtonClasses}
-            onClick={() =>
-              window.open(slides[currentSlide].repositoryUrl, '_blank')
-            }>
+          <a
+            href={slides[currentSlide].repositoryUrl}
+            target='_blank'
+            rel='noopener noreferrer'
+            className={repoButtonStyle}>
             Repository <FaCode />
-          </button>
-          <button
-            className={smallButtonClasses}
-            onClick={() =>
-              window.open(slides[currentSlide].liveDemoUrl, '_blank')
-            }>
+          </a>
+          <a
+            href={slides[currentSlide].liveDemoUrl}
+            target='_blank'
+            rel='noopener noreferrer'
+            className={repoButtonStyle}>
             Demo <FaRegPlayCircle />
-          </button>
+          </a>
         </div>
       </div>
 
@@ -113,6 +114,21 @@ const Slider = ({ slides }) => {
       </div>
     </div>
   );
+};
+
+Slider.propTypes = {
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      src: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+      description: PropTypes.string.isRequired,
+      repositoryUrl: PropTypes.string.isRequired,
+      liveDemoUrl: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default Slider;
