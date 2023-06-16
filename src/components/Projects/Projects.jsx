@@ -13,7 +13,7 @@ const Projects = () => {
     {
       id: 1,
       src: ProjectOne,
-      alt: 'Surfbot',
+      alt: 'Surfbot website screenshot. Normal header, picture of man surfing taken from above, small form to the right, to start signing in.',
       title: 'Surfbot',
       description: `Developed a surfing school website from scratch, based on the "Advanced UI Design" course. Implemented the instructor's design to enhance UI skills and solidify coding proficiency.`,
       tags: ['HTML', 'CSS', 'JavaScript'],
@@ -23,7 +23,7 @@ const Projects = () => {
     {
       id: 2,
       src: ProjectTwo,
-      alt: 'SteelMane Motorcycles',
+      alt: 'SteelMane Motorcycles website screenshot. Black background, normal header, photo of black cruiser motorcycle on the right, hero intro on the left.',
       title: 'SteelMane Motorcycles',
       description:
         'Created a fictional brand website, showcasing custom and original motorcycles. Developed during the "UI Design for Beginners" and "HTML and CSS for Beginners" courses.',
@@ -34,7 +34,7 @@ const Projects = () => {
     {
       id: 3,
       src: ProjectThree,
-      alt: 'Animais Fantásticos',
+      alt: 'Animais Fantásticos website screenshot. Yellowinsh layout, header to the right, with the name of the site right bellow, articles about each fantastic beast and their pictures.',
       title: 'Animais Fantásticos',
       description:
         'Fantastic Beasts website project demonstrating advanced JavaScript skills. Effects and features were created from scratch during the JavaScript ES6+ course at Origamid.',
@@ -45,7 +45,7 @@ const Projects = () => {
     {
       id: 4,
       src: ProjectFour,
-      alt: 'GitPop',
+      alt: 'GitPop website screenshot. Simple layout with a logo and a search bar, filled with the user information provided by the GitHub API.',
       title: 'GitPop',
       description:
         "Web app to explore popular GitHub repositories and user profiles. Leveraging GitHub's API, GitPop provides insights into trending projects and showcases coding expertise.",
@@ -56,7 +56,7 @@ const Projects = () => {
     {
       id: 5,
       src: ProjectFive,
-      alt: 'Spectre',
+      alt: 'Spectre Band website screenshot. Centered layout, all black background, header like movie poster, with names on top of the screen, band logo bellow and a show picture behind.',
       title: 'Spectre Band',
       description:
         'Official website for Spectre, a fictional rock band. Utilized HTML5, CSS3, and vanilla JavaScript. Integrated Vite.js for accelerated development and personal skill enhancement.',
