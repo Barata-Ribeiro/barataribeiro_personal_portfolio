@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Kanit:wght@100;400;600&family=Roboto:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MAIN CUSTOM CSS */
+
+@layer base {
+  body {
+    @apply font-Roboto;
+    @apply text-mistGray-950;
+    @apply bg-mistGray-50;
+    @apply pt-[100px];
+  }
+}
+
+.navlink {
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 10px;
+    left: 0;
+    background: linear-gradient(270deg, #2b81e3 0%, transparent 100%);
+    transform-origin: bottom right;
+    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+.courses {
+  &::after {
+    content: attr(data-course);
+    @apply text-mistGray-50;
+    @apply bg-royalBlue-600;
+    position: absolute;
+    right: 0%;
+    top: 1%;
+    font-size: 60%;
+    padding: 0.6em;
+    border-radius: 50%;
+    line-height: 1em;
+    text-align: center;
+    min-width: 2em;
+    font-weight: 700;
+  }
+}
