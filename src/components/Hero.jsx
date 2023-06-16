@@ -2,22 +2,25 @@ import React from 'react';
 import { Element } from 'react-scroll';
 import Avatar from '/assets/img/avatar.jpg';
 import MainButton from './utils/Button';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Hero = () => {
-  const avatarStyle = {
-    height: '6rem',
-    width: '6rem',
-    background: `url(${Avatar}) no-repeat center/cover`,
-    borderRadius: '50%',
-  };
-
   return (
     <Element name='home'>
       <main className='' aria-label='Site home page'>
         <div className={`mt-[13rem] mb-[7.5rem]`}>
           {/* Hero info */}
           <div className='flex flex-col items-center leading-none text-mistGray-950 text-center gap-6'>
-            <div style={avatarStyle}></div>
+            <LazyLoadImage
+              key='avatar'
+              height={96}
+              width={96}
+              className='rounded-full'
+              src={Avatar}
+              alt='avatar'
+              effect='blur'
+            />
             <div>
               <h1 className='uppercase font-Kanit font-semibold tracking-wider text-5xl text-mistGray-950'>
                 <span className='normal-case font-Robot text-[0.875rem] font-normal tracking-normal -mr-2'>
