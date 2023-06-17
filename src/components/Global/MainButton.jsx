@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 
 const Button = ({
@@ -25,6 +26,14 @@ const Button = ({
       {buttonText} <HiArrowNarrowRight size={20} />
     </a>
   );
+};
+
+Button.propTypes = {
+  buttonText: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  target: PropTypes.string,
+  rel: PropTypes.string,
 };
 
 export default Button;

@@ -29,7 +29,7 @@ const ProjectCard = ({
           src={projectImg}
           className={
             hover
-              ? 'md:max-h-[500px] max-h-96 w-full object-cover'
+              ? 'md:max-h-[31.25rem] max-h-96 w-full object-cover'
               : 'md:max-h-52 max-h-96 w-full object-cover'
           }
         />

@@ -19,7 +19,7 @@ const Education = () => {
   return (
     <Element name='education'>
       <section aria-label='Education section' className='bg-mistGray-950'>
-        <div className='container max-w-[1440px] sm:py-32 xs:py-16 py-6 px-4'>
+        <div className='container max-w-[90rem] sm:py-32 xs:py-16 py-6 px-4'>
           <div className='flex justify-center'>
             <p className='max-w-2xl text-mistGray-500 leading-relaxed mb-4 text-center text-xl'>
               With a bachelor's in{' '}

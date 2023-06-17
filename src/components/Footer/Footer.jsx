@@ -1,42 +1,48 @@
 import React from 'react';
-import { menuItems } from '../Header/Header';
 import { Link } from 'react-scroll';
+import { menuItems } from '../Header/Header';
 import { FaLinkedinIn, FaGithub, FaMailBulk } from 'react-icons/fa';
 
 const Footer = () => {
-  const year = new Date().getFullYear();
   return (
-    <footer aria-label='Footer, the end' className='bg-mistGray-900'>
-      <div className='container max-w-[1440px] flex flex-col items-center py-16 sm:px-6 lg:px-8 px-4'>
-        <a
-          href='http://barataribeiro.com/'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='flex items-center flex-wrap uppercase font-Kanit font-semibold xs:text-2xl tracking-widest text-mistGray-50 text-xl'>
-          Barata
-          <span className='font-Comfortaa font-bold text-rioGrande-600 tracking-normal px-1'>
-            &#60;/&#62;
-          </span>
-          Ribeiro
-        </a>
+    <footer className='bg-[#201F1D] min-w-full box-border'>
+      <div className='pt-8 pb-4'>
+        {/* INTRO TEXT */}
+        <div className='flex flex-col justify-center items-center gap-6'>
+          <h1 className='font-Kanit text-[2.5rem] text-mistGray-50 uppercase leading-none'>
+            Get in Touch
+          </h1>
+          <p className='max-w-md text-mistGray-50 leading-relaxed text-center'>
+            Feel free to take an in-depth look at my projects, and let's discuss
+            the possibility of working together. I am eager to collaborate with
+            fellow professionals in the industry.
+          </p>
+        </div>
 
-        {/* Footer text */}
-        <p className='mt-6 max-w-md text-center leading-relaxed text-mistGray-50'>
-          Feel free to take an in-depth look at my projects, and let's discuss
-          the possibility of working together. I am eager to collaborate with
-          fellow professionals in the industry.
-        </p>
-
-        {/* Footer nav */}
-        <nav aria-label='Footer menu' className='mt-6'>
-          <ul className='flex xs:flex-wrap justify-center gap-2 sm:gap-6 md:gap-8 lg:gap-12 max-xs:text-sm'>
-            {menuItems.map((item, index) => (
-              <li key={index}>
+        {/* MENU */}
+        <nav className='flex flex-col justify-center items-center gap-10 mt-10'>
+          <a className='p-3 self-center' href='./'>
+            <h1
+              alt='Barata Ribeiro Logo'
+              className='uppercase font-Kanit font-semibold text-mistGray-50 text-3xl tracking-widest leading-none'>
+              Barata{' '}
+              <span className='font-Comfortaa font-bold leading-4 text-rioGrande-600 tracking-normal'>
+                &#60;/&#62;
+              </span>{' '}
+              Ribeiro
+            </h1>
+          </a>
+          <ul className='flex gap-2 self-center'>
+            {menuItems.map((item) => (
+              <li
+                className='text-mistGray-50 border-r last:border-none pr-2 leading-none'
+                key={item.url}>
                 <Link
-                  className='text-mistGray-50 transition hover:text-royalBlue-500 hover:underline cursor-pointer'
+                  className={`cursor-pointer hover:text-royalBlue-100`}
                   to={item.url}
                   spy={true}
                   smooth={true}
+                  offset={-90}
                   duration={500}>
                   {item.text}
                 </Link>
@@ -45,10 +51,10 @@ const Footer = () => {
           </ul>
         </nav>
 
-        {/* Footer social */}
+        {/* SOCIAL */}
         <ul
           aria-label='Social and email'
-          className='mt-6 flex justify-center gap-6 md:gap-8'>
+          className='flex justify-center items-center gap-6 my-10'>
           <li>
             <a
               href='https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/'
@@ -56,7 +62,7 @@ const Footer = () => {
               target='_blank'
               className='text-mistGray-50 transition-colors hover:text-royalBlue-500'>
               <span className='sr-only'>LinkedIn</span>
-              <FaLinkedinIn />
+              <FaLinkedinIn size={40} />
             </a>
           </li>
           <li>
@@ -66,7 +72,7 @@ const Footer = () => {
               target='_blank'
               className='text-mistGray-50 transition-colors hover:text-royalBlue-500'>
               <span className='sr-only'>GitHub</span>
-              <FaGithub />
+              <FaGithub size={40} />
             </a>
           </li>
           <li>
@@ -76,14 +82,16 @@ const Footer = () => {
               target='_blank'
               className='text-mistGray-50 transition-colors hover:text-royalBlue-500'>
               <span className='sr-only'>Send Mail</span>
-              <FaMailBulk />
+              <FaMailBulk size={40} />
             </a>
           </li>
         </ul>
 
-        {/* Footer copyright */}
-        <p className='text-center text-slate-50 mt-6'>
-          Copyright © {year} - <span>Some rights reserved.</span>
+        {/* END MENU */}
+        <p className='text-mistGray-600 text-center text-xs'>
+          <span className='block'>Copyright &copy; 2023 - Barata Ribeiro</span>{' '}
+          All content referenced herein are the properties of their respective
+          owners.
         </p>
       </div>
     </footer>

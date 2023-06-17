@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const SmallButton = ({
@@ -35,6 +36,15 @@ const SmallButton = ({
       </p>
     </a>
   );
+};
+
+SmallButton.propTypes = {
+  href: PropTypes.string.isRequired,
+  icon: PropTypes.element.isRequired,
+  title: PropTypes.string.isRequired,
+  target: PropTypes.string,
+  rel: PropTypes.string,
+  text: PropTypes.string.isRequired,
 };
 
 export default SmallButton;

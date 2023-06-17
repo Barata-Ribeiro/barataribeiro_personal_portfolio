@@ -8,7 +8,7 @@ const Hero = () => {
       <main
         aria-label='Site home page'
         className='bg-mistGray-950 bg-heroBackground bg-center bg-cover bg-no-repeat h-screen w-full'>
-        <div className={`container max-w-[1440px] sm:py-64 py-40 px-4`}>
+        <div className={`container max-w-[90rem] sm:py-64 py-40 px-4`}>
           {/* Hero info */}
           <div className='flex flex-col items-start leading-none text-mistGray-950 max-sm:items-center max-sm:text-center'>
             <div>

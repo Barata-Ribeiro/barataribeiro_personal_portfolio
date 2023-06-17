@@ -51,12 +51,12 @@ const Header = () => {
     <header
       className={
         shadow
-          ? 'fixed top-0 bg-mistGray-50 shadow-lg w-full z-50 h-[100px]'
-          : 'fixed top-0 bg-mistGray-50 w-full z-50 h-[100px]'
+          ? 'fixed top-0 bg-mistGray-50 shadow-lg w-full z-50 h-[6.25rem]'
+          : 'fixed top-0 bg-mistGray-50 w-full z-50 h-[6.25rem]'
       }>
       <nav
         aria-label='Site main navigation'
-        className='container max-w-[1440px] flex justify-between items-center px-4 max-md:pt-3 max-sm:pt-4 max-[360px]:pt-[6px]'>
+        className='container max-w-[90rem] flex justify-between items-center px-4 max-md:pt-3 max-sm:pt-4 max-[22.5rem]:pt-[0.375rem]'>
         {/* logo */}
         {miniLogo ? (
           <a
@@ -92,7 +92,7 @@ const Header = () => {
           {menuItems.map((item) => (
             <li className='my-0 ml-2 font-Kanit text-2xl' key={item.url}>
               <Link
-                className='navlink relative p-3 cursor-pointer'
+                className='relative p-3 cursor-pointer hover:bg-mistGray-100 hover:rounded-lg transition-all duration-75'
                 to={item.url}
                 spy={true}
                 smooth={true}
@@ -127,7 +127,7 @@ const Header = () => {
               className='m-2 p-3 font-Kanit text-3xl font-semibold'
               key={item.url}>
               <Link
-                className='navlink relative pb-4 cursor-pointer'
+                className='relative py-2 px-4 cursor-pointer hover:bg-mistGray-100 hover:rounded-lg transition-all duration-75'
                 to={item.url}
                 spy={true}
                 smooth={true}
