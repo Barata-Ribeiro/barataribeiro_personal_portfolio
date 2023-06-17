@@ -1,6 +1,6 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import aboutImage from '/public/assets/img/illustration.jpg';
+import aboutImage from '/public/assets/img/about-photo.jpg';
 import SocialButtons from '../Global/SocialButton';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { SiMaildotru } from 'react-icons/si';
@@ -8,11 +8,17 @@ import { SiMaildotru } from 'react-icons/si';
 const About = () => {
   return (
     <Element name='about'>
-      <section aria-label='About section' className='bg-mistGray-950'>
-        <div className='container max-w-[90rem] sm:py-32 xs:py-16 py-6 px-4'>
+      <section
+        aria-label='About section'
+        style={{
+          boxShadow:
+            'inset 0px 48px 0px 0px rgba(5,4,1,1), inset 0px -48px 0px 0px rgba(75,73,67,1)',
+        }}
+        className='bg-mistGray-950'>
+        <div className='container max-w-[90rem] px-4'>
           <div className='flex justify-between items-center flex-col sm:flex-row'>
             <img
-              className='md:h-[46.25rem] md:w-[31.25rem] sm:h-96 sm:w-96 h-fit w-full object-cover max-sm:hidden'
+              className='md:h-[48rem] md:w-[31.25rem] sm:h-96 sm:w-96 h-fit w-full object-cover rounded-lg max-sm:hidden'
               src={aboutImage}
               alt='Photograph of a computer screen showing javascript code'
             />
@@ -28,31 +34,28 @@ const About = () => {
                   </h3>
                 </div>
                 <p className='max-w-xl text-mistGray-500 sm:text-right xs:text-justify leading-relaxed mt-4 text-center'>
-                  As a someone possessing a robust academic background in{' '}
+                  With a solid academic foundation in{' '}
                   <span className='text-mistGray-50'>
                     Business Administration
-                  </span>
-                  , complemented by graduate courses in
+                  </span>{' '}
+                  and graduate courses in{' '}
                   <span className='text-mistGray-50'>
-                    {' '}
                     Strategic People Management
                   </span>{' '}
                   and{' '}
                   <span className='text-mistGray-50'>Project Management</span>,
-                  my professional ethos revolves around fusing strategy and
-                  execution. My ambition is to craft and deliver projects that
-                  are not only visually impressive but also pragmatically
-                  efficient. Currently, I am delving deeper into the realms of
+                  I want to blend strategy and execution. My goal is to create
+                  and deliver projects that not only look good but also work
+                  efficiently in practice. Right now, I'm diving into the world
+                  of{' '}
                   <span className='text-mistGray-50'>
-                    {' '}
                     Front-end Development
                   </span>{' '}
                   and <span className='text-mistGray-50'>UI Design</span>,
-                  intending to architect visually compelling and user-centric
-                  interfaces that enhance user interaction and satisfaction. In
-                  addition, I am enthusiastic about utilizing my distinctive
-                  capabilities to drive the success of forward-thinking teams
-                  and organizations.
+                  aiming to design eye-catching interfaces that prioritize user
+                  experience and satisfaction. I can’t wait to use my developing
+                  set of skills to contribute to the success of forward-thinking
+                  teams and organizations. Let's make great things happen!
                 </p>
               </div>
               <span className='text-mistGray-50'></span>
