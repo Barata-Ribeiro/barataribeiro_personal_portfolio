@@ -28,9 +28,9 @@ const Hero = () => {
               </p>
             </div>
             <Button
-              buttonText={'Check GitHub'}
+              buttonText={'GitHub'}
               href={'https://github.com/Barata-Ribeiro'}
-              title={'Check GitHub'}
+              title={'GitHub'}
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { HiArrowNarrowRight } from 'react-icons/hi';
+import { FaGithub } from 'react-icons/fa';
 
 const Button = ({
   buttonText,
@@ -16,14 +16,12 @@ const Button = ({
       rel={rel}
       target={target}
       className={`
-      flex justify-between items-center
-      gap-x-1 mt-6 py-3 px-8
-      bg-royalBlue-600 text-mistGray-50
-      border-2 border-royalBlue-700 rounded-lg
-      font-Kanit font-semibold tracking-wider
-      hover:bg-mistGray-50 hover:border-royalBlue-600 hover:text-royalBlue-600 hover:gap-x-4 transition-all
-    `}>
-      {buttonText} <HiArrowNarrowRight size={20} />
+      flex justify-center items-center gap-2 py-3 px-4 max-w-max mt-6
+      border-2 border-royalBlue-700 bg-royalBlue-600 rounded-lg
+      font-Kanit text-mistGray-50 text-sm font-semibold tracking-wider
+      
+      hover:border-royalBlue-600 hover:bg-mistGray-50 hover:text-royalBlue-600 hover:px-8 transition-all`}>
+      <FaGithub /> {buttonText}
     </a>
   );
 };
