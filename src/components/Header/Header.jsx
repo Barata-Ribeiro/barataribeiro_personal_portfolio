@@ -56,7 +56,7 @@ const Header = () => {
       }>
       <nav
         aria-label='Site main navigation'
-        className='container max-w-[90rem] flex justify-between items-center px-4 max-md:pt-3 max-sm:pt-4 max-[22.5rem]:pt-[0.375rem]'>
+        className='container max-w-[90rem] flex justify-between items-center px-4 max-md:pt-3 max-sm:pt-[0.4rem] max-[22.5rem]:pt-[0.375rem]'>
         {/* logo */}
         {miniLogo ? (
           <a

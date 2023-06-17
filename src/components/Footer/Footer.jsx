@@ -6,13 +6,13 @@ import { FaLinkedinIn, FaGithub, FaMailBulk } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className='bg-[#201F1D] min-w-full box-border'>
-      <div className='pt-8 pb-4'>
+      <div className='sm:pt-8 pt-6 pb-4'>
         {/* INTRO TEXT */}
         <div className='flex flex-col justify-center items-center gap-6'>
           <h1 className='font-Kanit text-[2.5rem] text-mistGray-50 uppercase leading-none'>
             Get in Touch
           </h1>
-          <p className='max-w-md text-mistGray-50 leading-relaxed text-center'>
+          <p className='max-w-md text-mistGray-50 leading-relaxed text-center max-sm:px-4'>
             Feel free to take an in-depth look at my projects, and let's discuss
             the possibility of working together. I am eager to collaborate with
             fellow professionals in the industry.
@@ -24,7 +24,7 @@ const Footer = () => {
           <a className='p-3 self-center' href='./'>
             <h1
               alt='Barata Ribeiro Logo'
-              className='uppercase font-Kanit font-semibold text-mistGray-50 text-3xl tracking-widest leading-none'>
+              className='uppercase font-Kanit font-semibold text-mistGray-50 sm:text-3xl max-xs:text-xl tracking-widest leading-none'>
               Barata{' '}
               <span className='font-Comfortaa font-bold leading-4 text-rioGrande-600 tracking-normal'>
                 &#60;/&#62;
@@ -32,10 +32,10 @@ const Footer = () => {
               Ribeiro
             </h1>
           </a>
-          <ul className='flex gap-2 self-center'>
+          <ul className='flex gap-2 self-center max-sm:text-sm'>
             {menuItems.map((item) => (
               <li
-                className='text-mistGray-50 border-r last:border-none pr-2 leading-none'
+                className='text-mistGray-50 border-r last:border-none pr-2 last:pr-0 leading-none'
                 key={item.url}>
                 <Link
                   className={`cursor-pointer hover:text-royalBlue-100`}
