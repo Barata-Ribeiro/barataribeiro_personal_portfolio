@@ -18,65 +18,64 @@ const ProjectCard = ({
   const handleMouseLeave = () => {
     setHover(false);
   };
+
   return (
-    <div className='flex flex-wrap items-center max-md:px-4'>
+    <div
+      className='rounded-xl relative overflow-hidden shadow-lg'
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}>
+      <img
+        className={
+          hover
+            ? 'w-full rounded-xl block transition-transform scale-105'
+            : 'w-full rounded-xl block transition-transform'
+        }
+        src={projectImg}
+        alt={projectAlt}
+      />
       <div
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        className='overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl rounded-lg md:w-80 sm:max-w-xs max-w-sm'>
-        <img
-          alt={projectAlt}
-          src={projectImg}
-          className={
-            hover
-              ? 'md:max-h-[31.25rem] max-h-96 w-full object-cover'
-              : 'md:max-h-52 max-h-96 w-full object-cover'
-          }
-        />
-        <div className='bg-mistGray-50 w-full p-4'>
-          <h3 className='font-Kanit text-mistGray-950 text-2xl font-semibold tracking-wide'>
-            <span className='text-rioGrande-600 mr-1'>.</span>
-            {projectTitle}
-          </h3>
-          <p
-            className={
-              hover
-                ? 'hidden text-mistGray-700 font-light text-sm leading-relaxed'
-                : 'text-mistGray-700 font-light text-sm leading-relaxed'
-            }>
-            {projectDesc}
-          </p>
-          <div className='flex flex-wrap justify-starts items-center py-3 border-b-2 text-xs text-white font-medium'>
-            {projectTech.map((tech) => (
-              <span
-                key={tech}
-                className='m-1 px-2 py-1 rounded bg-mistGray-500 font-semibold'>
-                {tech.charAt(0).toUpperCase() + tech.slice(1)}
-              </span>
-            ))}
-          </div>
-          <div className='flex justify-between items-center'>
-            <a
-              href={projectRepo}
-              target='_blank'
-              rel='noreferrer noopener'
-              className={`flex items-center gap-2 cursor-pointer mt-3 px-2 py-1 rounded-lg bg-royalBlue-500 
+        className={
+          hover
+            ? 'h-full w-full bg-gradient-to-t from-mistGray-950 via-mistGray-900 to-transparent rounded-lg absolute left-0 bottom-0 overflow-hidden flex items-center justify-center flex-col px-10 text-center text-sm transition-all'
+            : 'h-0 w-full bg-gradient-to-t from-mistGray-950 via-mistGray-900 to-transparent rounded-lg absolute left-0 bottom-0 overflow-hidden flex items-center justify-center flex-col px-10 text-center text-sm transition-all'
+        }>
+        <h3 className='font-Kanit text-mistGray-100 text-3xl font-semibold tracking-wide mt-[50%]'>
+          <span className='text-rioGrande-600 mr-1'>.</span>
+          {projectTitle}
+        </h3>
+        <p className='text-mistGray-50 font-light text-base leading-relaxed'>
+          {projectDesc}
+        </p>
+        <div className='flex flex-wrap justify-starts items-center text-xs text-white font-medium gap-2 mt-4'>
+          {projectTech.map((tech) => (
+            <span
+              key={tech}
+              className='px-2 py-1 rounded bg-mistGray-500 font-semibold'>
+              {tech.charAt(0).toUpperCase() + tech.slice(1)}
+            </span>
+          ))}
+        </div>
+        <div className='flex justify-between items-center gap-2 mt-4'>
+          <a
+            href={projectRepo}
+            target='_blank'
+            rel='noreferrer noopener'
+            className={`flex items-center gap-2 cursor-pointer px-2 py-1 rounded-lg bg-royalBlue-500 
               border-2 border-royalBlue-600 text-mistGray-50 text-sm font-semibold tracking-wide
               
               hover:bg-mistGray-50 hover:border-royalBlue-500 hover:text-royalBlue-500`}>
-              Repository <FaCode />
-            </a>
-            <a
-              href={projectDemo}
-              target='_blank'
-              rel='noreferrer noopener'
-              className={`flex items-center gap-2 cursor-pointer mt-3 px-2 py-1 rounded-lg bg-royalBlue-500 
+            Repository <FaCode />
+          </a>
+          <a
+            href={projectDemo}
+            target='_blank'
+            rel='noreferrer noopener'
+            className={`flex items-center gap-2 cursor-pointer px-2 py-1 rounded-lg bg-royalBlue-500 
               border-2 border-royalBlue-600 text-mistGray-50 text-sm font-semibold tracking-wide
               
               hover:bg-mistGray-50 hover:border-royalBlue-500 hover:text-royalBlue-500`}>
-              Demo <FaRegPlayCircle />
-            </a>
-          </div>
+            Demo <FaRegPlayCircle />
+          </a>
         </div>
       </div>
     </div>

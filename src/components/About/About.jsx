@@ -1,28 +1,38 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import aboutImage from '/public/assets/img/about-photo.jpg';
+import aboutImage from '/assets/img/about-photo.jpg';
 import SocialButtons from '../Global/SocialButton';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { SiMaildotru } from 'react-icons/si';
 
 const About = () => {
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+  React.useEffect(() => {
+    const handleSize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleSize);
+    return () => window.removeEventListener('resize', handleSize);
+  }, []);
+
+  const boxShadow =
+    windowWidth > 1060
+      ? 'inset 0px 48px 0px 0px rgba(5,4,1,1), inset 0px -48px 0px 0px rgba(75,73,67,1)'
+      : 'initial';
+
   return (
     <Element name='about'>
       <section
         aria-label='About section'
-        style={{
-          boxShadow:
-            'inset 0px 48px 0px 0px rgba(5,4,1,1), inset 0px -48px 0px 0px rgba(75,73,67,1)',
-        }}
+        style={{ boxShadow }}
         className='bg-mistGray-950'>
         <div className='container max-w-[90rem] px-4'>
           <div className='flex justify-between items-center flex-col sm:flex-row'>
             <img
-              className='md:h-[48rem] md:w-[31.25rem] sm:h-96 sm:w-96 h-fit w-full object-cover rounded-lg max-sm:hidden'
+              className='md:h-[48rem] md:w-[31.25rem] sm:h-96 sm:w-96 h-fit w-full object-cover sm:rounded-lg rounded-none max-sm:hidden'
               src={aboutImage}
               alt='Photograph of a computer screen showing javascript code'
             />
-            <div className='flex flex-col items-start sm:items-end mt-6 sm:mt-0 max-sm:items-center'>
+            <div className='flex flex-col items-start sm:items-end my-6 sm:my-0 max-sm:items-center'>
               <div>
                 <div className='text-left sm:text-right max-sm:text-center'>
                   <h2 className='text-2xl text-mistGray-700 leading-tight'>
