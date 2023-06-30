@@ -1,7 +1,9 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 import aboutImage from '/assets/img/about-photo.jpg';
-import SocialButtons from '../Global/SocialButton';
+import SocialButtons from './Utils/SocialButton';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { SiMaildotru } from 'react-icons/si';
 
@@ -27,9 +29,10 @@ const About = () => {
         className='bg-mistGray-950'>
         <div className='container max-w-[90rem] px-4'>
           <div className='flex justify-between items-center flex-col sm:flex-row'>
-            <img
+            <LazyLoadImage
               className='md:h-[48rem] md:w-[31.25rem] sm:h-96 sm:w-96 h-fit w-full object-cover sm:rounded-lg rounded-none max-sm:hidden'
               src={aboutImage}
+              effect='black-and-white'
               alt='Photograph of a computer screen showing javascript code'
             />
             <div className='flex flex-col items-start sm:items-end my-6 sm:my-0 max-sm:items-center'>

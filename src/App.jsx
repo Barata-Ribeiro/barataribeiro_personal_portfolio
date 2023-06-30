@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Projects from './components/Projects/Projects';
-import Education from './components/Education/Education';
-import Footer from './components/Footer/Footer';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Education from './components/Education';
+import Footer from './components/Footer';
 
 const HeaderMemo = React.memo(Header);
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import ProjectCard from './ProjectCard';
+import ProjectCard from './Utils/ProjectCard';
 import ProjectOne from '/assets/img/projectsImages/steelManeMotors.jpg';
 import ProjectTwo from '/assets/img/projectsImages/surfbot.jpg';
 import ProjectThree from '/assets/img/projectsImages/animais-fantasticos.jpg';

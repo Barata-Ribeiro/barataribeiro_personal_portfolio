@@ -123,6 +123,15 @@ const Education = () => {
               </li>
             ))}
           </ol>
+          <div className='flex flex-col place-items-center mt-6'>
+            <a
+              href='www.linkedin.com/in/joão-mendes-jorge-barata-ribeiro-645073118'
+              rel='noreferrer'
+              target='_blank'
+              className='sm:text-xl text-base font-semibold text-center text-mistGray-500 underline underline-offset-4 transition-colors hover:text-royalBlue-500'>
+              Check LinkedIn for Certifications...
+            </a>
+          </div>
         </div>
       </section>
     </Element>

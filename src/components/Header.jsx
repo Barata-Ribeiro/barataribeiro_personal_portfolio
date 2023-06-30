@@ -56,23 +56,24 @@ const Header = () => {
       }>
       <nav
         aria-label='Site main navigation'
-        className='container max-w-[90rem] flex justify-between items-center px-4 max-md:pt-3 max-sm:pt-[0.4rem] max-[22.5rem]:pt-[0.375rem]'>
+        className='container max-w-[90rem] flex justify-between items-center px-4 max-md:pt-3 max-sm:pt-[1rem] max-316:pt-[0.5rem]'>
         {/* logo */}
         {miniLogo ? (
-          <a
+          <Link
+            spy={true}
             className='py-5 uppercase font-Kanit font-semibold flex items-center text-2xl'
             href='./'>
             <span className='font-Comfortaa font-bold text-rioGrande-600 tracking-normal mr-2 border-r-2 border-rioGrande-600 pr-2'>
               &#60;/&#62;
             </span>
             <h1
-              alt='Barata Ribeiro Logo'
+              title='Barata Ribeiro Logo'
               className='text-mistGray-950 tracking-wider leading-none'>
               Barata
               <br />
               Ribeiro
             </h1>
-          </a>
+          </Link>
         ) : (
           <a className='py-5' href='./'>
             <h1

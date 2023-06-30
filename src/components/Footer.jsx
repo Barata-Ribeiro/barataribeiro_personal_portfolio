@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import { menuItems } from '../Header/Header';
+import { menuItems } from './Header';
 import { FaLinkedinIn, FaGithub, FaMailBulk } from 'react-icons/fa';
 
 const Footer = () => {
