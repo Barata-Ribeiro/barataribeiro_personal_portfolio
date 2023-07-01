@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from "prop-types";
+import React from "react";
 
 const SmallButton = ({
   href,
   icon,
   title,
-  target = '_blank',
-  rel = 'noopener noreferrer',
+  target = "_blank",
+  rel = "noopener noreferrer",
   text,
 }) => {
   const [hovered, setHovered] = React.useState(false);
@@ -25,12 +25,14 @@ const SmallButton = ({
       href={href}
       title={title}
       target={target}
-      rel={rel}>
+      rel={rel}
+    >
       {icon}
       <p
         style={{ width: hovered ? ref.current?.offsetWidth || 0 : 0 }}
-        className='overflow-x-hidden transition-all duration-300 ease-out'>
-        <span ref={ref} className='px-1.5'>
+        className="overflow-x-hidden transition-all duration-300 ease-out"
+      >
+        <span ref={ref} className="px-1.5">
           {text}
         </span>
       </p>
