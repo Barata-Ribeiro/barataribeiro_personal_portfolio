@@ -11,6 +11,9 @@ export default {
       backgroundImage: {
         heroBackground: "url('/assets/img/cloudsBackground.jpg')",
       },
+      boxShadow: {
+        'about': 'inset 0px 48px 0px 0px rgba(5,4,1,1), inset 0px -48px 0px 0px rgba(75,73,67,1)'
+      },
       fontFamily: {
         Roboto: ['Roboto', 'sans-serif'],
         Kanit: ['Kanit', 'sans-serif'],
