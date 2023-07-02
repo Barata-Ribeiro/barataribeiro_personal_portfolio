@@ -23,7 +23,7 @@ const Education = () => {
   return (
     <Element name="education">
       <section aria-label="Education section" className="bg-mistGray-950">
-        <div className="container max-w-[90rem] sm:py-32 xs:py-16 py-6 px-4">
+        <div className="container max-w-[90rem] sm:pt-32 xs:pt-16 pt-6 px-4">
           <div className="flex justify-center">
             <p className="max-w-2xl text-mistGray-500 leading-relaxed mb-4 text-center text-xl">
               With a bachelor's in{" "}
@@ -107,7 +107,7 @@ const Education = () => {
           <h1 className="sm:text-3xl text-2xl font-semibold text-center text-mistGray-50 mt-8 mb-4">
             Intensive Courses
           </h1>
-          <ol className="flex flex-wrap-reverse lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+          <ol className="flex flex-wrap-reverse lg:w-4/5 sm:mx-auto -mx-2">
             {intensiveCourses.map((course, index) => (
               <li
                 data-course={`${index + 1}`}
@@ -131,7 +131,7 @@ const Education = () => {
               </li>
             ))}
           </ol>
-          <div className="flex flex-col place-items-center mt-6">
+          <div className="flex flex-col place-items-center sm:py-16 xs:py-8 py-3">
             <a
               href="https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/"
               rel="noreferrer"

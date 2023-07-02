@@ -6,15 +6,26 @@ import ProjectTwo from "/assets/img/projectsImages/surfbot.jpg";
 import ProjectThree from "/assets/img/projectsImages/animais-fantasticos.jpg";
 import ProjectFour from "/assets/img/projectsImages/gitpop.jpg";
 import ProjectFive from "/assets/img/projectsImages/spectre_band.jpg";
+import ProjectSix from "/assets/img/projectsImages/delightful-indulgence.jpg";
 
 const Projects = () => {
   const projectList = [
     {
+      id: "delightful-indulgence",
+      title: "Delightful Indulgence",
+      desc: "Website for a fictitious dessert shop that creates gourmet desserts for couples. Through Figma towards coding, with the purpose of training React and React Router.",
+      img: ProjectSix,
+      alt: "Delightful Indulgence",
+      tech: ["React", "React Router", "CSS Modules", "Vite.js"],
+      repo: "https://github.com/Barata-Ribeiro/delightful_indulgence",
+      demo: "https://barata-ribeiro.github.io/delightful_indulgence",
+    },
+    {
       id: "spectre-band",
       title: "Spectre",
-      desc: "Website for a fictional rock band, Spectre, for training typography concepts. Showcases contemporary web technologies to create a compelling user experience.",
+      desc: "Website for a fictional rock band. First, for training typography concepts, it also showcases contemporary web technologies to create a compelling user experience.",
       img: ProjectFive,
-      alt: "spectre band",
+      alt: "Spectre Band",
       tech: ["HTML", "CSS", "JavaScript", "Vite.js"],
       repo: "https://github.com/Barata-Ribeiro/spectre_band",
       demo: "https://barata-ribeiro.github.io/spectre_band/",
@@ -64,7 +75,7 @@ const Projects = () => {
   return (
     <Element name="projects">
       <section aria-label="Project section" className="bg-mistGray-900">
-        <div className="container max-w-[90rem] sm:py-32 xs:py-16 py-6 px-4">
+        <div className="container max-w-[90rem] sm:pt-32 xs:pt-16 pt-6 px-4">
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
             {projectList.map((project) => (
               <ProjectCard
@@ -79,6 +90,16 @@ const Projects = () => {
               />
             ))}
           </div>
+        </div>
+        <div className="flex flex-col place-items-center sm:py-16 xs:py-8 py-3">
+          <a
+            href="https://github.com/Barata-Ribeiro"
+            rel="noreferrer"
+            target="_blank"
+            className="sm:text-xl text-base font-semibold text-center text-mistGray-500 underline underline-offset-4 transition-colors hover:text-royalBlue-500"
+          >
+            Check GitHub for other projects...
+          </a>
         </div>
       </section>
     </Element>
