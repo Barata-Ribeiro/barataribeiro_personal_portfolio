@@ -1,7 +1,6 @@
 {
   "name": "personal_portfolio",
-  "private": true,
-  "homepage": "https://Barata-Ribeiro.github.io/barataribeiro_personal_portfolio/",
+  "homepage": "https://barataribeiro.com/",
   "version": "0.1.0",
   "type": "module",
   "scripts": {

@@ -7,9 +7,20 @@ import ProjectThree from "/assets/img/projectsImages/animais-fantasticos.jpg";
 import ProjectFour from "/assets/img/projectsImages/gitpop.jpg";
 import ProjectFive from "/assets/img/projectsImages/spectre_band.jpg";
 import ProjectSix from "/assets/img/projectsImages/delightful-indulgence.jpg";
+import ProjectSeven from "/assets/img/projectsImages/dogs.jpg";
 
 const Projects = () => {
   const projectList = [
+    {
+      id: "dogs",
+      title: "Dogs",
+      desc: "A dedicated social platform for dog enthusiasts, enabling photo sharing, and interactive communication, born out of the complete React course, using the teacher's API.",
+      img: ProjectSeven,
+      alt: "Dogs",
+      tech: ["React", "React Router", "React Hooks", "CSS Modules", "Vite.js"],
+      repo: "https://github.com/Barata-Ribeiro/Dogs",
+      demo: "https://dogs-lake.vercel.app/",
+    },
     {
       id: "delightful-indulgence",
       title: "Delightful Indulgence",
@@ -36,14 +47,14 @@ const Projects = () => {
       desc: "A user-friendly web app that displays trending GitHub repositories and profile stats by leveraging the GitHub API. An insightful tool for exploring coding prowess.",
       img: ProjectFour,
       alt: "gitpop",
-      tech: ["React", "Vite.js", "Tailwind CSS"],
+      tech: ["React", "Tailwind CSS", "Vite.js"],
       repo: "https://github.com/Barata-Ribeiro/GitPop",
       demo: "https://barata-ribeiro.github.io/GitPop/",
     },
     {
       id: "fantastic-beasts",
       title: "Fantastic Beasts",
-      desc: "Showcasing front-end development skills, this project was developed during an complete JavaScript course. It displays creativity and practical programming applications.",
+      desc: "Showcasing front-end development skills, this project was developed during a complete JavaScript course. It displays creativity and practical programming applications.",
       img: ProjectThree,
       alt: "Fantastic Beasts",
       tech: ["JavaScript", "HTML", "CSS"],
@@ -77,7 +88,7 @@ const Projects = () => {
       <section aria-label="Project section" className="bg-mistGray-900">
         <div className="container max-w-[90rem] sm:pt-32 xs:pt-16 pt-6 px-4">
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
-            {projectList.map((project) => (
+            {projectList.slice(0, 6).map((project) => (
               <ProjectCard
                 key={project.id}
                 projectTitle={project.title}
@@ -98,7 +109,7 @@ const Projects = () => {
             target="_blank"
             className="sm:text-xl text-base font-semibold text-center text-mistGray-500 underline underline-offset-4 transition-colors hover:text-royalBlue-500"
           >
-            Check GitHub for other projects...
+            Check GitHub for more projects...
           </a>
         </div>
       </section>
