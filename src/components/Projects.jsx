@@ -29,7 +29,7 @@ const Projects = () => {
       alt: "Delightful Indulgence",
       tech: ["React", "React Router", "CSS Modules", "Vite.js"],
       repo: "https://github.com/Barata-Ribeiro/delightful_indulgence",
-      demo: "https://barata-ribeiro.github.io/delightful_indulgence",
+      demo: "https://delightful-indulgence.vercel.app/",
     },
     {
       id: "spectre-band",
@@ -104,8 +104,8 @@ const Projects = () => {
         </div>
         <div className="flex flex-col place-items-center sm:py-16 xs:py-8 py-3">
           <a
-            href="https://github.com/Barata-Ribeiro"
-            rel="noreferrer"
+            href="https://github.barataribeiro.com/"
+            rel="noreferrer noopener"
             target="_blank"
             className="sm:text-xl text-base font-semibold text-center text-mistGray-500 underline underline-offset-4 transition-colors hover:text-royalBlue-500"
           >

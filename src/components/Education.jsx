@@ -134,7 +134,7 @@ const Education = () => {
           <div className="flex flex-col place-items-center sm:py-16 xs:py-8 py-3">
             <a
               href="https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               target="_blank"
               className="sm:text-xl text-base font-semibold text-center text-mistGray-500 underline underline-offset-4 transition-colors hover:text-royalBlue-500"
             >
