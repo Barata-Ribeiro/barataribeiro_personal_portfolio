@@ -20,22 +20,45 @@ const Education = () => {
     { id: "course10", course: "Complete React JS", place: "Origamid" },
   ];
 
+  const renderCourses = (course, index) => {
+    return (
+      <li
+        data-course={`${index + 1}`}
+        className="relative courses p-2 sm:w-1/2 w-full"
+        key={course.id}
+      >
+        <div className="flex justify-between bg-mistGray-50 rounded p-4 h-full items-center">
+          <div className="flex items-center">
+            <FaCheckCircle
+              className="text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4"
+              aria-hidden="true"
+            />
+            <span className="font-semibold tracking-wide">{course.course}</span>
+          </div>
+          <span className="text-mistGray-300 font-semibold tracking-wide max-xs:hidden">
+            {course.place}
+          </span>
+        </div>
+      </li>
+    );
+  };
+
   return (
     <Element name="education">
       <section aria-label="Education section" className="bg-mistGray-950">
         <div className="container max-w-[90rem] sm:pt-32 xs:pt-16 pt-6 px-4">
           <div className="flex justify-center">
             <p className="max-w-2xl text-mistGray-500 leading-relaxed mb-4 text-center text-xl">
-              With a bachelor's in{" "}
+              Dive into my educational track: a Bachelor's in{" "}
               <span className="text-mistGray-50">Business Administration</span>,
-              with two{" "}
-              <span className="text-mistGray-50">graduate courses</span> in the
-              field, I am currently specializing in{" "}
+              followed by two enriching{" "}
+              <span className="text-mistGray-50">graduate courses</span>. Now,
+              I'm adding a creative edge to my profile, specializing in{" "}
               <span className="text-mistGray-50">UI Design</span> and{" "}
-              <span className="text-mistGray-50">Front-end</span> development
-              through online courses. I aim to combine analytical and strategic
-              skills with creative abilities to create efficient and intuitive
-              user interfaces.
+              <span className="text-mistGray-50">Front-End Development</span>{" "}
+              through intensive{" "}
+              <span className="text-mistGray-50">online courses</span>. Explore
+              below!
             </p>
           </div>
 
@@ -108,28 +131,7 @@ const Education = () => {
             Intensive Courses
           </h1>
           <ol className="flex flex-wrap-reverse lg:w-4/5 sm:mx-auto -mx-2">
-            {intensiveCourses.map((course, index) => (
-              <li
-                data-course={`${index + 1}`}
-                className="relative courses p-2 sm:w-1/2 w-full"
-                key={course.id}
-              >
-                <div className="flex justify-between bg-mistGray-50 rounded p-4 h-full items-center">
-                  <div className="flex items-center">
-                    <FaCheckCircle
-                      className="text-rioGrande-600 w-6 h-6 flex-shrink-0 mr-4"
-                      aria-hidden="true"
-                    />
-                    <span className="font-semibold tracking-wide">
-                      {course.course}
-                    </span>
-                  </div>
-                  <span className="text-mistGray-300 font-semibold tracking-wide max-xs:hidden">
-                    {course.place}
-                  </span>
-                </div>
-              </li>
-            ))}
+            {intensiveCourses?.map(renderCourses)}
           </ol>
           <div className="flex flex-col place-items-center sm:py-16 xs:py-8 py-3">
             <a

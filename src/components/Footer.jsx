@@ -3,6 +3,26 @@ import { Link } from "react-scroll";
 import { menuItems } from "./Header";
 import { FaLinkedinIn, FaGithub, FaMailBulk } from "react-icons/fa";
 
+const renderFooterMenu = (item) => {
+  return (
+    <li
+      className="text-mistGray-50 border-r last:border-none pr-2 last:pr-0 leading-none"
+      key={item.url}
+    >
+      <Link
+        className={`cursor-pointer hover:text-royalBlue-100`}
+        to={item.url}
+        spy={true}
+        smooth={true}
+        offset={-90}
+        duration={500}
+      >
+        {item.text}
+      </Link>
+    </li>
+  );
+};
+
 const Footer = () => {
   return (
     <footer className="bg-[#201F1D] min-w-full box-border">
@@ -34,23 +54,7 @@ const Footer = () => {
             </h1>
           </a>
           <ul className="flex gap-2 self-center max-sm:text-sm">
-            {menuItems.map((item) => (
-              <li
-                className="text-mistGray-50 border-r last:border-none pr-2 last:pr-0 leading-none"
-                key={item.url}
-              >
-                <Link
-                  className={`cursor-pointer hover:text-royalBlue-100`}
-                  to={item.url}
-                  spy={true}
-                  smooth={true}
-                  offset={-90}
-                  duration={500}
-                >
-                  {item.text}
-                </Link>
-              </li>
-            ))}
+            {menuItems.map(renderFooterMenu)}
           </ul>
         </nav>
 

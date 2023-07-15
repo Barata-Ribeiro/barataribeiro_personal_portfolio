@@ -47,6 +47,41 @@ const Header = () => {
     };
   }, []);
 
+  const renderRegularMenu = (item) => {
+    return (
+      <li className="my-0 ml-2 font-Kanit text-2xl" key={item.url}>
+        <Link
+          className="relative p-3 cursor-pointer hover:bg-mistGray-100 hover:rounded-lg transition-all duration-75"
+          to={item.url}
+          spy={true}
+          smooth={true}
+          offset={-90}
+          duration={500}
+        >
+          {item.text}
+        </Link>
+      </li>
+    );
+  };
+
+  const renderMobileMenu = (item) => {
+    return (
+      <li className="m-2 p-3 font-Kanit text-3xl font-semibold" key={item.url}>
+        <Link
+          className="relative py-2 px-4 cursor-pointer hover:bg-mistGray-100 hover:rounded-lg transition-all duration-75"
+          to={item.url}
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-90}
+          onClick={handleClick}
+        >
+          {item.text}
+        </Link>
+      </li>
+    );
+  };
+
   return (
     <header
       className={
@@ -94,22 +129,7 @@ const Header = () => {
         )}
 
         {/* menu */}
-        <ul className="hidden sm:flex">
-          {menuItems.map((item) => (
-            <li className="my-0 ml-2 font-Kanit text-2xl" key={item.url}>
-              <Link
-                className="relative p-3 cursor-pointer hover:bg-mistGray-100 hover:rounded-lg transition-all duration-75"
-                to={item.url}
-                spy={true}
-                smooth={true}
-                offset={-90}
-                duration={500}
-              >
-                {item.text}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <ul className="hidden sm:flex">{menuItems?.map(renderRegularMenu)}</ul>
 
         {/* Hamburger */}
         <button onClick={handleClick} className="sm:hidden z-50">
@@ -130,28 +150,11 @@ const Header = () => {
               : "hidden"
           }
         >
-          {menuItems.map((item) => (
-            <li
-              className="m-2 p-3 font-Kanit text-3xl font-semibold"
-              key={item.url}
-            >
-              <Link
-                className="relative py-2 px-4 cursor-pointer hover:bg-mistGray-100 hover:rounded-lg transition-all duration-75"
-                to={item.url}
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-90}
-                onClick={handleClick}
-              >
-                {item.text}
-              </Link>
-            </li>
-          ))}
+          {menuItems.map(renderMobileMenu)}
         </ul>
       </nav>
     </header>
   );
 };
 
-export default React.memo(Header);
+export default Header;
