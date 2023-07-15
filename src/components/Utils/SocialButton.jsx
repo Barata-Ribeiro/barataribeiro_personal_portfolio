@@ -49,4 +49,4 @@ SmallButton.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-export default SmallButton;
+export default React.memo(SmallButton);

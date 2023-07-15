@@ -115,4 +115,4 @@ ProjectCard.propTypes = {
   projectDemo: PropTypes.string.isRequired,
 };
 
-export default ProjectCard;
+export default React.memo(ProjectCard);
