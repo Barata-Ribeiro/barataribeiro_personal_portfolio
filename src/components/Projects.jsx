@@ -14,7 +14,7 @@ const Projects = () => {
     {
       id: "dogs",
       title: "Dogs",
-      desc: "A dedicated social platform for dog enthusiasts, enabling photo sharing, and interactive communication, born out of the complete React course, using the teacher's API.",
+      desc: "A course project of a social network, which allows photo sharing, interaction, and statistics analysis. It's like Instagram, but for your canine friends.",
       img: ProjectSeven,
       alt: "Dogs",
       tech: ["React", "React Router", "React Hooks", "CSS Modules", "Vite.js"],
@@ -24,7 +24,7 @@ const Projects = () => {
     {
       id: "delightful-indulgence",
       title: "Delightful Indulgence",
-      desc: "Website for a fictitious dessert shop that creates gourmet desserts for couples. Through Figma towards coding, with the purpose of training React and React Router.",
+      desc: "Website for a fictitious dessert shop that creates gourmet desserts for couples. Created from Figma to code, emphasizing the application of React Router.",
       img: ProjectSix,
       alt: "Delightful Indulgence",
       tech: ["React", "React Router", "CSS Modules", "Vite.js"],
@@ -34,7 +34,7 @@ const Projects = () => {
     {
       id: "spectre-band",
       title: "Spectre",
-      desc: "Website for a fictional rock band. First, for training typography concepts, it also showcases contemporary web technologies to create a compelling user experience.",
+      desc: "Website for a fictional rock band. Its goals to display typography concepts I've learned, also showcasing contemporary web tec to enhance the user experience.",
       img: ProjectFive,
       alt: "Spectre Band",
       tech: ["HTML", "CSS", "JavaScript", "Vite.js"],
@@ -54,7 +54,7 @@ const Projects = () => {
     {
       id: "fantastic-beasts",
       title: "Fantastic Beasts",
-      desc: "Showcasing front-end development skills, this project was developed during a complete JavaScript course. It displays creativity and practical programming applications.",
+      desc: "A course project which showcases front-end skills by creating effects from scratch with JavaScript. It demonstrates creativity and practical coding applications.",
       img: ProjectThree,
       alt: "Fantastic Beasts",
       tech: ["JavaScript", "HTML", "CSS"],
@@ -64,7 +64,7 @@ const Projects = () => {
     {
       id: "surfbot",
       title: "Surfbot",
-      desc: "A project for a fictional surf school. Created during an advanced UI design course. With basic web tech, I wrote the code from scratch to enhance learning from other courses.",
+      desc: "Project from an advanced UI design course, dedicated to a fictional surf school, which I coded from scratch for an enhanced learning experience of other technologies.",
       img: ProjectTwo,
       alt: "Surfbot",
       tech: ["JavaScript", "HTML", "CSS"],
@@ -74,7 +74,7 @@ const Projects = () => {
     {
       id: "steel-mane-motors",
       title: "SteelMane Motorcycles",
-      desc: "A project showcasing customized motorcycles for a fictional brand, developed during a UI design and HTML/CSS beginner's course. It demonstrates originality and customization.",
+      desc: "Course project showcasing customized motorcycles for a fictional brand, created during a UI design and HTML/CSS beginner's course. It demonstrates originality and customization.",
       img: ProjectOne,
       alt: "SteelMane Motorcycles",
       tech: ["HTML", "CSS", "JavaScript"],
