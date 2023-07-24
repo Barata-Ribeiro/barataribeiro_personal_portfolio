@@ -18,6 +18,16 @@ const Education = () => {
     { id: "course8", course: "JavaScript ES6+", place: "Origamid" },
     { id: "course9", course: "Advanced Typography", place: "Origamid" },
     { id: "course10", course: "Complete React JS", place: "Origamid" },
+    {
+      id: "course11",
+      course: "UX Design Heuristics (on going)",
+      place: "Origamid",
+    },
+    {
+      id: "course12",
+      course: "Angular Dev Training (on going)",
+      place: "DIO",
+    },
   ];
 
   const renderCourses = (course, index) => {

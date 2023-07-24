@@ -20,7 +20,7 @@ const Hero = () => {
                 Barata Ribeiro
               </h1>
               <p className="font-Kanit text-mistGray-200 font-light text-2xl mb-1">
-                an aspiring Front-End Developer.
+                Front-End Developer & UI Designer.
               </p>
               <p className="leading-relaxed max-w-lg text-mistGray-600">
                 Business grad passionate about bridging strategy and execution,
