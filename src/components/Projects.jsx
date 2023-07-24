@@ -8,9 +8,20 @@ import ProjectFour from "/assets/img/projectsImages/gitpop.jpg";
 import ProjectFive from "/assets/img/projectsImages/spectre_band.jpg";
 import ProjectSix from "/assets/img/projectsImages/delightful-indulgence.jpg";
 import ProjectSeven from "/assets/img/projectsImages/dogs.jpg";
+import ProjectEight from "/assets/img/projectsImages/sector-67-blog.jpg";
 
 const Projects = () => {
   const projectList = [
+    {
+      id: "sector-67-blog",
+      title: "Sector 67 Blog",
+      desc: "A course project of a fictional blog incremented from the original for learning purposes of the Angular environment. It uses AI-generated data to simulate the real thing.",
+      img: ProjectEight,
+      alt: "Sector 67 Blog",
+      tech: ["Angular", "TypeScript", "HTML", "CSS"],
+      repo: "https://github.com/Barata-Ribeiro/dio_angular_blog",
+      demo: "https://dio-angular-blog-delta.vercel.app/",
+    },
     {
       id: "dogs",
       title: "Dogs",
