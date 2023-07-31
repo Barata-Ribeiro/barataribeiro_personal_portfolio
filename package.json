@@ -1,13 +1,13 @@
 {
   "name": "personal_portfolio",
   "homepage": "https://barataribeiro.com/",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
+    "preview": "vite preview --open",
     "predeploy": "vite build",
     "deploy": "gh-pages -d build"
   },

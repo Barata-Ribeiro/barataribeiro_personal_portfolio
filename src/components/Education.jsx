@@ -25,7 +25,7 @@ const Education = () => {
     },
     {
       id: "course12",
-      course: "Angular Dev Training (on going)",
+      course: "Angular Dev Training",
       place: "DIO",
     },
   ];

@@ -15,10 +15,10 @@ const Projects = () => {
     {
       id: "sector-67-blog",
       title: "Sector 67 Blog",
-      desc: "A course project of a fictional blog incremented from the original for learning purposes of the Angular environment. It uses AI-generated data to simulate the real thing.",
+      desc: "A course project of a fictional blog incremented from the original for learning purposes of the Angular environment. It uses generative AI to simulate the fetched data.",
       img: ProjectEight,
       alt: "Sector 67 Blog",
-      tech: ["Angular", "TypeScript", "HTML", "CSS"],
+      tech: ["Angular", "TypeScript"],
       repo: "https://github.com/Barata-Ribeiro/dio_angular_blog",
       demo: "https://dio-angular-blog-delta.vercel.app/",
     },
