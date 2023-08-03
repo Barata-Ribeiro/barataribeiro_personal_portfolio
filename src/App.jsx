@@ -1,5 +1,4 @@
 import React from "react";
-import { projects, intensiveCourses } from "./data/data.json";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -12,8 +11,13 @@ function App() {
   const [intensiveCoursesData, setIntensiveCoursesData] = React.useState([]);
 
   React.useEffect(() => {
-    setProjectsData(projects);
-    setIntensiveCoursesData(intensiveCourses);
+    fetch("/barataribeiro_personal_portfolio/assets/data/data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setProjectsData(data.projects);
+        setIntensiveCoursesData(data.intensiveCourses);
+      })
+      .catch((error) => console.error("Error:", error));
   }, []);
 
   return (
