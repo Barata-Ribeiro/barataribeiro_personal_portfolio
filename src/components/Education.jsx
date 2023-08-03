@@ -2,34 +2,7 @@ import React from "react";
 import { Element } from "react-scroll";
 import { FaGraduationCap, FaCheckCircle } from "react-icons/fa";
 
-const Education = () => {
-  const intensiveCourses = [
-    { id: "course1", course: "UI Design for Beginners", place: "Origamid" },
-    { id: "course2", course: "HTML & CSS for Beginners", place: "Origamid" },
-    {
-      id: "course3",
-      course: "CSS Grid Layout & CSS Flexbox",
-      place: "Origamid",
-    },
-    { id: "course4", course: "Programming Logic", place: "Udemy" },
-    { id: "course5", course: "Responsive Web Design", place: "freeCodeCamp" },
-    { id: "course6", course: "Algorithms", place: "Curso em Video" },
-    { id: "course7", course: "Advanced UI Design", place: "Origamid" },
-    { id: "course8", course: "JavaScript ES6+", place: "Origamid" },
-    { id: "course9", course: "Advanced Typography", place: "Origamid" },
-    { id: "course10", course: "Complete React JS", place: "Origamid" },
-    {
-      id: "course11",
-      course: "UX Design Heuristics (on going)",
-      place: "Origamid",
-    },
-    {
-      id: "course12",
-      course: "Angular Dev Training",
-      place: "DIO",
-    },
-  ];
-
+const Education = ({ intensiveCourses }) => {
   const renderCourses = (course, index) => {
     return (
       <li
