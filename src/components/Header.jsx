@@ -99,7 +99,7 @@ const Header = () => {
           <Link
             spy={true}
             className="py-5 uppercase font-Kanit font-semibold flex items-center text-2xl"
-            href="./"
+            to="top"
           >
             <span className="font-Comfortaa font-bold text-rioGrande-600 tracking-normal mr-2 border-r-2 border-rioGrande-600 pr-2">
               &#60;/&#62;

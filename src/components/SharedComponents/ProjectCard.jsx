@@ -31,18 +31,28 @@ const ProjectCard = ({
     );
   };
 
+  const isSmallScreen = () => {
+    return (
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(max-width: 300px)").matches
+    );
+  };
+
   const handleClick = () => {
     if (isMobileDevice()) {
       setHover((prevHover) => !prevHover);
     }
   };
 
-  const hoverClass = hover ? "scale-105" : "";
-  const divHoverClass = hover ? "h-full" : "h-0";
+  const titleClass =
+    isMobileDevice() && projectTitle.split(" ")[0].length >= 10
+      ? "text-2xl"
+      : "text-3xl";
 
   return (
     <div
-      className="rounded-xl relative overflow-hidden shadow-lg"
+      className="rounded-xl relative overflow-hidden shadow-lg ${mobileSize}"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
@@ -51,26 +61,36 @@ const ProjectCard = ({
       tabIndex={0}
     >
       <LazyLoadImage
-        className={`w-full rounded-xl inline-block transition-transform ${hoverClass}`}
-        effect="black-and-white"
+        className={`w-full rounded-xl inline-block transition-all ${
+          hover ? "scale-105" : ""
+        }`}
+        effect="blur"
         src={projectImg}
         alt={projectAlt}
       />
       <div
-        className={`${divHoverClass} w-full bg-gradient-to-t from-mistGray-950 via-mistGray-900 to-transparent rounded-lg absolute left-0 bottom-0 overflow-hidden flex items-center justify-center flex-col px-10 text-center text-sm transition-all`}
+        className={`${
+          hover ? "h-full" : "h-0"
+        } w-full bg-gradient-to-t from-mistGray-950 via-mistGray-900 to-transparent rounded-lg absolute left-0 bottom-0 overflow-hidden flex items-center justify-center flex-col px-10 text-center text-sm transition-all`}
       >
-        <h3 className="font-Kanit text-mistGray-100 text-3xl font-semibold tracking-wide sm:mt-[50%] mt-[20%]">
+        <h3
+          className={`font-Kanit text-mistGray-100 ${titleClass} font-semibold tracking-wide sm:mt-[50%] mt-[20%]`}
+        >
           <span className="text-rioGrande-600 mr-1">.</span>
           {projectTitle}
         </h3>
-        <p className="text-mistGray-50 font-light text-base leading-relaxed">
+        <p
+          className={`text-mistGray-50 font-light text-base leading-relaxed ${
+            isSmallScreen() ? "hidden" : ""
+          }`}
+        >
           {projectDesc}
         </p>
         <div className="flex flex-wrap justify-starts items-center text-xs text-white font-medium gap-2 mt-4">
           {projectTech.map((tech) => (
             <span
               key={tech}
-              className="px-2 py-1 rounded bg-mistGray-500 font-semibold"
+              className="px-2 py-1 grow rounded bg-mistGray-500 font-semibold"
             >
               {tech.charAt(0).toUpperCase() + tech.slice(1)}
             </span>
