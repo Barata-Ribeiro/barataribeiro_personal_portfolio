@@ -1,7 +1,7 @@
 import React from "react";
 import { Element } from "react-scroll";
 import aboutImage from "/assets/img/about-photo.jpg";
-import SocialButtons from "./Utils/SocialButton";
+import SocialButtons from "./SharedComponents/SocialButton";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";

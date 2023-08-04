@@ -1,6 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
-import Button from "./Utils/MainButton";
+import Button from "./SharedComponents/MainButton";
 
 const Hero = () => {
   return (

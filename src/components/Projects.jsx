@@ -1,6 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
-import ProjectCard from "./Utils/ProjectCard";
+import ProjectCard from "./SharedComponents/ProjectCard";
 
 const Projects = ({ projects }) => {
   const renderProjects = (project) => {
