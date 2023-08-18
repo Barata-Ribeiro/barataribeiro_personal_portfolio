@@ -116,13 +116,13 @@
     { "id": "course10", "course": "Complete React JS", "place": "Origamid" },
     {
       "id": "course11",
-      "course": "UX Design Heuristics (on going)",
-      "place": "Origamid"
+      "course": "Angular Dev Training",
+      "place": "DIO"
     },
     {
       "id": "course12",
-      "course": "Angular Dev Training",
-      "place": "DIO"
+      "course": "TypeScript for Beginners",
+      "place": "Origamid"
     }
   ]
 }
