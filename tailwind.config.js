@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      container: {
+        center: true,
+      },
       backgroundImage: {
         heroBackground: "url('/assets/img/cloudsBackground.jpg')",
       },

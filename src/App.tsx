@@ -1,3 +1,4 @@
+import Header from './components/Header';
 import useFetch from './hooks/useFetch';
 import { Project, IntensiveCourse } from './types';
 
@@ -14,7 +15,7 @@ const App = () => {
 
   return (
     <>
-      <h1 className="text-5xl">Hello, World!</h1>
+      <Header />
     </>
   );
 };
