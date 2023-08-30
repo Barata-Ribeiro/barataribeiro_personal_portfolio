@@ -9,3 +9,7 @@ export interface Project {
   repo: string;
   demo: string;
 }
+
+export interface ProjectsProps {
+  projects: Project[];
+}

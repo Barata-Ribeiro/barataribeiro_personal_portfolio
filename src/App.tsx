@@ -2,6 +2,7 @@ import About from './components/About';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Projects from './components/Projects';
 import useFetch from './hooks/useFetch';
 import { Project, IntensiveCourse } from './types';
 
@@ -16,14 +17,19 @@ const App = () => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
-  return (
-    <>
-      <Header />
-      <Hero />
-      <About />
-      <Footer />
-    </>
-  );
+  if (data) {
+    return (
+      <>
+        <Header />
+        <Hero />
+        <About />
+        <Projects projects={data.projects} />
+        <Footer />
+      </>
+    );
+  }
+
+  return <div>No data available</div>;
 };
 
 export default App;
