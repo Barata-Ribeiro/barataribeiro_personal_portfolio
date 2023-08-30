@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  mode: 'jit',
-  darkMode: 'media',
+module.exports = {
+  content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       container: {
@@ -12,27 +10,13 @@ export default {
         heroBackground: "url('/assets/img/cloudsBackground.jpg')",
       },
       boxShadow: {
-        'about': 'inset 0px 48px 0px 0px rgba(5,4,1,1), inset 0px -48px 0px 0px rgba(75,73,67,1)'
+        about:
+          'inset 0px 48px 0px 0px rgba(5,4,1,1), inset 0px -48px 0px 0px rgba(75,73,67,1)',
       },
       fontFamily: {
         Roboto: ['Roboto', 'sans-serif'],
         Kanit: ['Kanit', 'sans-serif'],
         Comfortaa: ['Comfortaa', 'sans-serif'],
-      },
-      fontSize: {
-        xs: '0.75em',
-        sm: '0.875em',
-        base: '1em',
-        lg: '1.125em',
-        xl: '1.25em',
-        '2xl': '1.5em',
-        '3xl': '2em',
-        '4xl': '2.25em',
-        '5xl': '3em',
-        '6xl': '4em',
-        '7xl': '5em',
-        '8xl': '6em',
-        '9xl': '7em',
       },
       colors: {
         rioGrande: {
@@ -74,15 +58,6 @@ export default {
           900: '#4b4943',
           950: '#272623',
         },
-      },
-      screens: {
-        '316': '316px',
-        xs: '480px',
-        ss: '620px',
-        sm: '768px',
-        md: '1060px',
-        lg: '1200px',
-        xl: '1700px',
       },
     },
   },

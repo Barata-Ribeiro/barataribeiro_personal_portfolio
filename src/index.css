@@ -1,17 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Kanit:wght@100;400;600&family=Roboto:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Kanit:wght@100;400;600&family=Roboto:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* MAIN CUSTOM CSS */
+/* BASE STYLE */
 
 @layer base {
   body {
     @apply font-Roboto;
     @apply text-mistGray-950;
     @apply bg-mistGray-50;
-    @apply pt-[100px];
   }
 }
 
@@ -30,5 +29,29 @@
     text-align: center;
     min-width: 2em;
     font-weight: 700;
+  }
+}
+
+.loader {
+  border-top-color: #4299e1;
+  -webkit-animation: spinner 1.5s linear infinite;
+  animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

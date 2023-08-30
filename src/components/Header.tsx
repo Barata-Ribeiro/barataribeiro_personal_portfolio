@@ -1,12 +1,13 @@
-import React from "react";
-import { Link } from "react-scroll";
-import Hamburger from "hamburger-react";
+import React from 'react';
+import { MenuLinks } from '../types/Components/MenuLinks';
+import { Link } from 'react-scroll';
+import Hamburger from 'hamburger-react';
 
-export const menuItems = [
-  { text: "Home", url: "home" },
-  { text: "About", url: "about" },
-  { text: "Projects", url: "projects" },
-  { text: "Education", url: "education" },
+export const menuItems: MenuLinks[] = [
+  { text: 'Home', url: 'home' },
+  { text: 'About', url: 'about' },
+  { text: 'Projects', url: 'projects' },
+  { text: 'Education', url: 'education' },
 ];
 
 const Header = () => {
@@ -15,13 +16,13 @@ const Header = () => {
   const [miniLogo, setMiniLogo] = React.useState(false);
   const [shadow, setShadow] = React.useState(false);
 
-  const handleClick = (event) => {
+  const handleClick = (event: React.SyntheticEvent) => {
     event.preventDefault();
     setNav(!nav);
   };
 
   React.useEffect(() => {
-    document.body.style.overflow = nav ? "hidden" : "unset";
+    document.body.style.overflow = nav ? 'hidden' : 'unset';
   }, [nav]);
 
   React.useEffect(() => {
@@ -29,9 +30,9 @@ const Header = () => {
       if (window.scrollY > 90) setShadow(true);
       else setShadow(false);
     };
-    window.addEventListener("scroll", handleShadow);
+    window.addEventListener('scroll', handleShadow);
     return () => {
-      window.removeEventListener("scroll", handleShadow);
+      window.removeEventListener('scroll', handleShadow);
     };
   }, []);
 
@@ -41,17 +42,17 @@ const Header = () => {
       else setMiniLogo(false);
     };
     handleLogo();
-    window.addEventListener("resize", handleLogo);
+    window.addEventListener('resize', handleLogo);
     return () => {
-      window.removeEventListener("resize", handleLogo);
+      window.removeEventListener('resize', handleLogo);
     };
   }, []);
 
-  const renderRegularMenu = (item) => {
+  const renderRegularMenu = (item: MenuLinks) => {
     return (
       <li className="my-0 ml-2 font-Kanit text-2xl" key={item.url}>
         <Link
-          className="relative p-3 cursor-pointer hover:bg-mistGray-100 hover:rounded-lg transition-all duration-75"
+          className="relative cursor-pointer p-3 transition-all duration-75 hover:rounded-lg hover:bg-mistGray-100"
           to={item.url}
           spy={true}
           smooth={true}
@@ -64,11 +65,11 @@ const Header = () => {
     );
   };
 
-  const renderMobileMenu = (item) => {
+  const renderMobileMenu = (item: MenuLinks) => {
     return (
       <li className="m-2 p-3 font-Kanit text-3xl font-semibold" key={item.url}>
         <Link
-          className="relative py-2 px-4 cursor-pointer hover:bg-mistGray-100 hover:rounded-lg transition-all duration-75"
+          className="relative cursor-pointer px-4 py-2 transition-all duration-75 hover:rounded-lg hover:bg-mistGray-100"
           to={item.url}
           spy={true}
           smooth={true}
@@ -86,27 +87,27 @@ const Header = () => {
     <header
       className={
         shadow
-          ? "fixed top-0 bg-mistGray-50 shadow-lg w-full z-50 h-[6.25rem]"
-          : "fixed top-0 bg-mistGray-50 w-full z-50 h-[6.25rem]"
+          ? 'sticky top-0 z-50 h-[6.25rem] w-full bg-mistGray-50 shadow-lg'
+          : 'sticky top-0 z-50 h-[6.25rem] w-full bg-mistGray-50'
       }
     >
       <nav
         aria-label="Site main navigation"
-        className="container max-w-[90rem] flex justify-between items-center px-4 max-md:pt-3 max-sm:pt-[1rem] max-316:pt-[0.5rem]"
+        className="container flex max-w-[90rem] items-center justify-between px-4 max-md:pt-3 max-sm:pt-[1rem]"
       >
         {/* logo */}
         {miniLogo ? (
           <Link
             spy={true}
-            className="py-5 uppercase font-Kanit font-semibold flex items-center text-2xl"
+            className="flex items-center py-5 font-Kanit text-2xl font-semibold uppercase"
             to="top"
           >
-            <span className="font-Comfortaa font-bold text-rioGrande-600 tracking-normal mr-2 border-r-2 border-rioGrande-600 pr-2">
+            <span className="mr-2 border-r-2 border-rioGrande-600 pr-2 font-Comfortaa font-bold tracking-normal text-rioGrande-600">
               &#60;/&#62;
             </span>
             <h1
               title="Barata Ribeiro Logo"
-              className="text-mistGray-950 tracking-wider leading-none"
+              className="leading-none tracking-wider text-mistGray-950"
             >
               Barata
               <br />
@@ -116,13 +117,13 @@ const Header = () => {
         ) : (
           <a className="py-5" href="./">
             <h1
-              alt="Barata Ribeiro Logo"
-              className="uppercase font-Kanit font-semibold md:text-4xl text-mistGray-950 tracking-widest sm:text-2xl text-xl"
+              title="Barata Ribeiro Logo"
+              className="font-Kanit text-xl font-semibold uppercase tracking-widest text-mistGray-950 sm:text-2xl md:text-4xl"
             >
-              Barata{" "}
-              <span className="font-Comfortaa font-bold text-rioGrande-600 tracking-normal">
+              Barata{' '}
+              <span className="font-Comfortaa font-bold tracking-normal text-rioGrande-600">
                 &#60;/&#62;
-              </span>{" "}
+              </span>{' '}
               Ribeiro
             </h1>
           </a>
@@ -132,7 +133,7 @@ const Header = () => {
         <ul className="hidden sm:flex">{menuItems?.map(renderRegularMenu)}</ul>
 
         {/* Hamburger */}
-        <button onClick={handleClick} className="sm:hidden z-50">
+        <button onClick={handleClick} className="z-50 sm:hidden">
           <Hamburger
             rounded
             size={25}
@@ -146,8 +147,8 @@ const Header = () => {
         <ul
           className={
             nav
-              ? "absolute top-0 left-0 w-full h-screen bg-mistGray-50 flex flex-col justify-center items-center"
-              : "hidden"
+              ? 'absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center bg-mistGray-50'
+              : 'hidden'
           }
         >
           {menuItems.map(renderMobileMenu)}

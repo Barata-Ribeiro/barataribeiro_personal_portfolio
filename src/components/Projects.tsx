@@ -1,9 +1,9 @@
-import React from "react";
-import { Element } from "react-scroll";
-import ProjectCard from "./SharedComponents/ProjectCard";
+import { Element } from 'react-scroll';
+import ProjectCard from './SharedComponents/ProjectCard';
+import { Project, ProjectsProps } from '../types';
 
-const Projects = ({ projects }) => {
-  const renderProjects = (project) => {
+const Projects: React.FC<ProjectsProps> = ({ projects }) => {
+  const renderProjects = (project: Project) => {
     return (
       <ProjectCard
         key={project.id}
@@ -21,17 +21,17 @@ const Projects = ({ projects }) => {
   return (
     <Element name="projects">
       <section aria-label="Project section" className="bg-mistGray-900">
-        <div className="container max-w-[90rem] sm:pt-32 xs:pt-16 pt-6 px-4">
-          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
+        <div className="xs:pt-16 container max-w-[90rem] px-4 pt-6 sm:pt-32">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
             {projects.slice(0, 6).map(renderProjects)}
           </div>
         </div>
-        <div className="flex flex-col place-items-center sm:py-16 xs:py-8 py-3">
+        <div className="xs:py-8 flex flex-col place-items-center py-3 sm:py-16">
           <a
             href="https://github.barataribeiro.com/"
             rel="noreferrer noopener"
             target="_blank"
-            className="sm:text-xl text-base font-semibold text-center text-mistGray-500 underline underline-offset-4 transition-colors hover:text-royalBlue-500"
+            className="text-center text-base font-semibold text-mistGray-500 underline underline-offset-4 transition-colors hover:text-royalBlue-500 sm:text-xl"
           >
             Check GitHub for more projects...
           </a>

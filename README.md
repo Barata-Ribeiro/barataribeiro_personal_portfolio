@@ -2,11 +2,11 @@
 
 ## 🎨 Front-End Developer & UI Designer
 
-I developed this portfolio starting with the UI Design using Figma, and then the code was written using React + Vite with Tailwind CSS as the style framework. I've used a combination of fonts, such as `Roboto` and `Kanit`, with `Comfortaa` for the decorator. I chose the color palette using the following as a base: ![#838073](https://placehold.co/15x15/838073/838073.png) `#838073`, ![#2b81e3](https://placehold.co/15x15/2b81e3/2b81e3.png) `#2b81e3`, ![#d2d904](https://placehold.co/15x15/d2d904/d2d904.png) `#d2d904`. The images used in both the hero and about sections are from Unsplash. Check out my projects and education, and let's discuss working together!
+I developed this portfolio starting with the UI Design using Figma, and then the code was written using React with TypeScript + Vite, using Tailwind CSS as the style framework. I've used a combination of fonts, such as `Roboto` and `Kanit`, with `Comfortaa` for the decorator. I chose the color palette using the following as a base: ![#838073](https://placehold.co/15x15/838073/838073.png) `#838073`, ![#2b81e3](https://placehold.co/15x15/2b81e3/2b81e3.png) `#2b81e3`, ![#d2d904](https://placehold.co/15x15/d2d904/d2d904.png) `#d2d904`. The images used in both the hero and about sections are from Unsplash. Check out my projects and education, and let's discuss working together!
 
 ## 👨‍💻 Demo
 
-[Click here](https://barata-ribeiro.github.io/barataribeiro_personal_portfolio/) to see a live demo of the website.
+[Click here](https://barataribeiro.com/) to see a live demo of the website.
 
 ![Personal Portfolio](./public/screenshot.gif)
 
@@ -15,6 +15,7 @@ I developed this portfolio starting with the UI Design using Figma, and then the
 This portfolio has been built using:
 
 - [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
