@@ -87,13 +87,13 @@ const Header = () => {
     <header
       className={
         shadow
-          ? 'fixed top-0 z-50 h-[6.25rem] w-full bg-mistGray-50 shadow-lg'
-          : 'fixed top-0 z-50 h-[6.25rem] w-full bg-mistGray-50'
+          ? 'sticky top-0 z-50 h-[6.25rem] w-full bg-mistGray-50 shadow-lg'
+          : 'sticky top-0 z-50 h-[6.25rem] w-full bg-mistGray-50'
       }
     >
       <nav
         aria-label="Site main navigation"
-        className="max-316:pt-[0.5rem] container flex max-w-[90rem] items-center justify-between px-4 max-md:pt-3 max-sm:pt-[1rem]"
+        className="container flex max-w-[90rem] items-center justify-between px-4 max-md:pt-3 max-sm:pt-[1rem]"
       >
         {/* logo */}
         {miniLogo ? (
