@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuLinks } from '../types/Components/HeaderTypes';
+import { MenuLinks } from '../types/Components/MenuLinks';
 import { Link } from 'react-scroll';
 import Hamburger from 'hamburger-react';
 

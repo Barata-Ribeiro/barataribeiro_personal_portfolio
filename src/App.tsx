@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import Header from './components/Header';
 import useFetch from './hooks/useFetch';
 import { Project, IntensiveCourse } from './types';
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <>
       <Header />
+      <Footer />
     </>
   );
 };
