@@ -7,6 +7,10 @@ import Projects from './components/Projects';
 import useFetch from './hooks/useFetch';
 import { Project, IntensiveCourse } from './types';
 
+import Loading from './components/SharedComponents/Loading';
+import Error from './components/SharedComponents/Error';
+import NoData from './components/SharedComponents/NoData';
+
 interface Data {
   projects: Project[];
   intensiveCourses: IntensiveCourse[];
@@ -15,9 +19,8 @@ interface Data {
 const App = () => {
   const { data, loading, error } = useFetch<Data>('/assets/data/data.json');
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-
+  if (loading) return <Loading />;
+  if (error) return <Error message={`Something happened: ${error}`} />;
   if (data) {
     return (
       <>
@@ -31,7 +34,7 @@ const App = () => {
     );
   }
 
-  return <div>No data available</div>;
+  return <NoData />;
 };
 
 export default App;
