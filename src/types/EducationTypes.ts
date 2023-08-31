@@ -8,8 +8,14 @@ export interface IntensiveCourseProps {
   intensiveCourses: IntensiveCourse[];
 }
 
-export interface EducationCardProps {
+export interface HigherEducationCourse {
   year: string;
   degree: string;
   university: string;
 }
+
+export interface HigherEducationProps {
+  highEducationCourses: HigherEducationCourse[];
+}
+
+export type DataEducation = IntensiveCourseProps & HigherEducationProps;

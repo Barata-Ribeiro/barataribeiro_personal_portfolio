@@ -5,7 +5,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import useFetch from './hooks/useFetch';
-import { Project, IntensiveCourse } from './types';
+
+import { Project, IntensiveCourse, HigherEducationCourse } from './types';
 
 import Loading from './components/SharedComponents/Loading';
 import Error from './components/SharedComponents/Error';
@@ -14,6 +15,7 @@ import NoData from './components/SharedComponents/NoData';
 interface Data {
   projects: Project[];
   intensiveCourses: IntensiveCourse[];
+  higherEducationCourses: HigherEducationCourse[];
 }
 
 const App = () => {
@@ -28,7 +30,10 @@ const App = () => {
         <Hero />
         <About />
         <Projects projects={data.projects} />
-        <Education intensiveCourses={data.intensiveCourses} />
+        <Education
+          intensiveCourses={data.intensiveCourses}
+          highEducationCourses={data.higherEducationCourses}
+        />
         <Footer />
       </>
     );

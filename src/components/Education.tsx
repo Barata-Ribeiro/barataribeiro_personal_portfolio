@@ -1,51 +1,15 @@
 import { Element } from 'react-scroll';
 import { FaGraduationCap, FaCheckCircle } from 'react-icons/fa';
 import {
-  EducationCardProps,
+  DataEducation,
+  HigherEducationCourse,
   IntensiveCourse,
-  IntensiveCourseProps,
-} from '../types/IntensiveCourse';
+} from '../types/EducationTypes';
 
-const EducationCard: React.FC<EducationCardProps> = ({ year, degree, university }) => {
-  return (
-    <div className="p-4 md:w-1/3">
-      <div className="flex h-full flex-col rounded-lg bg-mistGray-50 p-8 shadow-lg">
-        <div className="mb-3 flex items-center gap-2">
-          <div className="mr-3 inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-rioGrande-600 text-white">
-            <FaGraduationCap size={20} />
-          </div>
-          <h2 className="text-2xl text-mistGray-950">{year}</h2>
-        </div>
-        <div className="flex-grow">
-          <p className="font-Kanit text-2xl font-semibold tracking-wide">{degree}</p>
-          <p className="mt-3 inline-flex items-center text-mistGray-950">
-            {university}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const Education: React.FC<IntensiveCourseProps> = ({ intensiveCourses }) => {
-  const educationData = [
-    {
-      year: "2018 - Bachelor's Degree",
-      degree: 'Business Administration',
-      university: 'Estácio de Sá University',
-    },
-    {
-      year: '2020 - Graduate Course',
-      degree: 'Strategic People Management',
-      university: 'Estácio de Sá University',
-    },
-    {
-      year: '2022 - Gradute Course',
-      degree: 'Project Management',
-      university: 'Estácio de Sá University',
-    },
-  ];
-
+const Education: React.FC<DataEducation> = ({
+  intensiveCourses,
+  highEducationCourses,
+}) => {
   const renderCourses = (course: IntensiveCourse, index: number) => {
     return (
       <li
@@ -70,6 +34,29 @@ const Education: React.FC<IntensiveCourseProps> = ({ intensiveCourses }) => {
     );
   };
 
+  const renderHigherEducation = (course: HigherEducationCourse, index: number) => {
+    return (
+      <div className="p-4 md:w-1/3" key={`hec-${index + 1}`}>
+        <div className="flex h-full flex-col rounded-lg bg-mistGray-50 p-8 shadow-lg">
+          <div className="mb-3 flex items-center gap-2">
+            <div className="mr-3 inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-rioGrande-600 text-white">
+              <FaGraduationCap size={20} />
+            </div>
+            <h2 className="text-2xl text-mistGray-950">{course.year}</h2>
+          </div>
+          <div className="flex-grow">
+            <p className="font-Kanit text-2xl font-semibold tracking-wide">
+              {course.degree}
+            </p>
+            <p className="mt-3 inline-flex items-center text-mistGray-950">
+              {course.university}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <Element name="education">
       <section aria-label="Education section" className="bg-mistGray-950">
@@ -90,14 +77,7 @@ const Education: React.FC<IntensiveCourseProps> = ({ intensiveCourses }) => {
 
           {/* Education */}
           <div className="flex flex-wrap justify-center">
-            {educationData.map((data, index) => (
-              <EducationCard
-                key={index}
-                year={data.year}
-                degree={data.degree}
-                university={data.university}
-              />
-            ))}
+            {highEducationCourses?.map(renderHigherEducation)}
           </div>
 
           {/* Courses */}

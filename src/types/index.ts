@@ -1,6 +1,6 @@
 // src/types/index.ts
 export * from './ProjectTypes';
-export * from './IntensiveCourse';
+export * from './EducationTypes';
 
 export interface ErrorProps {
   message: string;
