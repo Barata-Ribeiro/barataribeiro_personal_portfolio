@@ -6,7 +6,7 @@ import { SocialLink } from '../types/Components/SocialLinks';
 
 const socialLinks: SocialLink[] = [
   {
-    url: 'https://www.linkedin.com/in/...',
+    url: 'https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/',
     icon: <FaLinkedinIn size={40} />,
     label: 'LinkedIn',
   },
