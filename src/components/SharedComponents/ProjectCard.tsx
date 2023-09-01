@@ -52,13 +52,15 @@ const ProjectCard: FC<ProjectCardProps> = ({
 
   return (
     <div
+      role="button"
+      aria-label={`Project ${projectTitle}`}
+      tabIndex={0}
       className="rounded-xl relative overflow-hidden shadow-lg ${mobileSize}"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
       onFocus={handleMouseEnter}
       onBlur={handleMouseLeave}
-      tabIndex={0}
     >
       <LazyLoadImage
         className={`inline-block w-full rounded-xl transition-all ${
@@ -100,6 +102,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
           <a
             onClick={(e) => e.stopPropagation()}
             href={projectRepo}
+            aria-label="Open Repository"
             target="_blank"
             rel="noreferrer noopener"
             className={`flex cursor-pointer items-center gap-2 rounded-lg border-2 border-royalBlue-600 bg-royalBlue-500
@@ -111,6 +114,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
           <a
             onClick={(e) => e.stopPropagation()}
             href={projectDemo}
+            aria-label="See Demo"
             target="_blank"
             rel="noreferrer noopener"
             className={`flex cursor-pointer items-center gap-2 rounded-lg border-2 border-royalBlue-600 bg-royalBlue-500

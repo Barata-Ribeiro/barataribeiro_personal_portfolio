@@ -48,40 +48,24 @@ const Header = () => {
     };
   }, []);
 
-  const renderRegularMenu = (item: MenuLinks) => {
-    return (
-      <li className="my-0 ml-2 font-Kanit text-2xl" key={item.url}>
-        <Link
-          className="relative cursor-pointer p-3 transition-all duration-75 hover:rounded-lg hover:bg-mistGray-100"
-          to={item.url}
-          spy={true}
-          smooth={true}
-          offset={-90}
-          duration={500}
-        >
-          {item.text}
-        </Link>
-      </li>
-    );
-  };
-
-  const renderMobileMenu = (item: MenuLinks) => {
-    return (
-      <li className="m-2 p-3 font-Kanit text-3xl font-semibold" key={item.url}>
-        <Link
-          className="relative cursor-pointer px-4 py-2 transition-all duration-75 hover:rounded-lg hover:bg-mistGray-100"
-          to={item.url}
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={-90}
-          onClick={handleClick}
-        >
-          {item.text}
-        </Link>
-      </li>
-    );
-  };
+  const renderMenu = (item: MenuLinks, additionalClasses: string) => (
+    <li className={`font-Kanit ${additionalClasses}`} key={item.url}>
+      <Link
+        className="relative cursor-pointer p-3 transition-all duration-75 hover:rounded-lg hover:bg-mistGray-100"
+        to={item.url}
+        spy={true}
+        smooth={true}
+        offset={-90}
+        duration={500}
+        tabIndex={0}
+        role="menuitem"
+        aria-label={`Scroll to ${item.text}`}
+        onClick={() => nav && setNav(false)}
+      >
+        {item.text}
+      </Link>
+    </li>
+  );
 
   return (
     <header
@@ -90,9 +74,11 @@ const Header = () => {
           ? 'sticky top-0 z-50 h-[6.25rem] w-full bg-mistGray-50 shadow-lg'
           : 'sticky top-0 z-50 h-[6.25rem] w-full bg-mistGray-50'
       }
+      role="banner"
     >
       <nav
         aria-label="Site main navigation"
+        role="navigation"
         className="container flex max-w-[90rem] items-center justify-between px-4 max-md:pt-3 max-sm:pt-[1rem]"
       >
         {/* logo */}
@@ -130,7 +116,9 @@ const Header = () => {
         )}
 
         {/* menu */}
-        <ul className="hidden sm:flex">{menuItems?.map(renderRegularMenu)}</ul>
+        <ul className="hidden sm:flex">
+          {menuItems?.map((item) => renderMenu(item, 'my-0 ml-2 text-2xl'))}
+        </ul>
 
         {/* Hamburger */}
         <button onClick={handleClick} className="z-50 sm:hidden">
@@ -140,18 +128,23 @@ const Header = () => {
             toggled={nav}
             toggle={setNav}
             label="Show menu"
+            aria-haspopup="true"
+            aria-controls="mobile-menu"
+            aria-expanded={nav}
           />
         </button>
 
         {/* Mobile Menu */}
         <ul
+          id="mobile-menu"
+          role="menu"
           className={
             nav
               ? 'absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center bg-mistGray-50'
               : 'hidden'
           }
         >
-          {menuItems.map(renderMobileMenu)}
+          {menuItems.map((item) => renderMenu(item, 'm-2 p-3 text-3xl font-semibold'))}
         </ul>
       </nav>
     </header>

@@ -59,7 +59,8 @@ const Education: React.FC<DataEducation> = ({
 
   return (
     <Element name="education">
-      <section aria-label="Education section" className="bg-mistGray-950">
+      <section aria-label="Education section" role="region" className="bg-mistGray-950">
+        <h1 className="sr-only">Education and Courses</h1>
         <div className="xs:pt-16 container max-w-[90rem] px-4 pt-6 sm:pt-32">
           <div className="flex justify-center">
             <p className="mb-4 max-w-2xl text-center text-xl leading-relaxed text-mistGray-500">
@@ -76,7 +77,10 @@ const Education: React.FC<DataEducation> = ({
           </div>
 
           {/* Education */}
-          <div className="flex flex-wrap justify-center">
+          <div
+            className="flex flex-wrap justify-center"
+            aria-label="List of Higher Education"
+          >
             {highEducationCourses?.map(renderHigherEducation)}
           </div>
 
@@ -84,7 +88,11 @@ const Education: React.FC<DataEducation> = ({
           <h1 className="mb-4 mt-8 text-center text-2xl font-semibold text-mistGray-50 sm:text-3xl">
             Intensive Courses
           </h1>
-          <ol className="-mx-2 flex flex-wrap-reverse sm:mx-auto lg:w-4/5">
+          <ol
+            className="-mx-2 flex flex-wrap-reverse sm:mx-auto lg:w-4/5"
+            role="list"
+            aria-label="List of Intensive Courses"
+          >
             {intensiveCourses?.map(renderCourses)}
           </ol>
           <div className="xs:py-8 flex flex-col place-items-center py-3 sm:py-16">
@@ -92,6 +100,7 @@ const Education: React.FC<DataEducation> = ({
               href="https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/"
               rel="noreferrer noopener"
               target="_blank"
+              aria-label="Check LinkedIn for Certifications"
               className="text-center text-base font-semibold text-mistGray-500 underline underline-offset-4 transition-colors hover:text-royalBlue-500 sm:text-xl"
             >
               Check LinkedIn for Certifications...

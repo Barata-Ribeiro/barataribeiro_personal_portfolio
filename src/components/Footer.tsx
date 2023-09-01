@@ -7,17 +7,17 @@ import { SocialLink } from '../types/Components/SocialLinks';
 const socialLinks: SocialLink[] = [
   {
     url: 'https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/',
-    icon: <FaLinkedinIn size={40} />,
+    icon: <FaLinkedinIn size={40} aria-label="LinkedIn" />,
     label: 'LinkedIn',
   },
   {
     url: 'https://github.barataribeiro.com/',
-    icon: <FaGithub size={40} />,
+    icon: <FaGithub size={40} aria-label="GitHub" />,
     label: 'GitHub',
   },
   {
     url: 'mailto:j.mendes1920@gmail.com',
-    icon: <FaMailBulk size={40} />,
+    icon: <FaMailBulk size={40} aria-label="Email" />,
     label: 'Send Mail',
   },
 ];
@@ -35,6 +35,7 @@ const renderFooterMenu = (item: MenuLinks) => {
         smooth={true}
         offset={-90}
         duration={500}
+        aria-label={`Scroll to ${item.text}`}
       >
         {item.text}
       </Link>
@@ -58,8 +59,11 @@ const Footer = () => (
       </div>
 
       {/* MENU */}
-      <nav className="mt-10 flex flex-col items-center justify-center gap-10">
-        <a className="self-center p-3" href="./">
+      <nav
+        className="mt-10 flex flex-col items-center justify-center gap-10"
+        aria-label="Footer navigation"
+      >
+        <a className="self-center p-3" aria-label="Navigate to homepage" href="./">
           <h1
             title="Barata Ribeiro Logo"
             className="max-xs:text-xl font-Kanit font-semibold uppercase leading-none tracking-widest text-mistGray-50 sm:text-3xl"
@@ -85,6 +89,7 @@ const Footer = () => (
           <li key={url}>
             <a
               href={url}
+              aria-label={label}
               rel="noreferrer"
               target="_blank"
               className="text-mistGray-50 transition-colors hover:text-royalBlue-500"

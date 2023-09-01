@@ -11,20 +11,20 @@ import { SocialButtonProps } from '../types/Components/SocialLinks';
 const socialButtons: SocialButtonProps[] = [
   {
     href: 'https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/',
-    title: 'LinkedIn profile',
-    icon: <FaLinkedinIn size={25} />,
+    title: 'Visit my LinkedIn profile',
+    icon: <FaLinkedinIn size={25} aria-label="LinkedIn logo" />,
     text: 'LinkedIn',
   },
   {
     href: 'https://github.barataribeiro.com/',
-    title: 'GitHub profile',
-    icon: <FaGithub size={25} />,
+    title: 'Visit my GitHub profile',
+    icon: <FaGithub size={25} aria-label="GitHub logo" />,
     text: 'GitHub',
   },
   {
     href: 'mailto:j.mendes1920@gmail.com',
-    title: 'Send Email',
-    icon: <SiMaildotru size={25} />,
+    title: 'Send me an Email',
+    icon: <SiMaildotru size={25} aria-label="Email logo" />,
     text: 'Email',
   },
 ];
@@ -32,7 +32,11 @@ const socialButtons: SocialButtonProps[] = [
 const About: React.FC = () => {
   return (
     <Element name="about">
-      <section aria-label="About section" className="bg-mistGray-950 md:shadow-about">
+      <section
+        aria-label="About section"
+        role="region"
+        className="bg-mistGray-950 md:shadow-about"
+      >
         <div className="container max-w-[90rem] px-4">
           <div className="flex flex-col items-center justify-between sm:flex-row">
             <LazyLoadImage
@@ -52,7 +56,10 @@ const About: React.FC = () => {
                     Front-end Developer & UI Designer
                   </h3>
                 </div>
-                <p className="xs:text-justify mt-4 max-w-xl text-center leading-relaxed text-mistGray-500 sm:text-right">
+                <p
+                  aria-label="About me text"
+                  className="xs:text-justify mt-4 max-w-xl text-center leading-relaxed text-mistGray-500 sm:text-right"
+                >
                   With a solid academic foundation in{' '}
                   <span className="text-mistGray-50">Business Administration</span> and
                   graduate courses in{' '}
@@ -70,7 +77,10 @@ const About: React.FC = () => {
                 </p>
               </div>
               <span className="text-mistGray-50"></span>
-              <div className="flex items-center justify-start gap-2 sm:justify-end">
+              <div
+                aria-label="Social media links"
+                className="flex items-center justify-start gap-2 sm:justify-end"
+              >
                 {socialButtons.map(({ href, title, icon, text }) => (
                   <SocialButtons
                     key={href}
