@@ -71,15 +71,15 @@ const Header = () => {
     <header
       className={
         shadow
-          ? 'sticky top-0 z-50 h-[6.25rem] w-full bg-mistGray-50 shadow-lg'
-          : 'sticky top-0 z-50 h-[6.25rem] w-full bg-mistGray-50'
+          ? 'sticky top-0 z-50 w-full bg-mistGray-50 shadow-lg'
+          : 'sticky top-0 z-50 w-full bg-mistGray-50'
       }
       role="banner"
     >
       <nav
         aria-label="Site main navigation"
         role="navigation"
-        className="container flex max-w-[90rem] items-center justify-between px-4 max-md:pt-3 max-sm:pt-[1rem]"
+        className="container flex max-w-[90rem] items-center justify-between px-4 py-2"
       >
         {/* logo */}
         {miniLogo ? (
@@ -104,7 +104,7 @@ const Header = () => {
           <a className="py-5" href="./">
             <h1
               title="Barata Ribeiro Logo"
-              className="font-Kanit text-xl font-semibold uppercase tracking-widest text-mistGray-950 sm:text-2xl md:text-4xl"
+              className="font-Kanit font-semibold uppercase tracking-widest text-mistGray-950 sm:text-2xl md:text-4xl"
             >
               Barata{' '}
               <span className="font-Comfortaa font-bold tracking-normal text-rioGrande-600">
