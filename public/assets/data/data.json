@@ -7,7 +7,7 @@
       "img": "./assets/img/projectsImages/sector-67-blog.jpg",
       "alt": "Sector 67 Blog",
       "tech": ["Angular", "TypeScript"],
-      "repo": ".https://github.com/Barata-Ribeiro/dio_angular_blog",
+      "repo": "https://github.com/Barata-Ribeiro/dio_angular_blog",
       "demo": "https://dio-angular-blog-delta.vercel.app/"
     },
     {
@@ -134,6 +134,16 @@
       "id": "course12",
       "course": "TypeScript for Beginners",
       "place": "Origamid"
+    },
+    {
+      "id": "course13",
+      "course": "React with TypeScript (on going)",
+      "place": "Origamid"
+    },
+    {
+      "id": "course14",
+      "course": "Java Dev Training (on going)",
+      "place": "DIO"
     }
   ]
 }
