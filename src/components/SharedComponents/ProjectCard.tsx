@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { FaCode, FaRegPlayCircle } from 'react-icons/fa';
-import { ProjectCardProps } from '../../types/SharedComponents/ProjectCardProps';
+import { ProjectCardProps } from '../../@types/SharedComponents/ProjectCardProps';
 
 const ProjectCard: FC<ProjectCardProps> = ({
   projectTitle,

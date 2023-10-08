@@ -6,7 +6,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { SiMaildotru } from 'react-icons/si';
-import { SocialButtonProps } from '../types/Components/SocialLinks';
+import { SocialButtonProps } from '../@types/Components/SocialLinks';
 
 const socialButtons: SocialButtonProps[] = [
   {

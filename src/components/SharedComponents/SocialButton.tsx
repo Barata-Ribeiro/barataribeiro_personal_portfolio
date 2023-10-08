@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { SocialButtonProps } from '../../types/SharedComponents/SocialButtonProps';
+import { SocialButtonProps } from '../../@types/SharedComponents/SocialButtonProps';
 
 const SocialButton: FC<SocialButtonProps> = ({
   href,

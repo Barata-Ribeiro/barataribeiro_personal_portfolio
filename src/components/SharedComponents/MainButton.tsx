@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { MainButtonProps } from '../../types/SharedComponents/MainButtonProps';
+import { MainButtonProps } from '../../@types/SharedComponents/MainButtonProps';
 
 const MainButton: FC<MainButtonProps> = ({
   buttonText,

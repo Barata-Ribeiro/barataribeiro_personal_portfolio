@@ -1,6 +1,6 @@
 import { Element } from 'react-scroll';
 import ProjectCard from './SharedComponents/ProjectCard';
-import { Project, ProjectsProps } from '../types';
+import { Project, ProjectsProps } from '../@types';
 
 const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   const renderProjects = (project: Project) => {

@@ -4,7 +4,7 @@ import {
   DataEducation,
   HigherEducationCourse,
   IntensiveCourse,
-} from '../types/EducationTypes';
+} from '../@types/EducationTypes';
 
 const Education: React.FC<DataEducation> = ({
   intensiveCourses,

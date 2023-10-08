@@ -1,4 +1,4 @@
-import { ErrorProps } from '../../types';
+import { ErrorProps } from '../../@types';
 
 const Error: React.FC<ErrorProps> = ({ message }) => {
   return (

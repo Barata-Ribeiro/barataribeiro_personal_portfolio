@@ -1,8 +1,8 @@
 import { Link } from 'react-scroll';
 import { menuItems } from './Header';
-import { MenuLinks } from '../types/Components/MenuLinks';
+import { MenuLinks } from '../@types/Components/MenuLinks';
 import { FaLinkedinIn, FaGithub, FaMailBulk } from 'react-icons/fa';
-import { SocialLink } from '../types/Components/SocialLinks';
+import { SocialLink } from '../@types/Components/SocialLinks';
 
 const socialLinks: SocialLink[] = [
   {

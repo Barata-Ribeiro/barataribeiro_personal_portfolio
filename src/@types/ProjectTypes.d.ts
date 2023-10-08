@@ -1,4 +1,4 @@
-// src/types/ProjectTypes.ts
+// src/@types/ProjectTypes.ts
 export interface Project {
   id: string;
   title: string;
