@@ -6,7 +6,7 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import useFetch from './hooks/useFetch';
 
-import { Project, IntensiveCourse, HigherEducationCourse } from './types';
+import { Project, IntensiveCourse, HigherEducationCourse } from './@types';
 
 import Loading from './components/SharedComponents/Loading';
 import Error from './components/SharedComponents/Error';
