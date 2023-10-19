@@ -1,10 +1,11 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2023: true, node: true},
+  env: { browser: true, esnext: true, node: true },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:tailwindcss/recommended',
     'plugin:prettier/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -30,7 +31,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     'tailwindcss/classnames-order': 'warn',
-    'tailwindcss/no-custom-classname': 'warn',
+    'tailwindcss/no-custom-classname': 'off',
     'tailwindcss/no-contradicting-classname': 'error',
   },
 };
