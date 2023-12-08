@@ -1,7 +1,17 @@
 {
   "name": "barataribeiro_personal_portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "homepage": "https://barataribeiro.com/",
+  "author": {
+    "name": "João Mendes Jorge Barata Ribeiro",
+    "email": "j.mendes1920@gmail.com",
+    "url": "https://github.barataribeiro.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/Barata-Ribeiro/barataribeiro_personal_portfolio/issues",
+    "email": "j.mendes1920@gmail.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
