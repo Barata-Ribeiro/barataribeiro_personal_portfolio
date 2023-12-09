@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  reactStrictMode: true,
+  distDir: 'build',
+  images: {
+    minimumCacheTTL: 60,
+  },
+  compiler: {
+    removeConsole: true,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
