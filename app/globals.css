@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-Roboto;
+    @apply text-mistGray-950;
+    @apply bg-mistGray-50;
+  }
+}

@@ -1,7 +1,6 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  darkMode: "class",
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,10 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '0rem',
+        },
+      },
       fontFamily: {
-        roboto: ['var(--font-roboto)'],
-        Kanit: ['var(--font-kanit)'],
-        Comfortaa: ['var(--font-comfortaa)'],
+        Roboto: 'var(--font-roboto)',
+        Kanit: 'var(--font-kanit)',
+        Comfortaa: 'var(--font-comfortaa)',
       },
       colors: {
         rioGrande: {
