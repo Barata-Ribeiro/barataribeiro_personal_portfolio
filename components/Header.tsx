@@ -54,7 +54,7 @@ export const Header = () => {
   return (
     <header
       role='banner'
-      className={`sticky top-0 w-full bg-mistGray-50 ${
+      className={`sticky top-0 w-full bg-mistGray-50 z-40 ${
         isScrolled ? 'shadow-lg' : ''
       }`}
       aria-labelledby='header-title'>
