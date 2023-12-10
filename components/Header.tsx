@@ -4,7 +4,7 @@ import { LinkButton } from '@/components/shared/LinkButton';
 import { Logo } from '@/components/shared/Logo';
 import { MiniLogo } from '@/components/shared/MiniLogo';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { IoClose, IoMenu } from 'react-icons/io5';
 
 interface MenuItem {
@@ -17,6 +17,7 @@ export const Header = () => {
   const [isNarrowScreen, setIsNarrowScreen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const firstMenuItemRef = useRef<HTMLAnchorElement>(null);
   const menuItems: MenuItem[] = [
     { text: 'Home', url: '/#home' },
     { text: 'About', url: '/#about' },
@@ -49,7 +50,16 @@ export const Header = () => {
     return () => window.removeEventListener('resize', checkIfMobileScreen);
   }, []);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    if (!isMenuOpen) {
+      setTimeout(() => {
+        firstMenuItemRef.current?.focus();
+      }, 100);
+    }
+  };
+
+  const handleLinkClick = () => setIsMenuOpen(false);
 
   return (
     <header
@@ -82,28 +92,46 @@ export const Header = () => {
               <Link
                 href={item.url}
                 aria-label={item.text}
-                onClick={() => isMenuOpen && setIsMenuOpen(false)}
+                onClick={handleLinkClick}
                 scroll={true}
                 className={`font-Kanit hover:rounded-lg transition-all cursor-pointer py-1 px-4 ${
                   isMenuOpen && isMobile
                     ? 'hover:bg-mistGray-50 text-4xl'
                     : 'hover:bg-mistGray-100 text-xl'
                 }`}>
-                {item.text}
+                <span
+                  ref={index === 0 ? firstMenuItemRef : null}
+                  tabIndex={index === 0 ? 1 : index + 1}>
+                  {item.text}
+                </span>
               </Link>
             </li>
           ))}
+          <li
+            className={`sm:hidden ${
+              isMenuOpen && isMobile && 'border-t-2 border-mistGray-400 pt-6'
+            }`}>
+            <LinkButton
+              href='/'
+              tabIndex={isMenuOpen ? menuItems.length + 1 : -1}
+              onClick={handleLinkClick}
+              download={true}
+              additionalStyles='font-Kanit border-2 tracking-wider bg-royalBlue-600 text-royalBlue-50 py-2 px-4 hover:border-royalBlue-600 hover:bg-mistGray-50 hover:text-royalBlue-600 border-royalBlue-700'>
+              Download C.V.
+            </LinkButton>
+          </li>
         </ul>
 
         <div className='flex gap-4'>
           <LinkButton
             href='/'
             download={true}
-            additionalStyles='font-Kanit border-2 tracking-wider bg-royalBlue-600 text-royalBlue-50 py-2 px-4 hover:border-royalBlue-600 hover:bg-mistGray-50 hover:text-royalBlue-600 border-royalBlue-700'>
+            additionalStyles='font-Kanit border-2 tracking-wider bg-royalBlue-600 text-royalBlue-50 py-2 px-4 hover:border-royalBlue-600 hover:bg-mistGray-50 hover:text-royalBlue-600 border-royalBlue-700 max-sm:hidden'>
             Download C.V.
           </LinkButton>
           <button
             className='lg:hidden block z-50'
+            tabIndex={isMenuOpen ? 0 : -1}
             onClick={toggleMenu}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}>
             {isMenuOpen ? <IoClose size={32} /> : <IoMenu size={32} />}
