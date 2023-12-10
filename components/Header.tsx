@@ -84,7 +84,7 @@ export const Header = () => {
         <ul
           className={`lg:flex items-center gap-4 ${
             isMenuOpen && isMobile
-              ? 'flex flex-col gap-8 justify-center items-center fixed inset-0 bg-mistGray-100 overflow-hidden'
+              ? 'flex flex-col gap-8 justify-center items-center fixed inset-0 bg-mistGray-100 dark:bg-mistGray-900 overflow-hidden'
               : 'hidden'
           }`}>
           {menuItems.map((item, index) => (
@@ -96,8 +96,8 @@ export const Header = () => {
                 scroll={true}
                 className={`font-Kanit hover:rounded-lg transition-all cursor-pointer py-1 px-4 ${
                   isMenuOpen && isMobile
-                    ? 'hover:bg-mistGray-50 text-4xl'
-                    : 'hover:bg-mistGray-100 text-xl'
+                    ? 'hover:bg-mistGray-50 dark:hover:bg-mistGray-950 text-4xl'
+                    : 'hover:bg-mistGray-100 dark:hover:bg-mistGray-900 text-xl'
                 }`}>
                 <span
                   ref={index === 0 ? firstMenuItemRef : null}
@@ -109,14 +109,14 @@ export const Header = () => {
           ))}
           <li
             className={`sm:hidden ${
-              isMenuOpen && isMobile && 'border-t-2 border-mistGray-400 pt-6'
+              isMenuOpen && isMobile && 'border-t-2 border-mistGray-400 pt-12'
             }`}>
             <LinkButton
               href='/'
               tabIndex={isMenuOpen ? menuItems.length + 1 : -1}
               onClick={handleLinkClick}
               download={true}
-              additionalStyles='font-Kanit border-2 tracking-wider bg-royalBlue-600 text-royalBlue-50 py-2 px-4 hover:border-royalBlue-600 hover:bg-mistGray-50 hover:text-royalBlue-600 border-royalBlue-700'>
+              additionalStyles='font-Kanit !text-xl border-2 tracking-wider bg-royalBlue-600 text-royalBlue-50 py-4 px-8 hover:border-royalBlue-600 hover:bg-mistGray-50 hover:text-royalBlue-600 border-royalBlue-700'>
               Download C.V.
             </LinkButton>
           </li>
@@ -134,7 +134,11 @@ export const Header = () => {
             tabIndex={isMenuOpen ? 0 : -1}
             onClick={toggleMenu}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}>
-            {isMenuOpen ? <IoClose size={32} /> : <IoMenu size={32} />}
+            {isMenuOpen ? (
+              <IoClose size={32} />
+            ) : (
+              <IoMenu size={32} className='text-mistGray-950' />
+            )}
           </button>
         </div>
       </nav>

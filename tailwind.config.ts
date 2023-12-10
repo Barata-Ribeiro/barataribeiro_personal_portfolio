@@ -6,6 +6,7 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       container: {
@@ -14,6 +15,9 @@ const config: Config = {
           DEFAULT: '1rem',
           sm: '0rem',
         },
+      },
+      screens: {
+        xs: '320px',
       },
       fontFamily: {
         Roboto: 'var(--font-roboto)',
