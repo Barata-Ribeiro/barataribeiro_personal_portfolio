@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className='container'>
+      <main className='lg:container px-1'>
         <Hero />
         <About />
         <Projects />
