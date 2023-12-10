@@ -4,10 +4,10 @@ import { IoLogoGithub } from 'react-icons/io';
 
 export const Hero = () => {
   return (
-    <section className='flex flex-wrap'>
+    <section className='flex flex-wrap' id='home'>
       <div className='w-full sm:w-8/12 mb-10'>
         <div className='container mx-auto h-full sm:p-10'>
-          <div className='container px-4 lg:flex lg:flex-col mt-48 items-start h-full'>
+          <div className='container px-4 lg:flex lg:flex-col sm:mt-64 mt-24 items-start h-full'>
             <h1
               id='hero-heading'
               className='font-Kanit text-5xl font-semibold uppercase tracking-wider dark:text-mistGray-50 text-mistGray-950'>
