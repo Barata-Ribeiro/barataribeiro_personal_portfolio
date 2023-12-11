@@ -37,7 +37,9 @@ export const Education = ({
               className='mr-4 h-6 w-6 flex-shrink-0 text-rioGrande-600'
               aria-hidden='true'
             />
-            <span className='font-semibold tracking-wide text-mistGray-950 dark:text-mistGray-50'>{course.course}</span>
+            <span className='font-semibold tracking-wide text-mistGray-950 dark:text-mistGray-50'>
+              {course.course}
+            </span>
           </div>
           <span className='max-xs:hidden font-semibold tracking-wide text-mistGray-300'>
             {course.place}
@@ -58,7 +60,9 @@ export const Education = ({
             <div className='mr-3 inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-rioGrande-600 text-white'>
               <FaGraduationCap size={20} />
             </div>
-            <h2 className='text-2xl text-mistGray-950 dark:text-mistGray-50'>{course.year}</h2>
+            <h2 className='text-2xl text-mistGray-950 dark:text-mistGray-50'>
+              {course.year}
+            </h2>
           </div>
           <div className='flex-grow'>
             <p className='font-Kanit text-2xl font-semibold tracking-wide'>
@@ -74,7 +78,12 @@ export const Education = ({
   };
 
   return (
-    <section id='education' className='flex items-center'>
+    <section
+      id='education'
+      aria-label='Education section'
+      role='region'
+      className='flex items-center'>
+      <h1 className='sr-only'>Education and Courses</h1>
       <div className='justify-center flex-1 max-w-6xl mx-auto'>
         <div className='px-4 mb-4 md:text-center'>
           <p className='mb-2 text-lg font-semibold text-rioGrande-800 dark:text-rioGrande-400'>
@@ -93,15 +102,27 @@ export const Education = ({
           <div className='flex justify-center'>
             <p className='mb-4 max-w-2xl md:text-center text-left text-xl leading-relaxed text-mistGray-600 dark:text-gray-400'>
               Dive into my educational track: a Bachelor&apos;s in{' '}
-              <span className='text-mistGray-950 dark:text-mistGray-50'>Business Administration</span>,
-              followed by two enriching{' '}
-              <span className='text-mistGray-950 dark:text-mistGray-50'>graduate courses</span>. Now,
-              I&apos;m adding a creative edge to my profile, specializing in{' '}
-              <span className='text-mistGray-950 dark:text-mistGray-50'>UI Design</span> and{' '}
-              <span className='text-mistGray-950 dark:text-mistGray-50'>Front-End Development</span>{' '}
+              <span className='text-mistGray-950 dark:text-mistGray-50'>
+                Business Administration
+              </span>
+              , followed by two enriching{' '}
+              <span className='text-mistGray-950 dark:text-mistGray-50'>
+                graduate courses
+              </span>
+              . Now, I&apos;m adding a creative edge to my profile, specializing
+              in{' '}
+              <span className='text-mistGray-950 dark:text-mistGray-50'>
+                UI Design
+              </span>{' '}
+              and{' '}
+              <span className='text-mistGray-950 dark:text-mistGray-50'>
+                Front-End Development
+              </span>{' '}
               through intensive{' '}
-              <span className='text-mistGray-950 dark:text-mistGray-50'>online courses</span>. Explore
-              below!
+              <span className='text-mistGray-950 dark:text-mistGray-50'>
+                online courses
+              </span>
+              . Explore below!
             </p>
           </div>
 

@@ -34,7 +34,11 @@ export const About = () => {
     },
   ];
   return (
-    <section id='about' className='flex items-center'>
+    <section
+      id='about'
+      aria-label='About section'
+      role='region'
+      className='flex items-center'>
       <div className='justify-center flex-1 max-w-6xl mx-auto'>
         <div className='px-4 mb-4 md:text-center'>
           <p className='mb-2 text-lg font-semibold text-rioGrande-800 dark:text-rioGrande-400'>

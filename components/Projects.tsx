@@ -25,7 +25,12 @@ export const Projects = ({ projects }: ProjectsProps) => {
   const currentProject = projects[currentProjectIndex];
 
   return (
-    <section id='projects' className='flex items-center flex-col'>
+    <section
+      id='projects'
+      aria-label='Project section'
+      role='region'
+      className='flex items-center flex-col'>
+      <h1 className='sr-only'>My Projects</h1>
       <div className='justify-center flex-1 max-w-6xl mx-auto'>
         <div className='px-4 mb-4 md:text-center'>
           <p className='mb-2 text-lg font-semibold text-rioGrande-800 dark:text-rioGrande-400'>
