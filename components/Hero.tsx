@@ -54,7 +54,7 @@ export const Hero = () => {
         alt='Lights'
         width={5760}
         height={3840}
-        className='w-full h-48 object-cover object-center sm:h-screen sm:w-4/12'
+        className='w-full h-48 object-cover object-center sm:h-screen sm:w-4/12 sm:rounded-b-lg'
       />
     </section>
   );
