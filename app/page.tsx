@@ -19,7 +19,10 @@ export default async function Home() {
         <Hero />
         <About />
         <Projects projects={projects} />
-        <Education />
+        <Education
+          intensiveCourses={intensiveCourses}
+          highEducationCourses={higherEducationCourses}
+        />
       </main>
       <Footer />
       <ThemeSwitcher />
