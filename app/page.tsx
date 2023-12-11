@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className='lg:container px-1'>
+      <main className='lg:container px-1 flex flex-col gap-8 md:gap-6'>
         <Hero />
         <About />
         <Projects />
