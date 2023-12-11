@@ -36,7 +36,7 @@ export const About = () => {
   return (
     <section id='about' className='flex items-center'>
       <div className='justify-center flex-1 max-w-6xl mx-auto'>
-        <div className='px-4 mb-5 md:text-center md:mb-20'>
+        <div className='px-4 mb-4 md:text-center'>
           <p className='mb-2 text-lg font-semibold text-rioGrande-800 dark:text-rioGrande-400'>
             About me
           </p>
@@ -65,7 +65,7 @@ export const About = () => {
               className='relative italic object-cover w-full h-96 sm:rounded-lg lg:h-full'
             />
           </div>
-          <div className='w-full px-4 mb-10 lg:w-1/2 lg:mb-0 lg:mt-40'>
+          <div className='w-full px-4 mb-10 lg:w-1/2 lg:mb-0 lg:mt-56'>
             <h2 className='py-3 pl-2 mb-4 text-2xl sm:font-thin font-Kanit leading-tight text-mistGray-950 border-l-4 border-rioGrande-700 dark:border-rioGrande-500 dark:text-mistGray-300'>
               Front-end Developer & UI Designer
             </h2>
@@ -98,6 +98,7 @@ export const About = () => {
               and organizations. Let&apos;s make great things happen!
             </p>
             <div
+              role='navigation'
               aria-label='Social media links'
               className='flex items-center justify-start gap-2 sm:justify-start'>
               {socialButtonsItems.map((item, index) => (

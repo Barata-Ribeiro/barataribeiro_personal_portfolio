@@ -15,7 +15,7 @@ export default async function Home() {
   return (
     <>
       <Header />
-      <main className='lg:container px-1 flex flex-col gap-12 md:gap-8 shadow-lg bg-mistGray-100 dark:bg-mistGray-900'>
+      <main className='lg:container px-1 flex flex-col gap-16 md:gap-10 shadow-md shadow-mistGray-500 dark:shadow-black bg-mistGray-100 dark:bg-mistGray-950'>
         <Hero />
         <About />
         <Projects projects={projects} />

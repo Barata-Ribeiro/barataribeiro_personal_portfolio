@@ -5,24 +5,30 @@ import {
   BsFillArrowRightCircleFill,
 } from 'react-icons/bs';
 
+interface Slide {
+  img: string;
+  alt: string;
+}
+
 interface CarouselProps {
-  slides: string[];
+  slides: Slide[];
   onSlideChange: (index: number) => void;
 }
 
 export default function Carousel({ slides, onSlideChange }: CarouselProps) {
   let [current, setCurrent] = useState(0);
 
-  let previousSlide = () => {
-    const newIndex = current === 0 ? slides.length - 1 : current - 1;
+  const changeSlide = (newIndex: number) => {
     setCurrent(newIndex);
     onSlideChange(newIndex);
   };
 
-  let nextSlide = () => {
-    const newIndex = current === slides.length - 1 ? 0 : current + 1;
-    setCurrent(newIndex);
-    onSlideChange(newIndex);
+  const previousSlide = () => {
+    changeSlide(current === 0 ? slides.length - 1 : current - 1);
+  };
+
+  const nextSlide = () => {
+    changeSlide(current === slides.length - 1 ? 0 : current + 1);
   };
 
   return (
@@ -33,15 +39,30 @@ export default function Carousel({ slides, onSlideChange }: CarouselProps) {
           transform: `translateX(-${current * 100}%)`,
         }}>
         {slides.map((s, i) => {
-          return <Image key={i} src={s} alt='' width={1024} height={1024} />;
+          return (
+            <Image
+              key={i}
+              src={s.img}
+              alt={s.alt}
+              width={1024}
+              height={1024}
+              className='italic'
+            />
+          );
         })}
       </div>
 
-      <div className='absolute top-0 h-full w-full justify-between items-center flex text-mistGray-50 px-10 text-3xl'>
-        <button onClick={previousSlide}>
+      <div className='absolute top-0 h-full w-full justify-between items-center flex text-royalBlue-600 px-10 text-3xl md:text-4xl'>
+        <button
+          onClick={previousSlide}
+          aria-label='Go to left slide'
+          className='hover:text-royalBlue-300'>
           <BsFillArrowLeftCircleFill />
         </button>
-        <button onClick={nextSlide}>
+        <button
+          onClick={nextSlide}
+          aria-label='Go to right slide'
+          className='hover:text-royalBlue-300'>
           <BsFillArrowRightCircleFill />
         </button>
       </div>
@@ -50,12 +71,10 @@ export default function Carousel({ slides, onSlideChange }: CarouselProps) {
         {slides.map((_, i) => {
           return (
             <div
-              onClick={() => {
-                setCurrent(i);
-              }}
+              onClick={() => changeSlide(i)}
               key={'circle' + i}
-              className={`rounded-full w-5 h-5 cursor-pointer  ${
-                i == current ? 'bg-mistGray-50' : 'bg-mistGray-500'
+              className={`rounded-full w-5 h-5 cursor-pointer ${
+                i == current ? 'bg-rioGrande-600' : 'bg-rioGrande-950'
               }`}></div>
           );
         })}

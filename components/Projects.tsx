@@ -1,7 +1,9 @@
 'use client';
 
 import Carousel from '@/components/Carousel';
+import Link from 'next/link';
 import { useState } from 'react';
+import { FaCode, FaRegPlayCircle } from 'react-icons/fa';
 
 interface Project {
   id: string;
@@ -25,7 +27,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
   return (
     <section id='projects' className='flex items-center flex-col'>
       <div className='justify-center flex-1 max-w-6xl mx-auto'>
-        <div className='px-4 mb-5 md:text-center md:mb-20'>
+        <div className='px-4 mb-4 md:text-center'>
           <p className='mb-2 text-lg font-semibold text-rioGrande-800 dark:text-rioGrande-400'>
             Projects
           </p>
@@ -38,15 +40,54 @@ export const Projects = ({ projects }: ProjectsProps) => {
             <div className='flex-1 h-2 dark:bg-rioGrande-300 bg-rioGrande-600'></div>
           </div>
         </div>
-      </div>
-      <Carousel
-        slides={projects.map((project) => project.img)}
-        onSlideChange={setCurrentProjectIndex}
-      />
-      <div className='project-info'>
-        <h3>{currentProject.title}</h3>
-        <p>{currentProject.desc}</p>
-        {/* ... additional project details ... */}
+        <div className='flex flex-col gap-4 items-center justify-center'>
+          <Carousel
+            slides={projects.map((project) => project)}
+            onSlideChange={setCurrentProjectIndex}
+          />
+          <div id='project-info' className='max-w-md text-center flex-1'>
+            <h3 className='font-Kanit text-xl text-mistGray-950 dark:text-mistGray-100 font-semibold tracking-wide'>
+              <span className='mr-1 text-rioGrande-600'>.</span>{' '}
+              {currentProject.title}
+            </h3>
+            <p className='text-base font-light leading-relaxed text-mistGray-950 dark:text-mistGray-50'>
+              {currentProject.desc}
+            </p>
+            <div className='mt-2 flex flex-wrap items-center justify-start gap-2 text-xs font-medium text-mistGray-600 dark:text-white'>
+              {currentProject.tech.map((tech) => (
+                <span
+                  key={tech}
+                  className='grow rounded bg-mistGray-200 dark:bg-mistGray-300 px-2 py-1 font-semibold'>
+                  {tech.charAt(0).toUpperCase() + tech.slice(1)}
+                </span>
+              ))}
+            </div>
+            <div className='flex items-center justify-center gap-2 mt-4'>
+              <Link
+                onClick={(e) => e.stopPropagation()}
+                href={currentProject.repo}
+                aria-label='Open Repository'
+                target='_blank'
+                rel='noreferrer noopener'
+                className='flex cursor-pointer items-center gap-2 rounded-lg border-2 border-royalBlue-600 bg-royalBlue-500
+              px-2 py-1 text-sm font-semibold tracking-wide text-mistGray-50
+              hover:border-royalBlue-500 hover:bg-mistGray-50 hover:text-royalBlue-500'>
+                Repository <FaCode />
+              </Link>
+              <a
+                onClick={(e) => e.stopPropagation()}
+                href={currentProject.demo}
+                aria-label='See Demo'
+                target='_blank'
+                rel='noreferrer noopener'
+                className='flex cursor-pointer items-center gap-2 rounded-lg border-2 border-royalBlue-600 bg-royalBlue-500
+              px-2 py-1 text-sm font-semibold tracking-wide text-mistGray-50
+              hover:border-royalBlue-500 hover:bg-mistGray-50 hover:text-royalBlue-500'>
+                Demo <FaRegPlayCircle />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
