@@ -41,7 +41,8 @@ export const About = () => {
             About me
           </p>
           <h2 className='text-2xl md:text-4xl leading-tight text-mistGray-400 dark:text-mistGray-700'>
-            João Mendes Jorge{' '}
+            <span className='max-md:block'>João Mendes Jorge </span>
+
             <span className='text-mistGray-950 dark:text-mistGray-50'>
               Barata Ribeiro
             </span>
@@ -59,6 +60,8 @@ export const About = () => {
               alt='Photograph of a computer screen showing javascript code'
               width={1480}
               height={920}
+              blurDataURL='/assets/img/about-photo.jpg'
+              placeholder='blur'
               className='relative italic object-cover w-full h-96 sm:rounded-lg lg:h-full'
             />
           </div>

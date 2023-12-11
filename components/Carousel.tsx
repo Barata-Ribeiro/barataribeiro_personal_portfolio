@@ -26,7 +26,7 @@ export default function Carousel({ slides, onSlideChange }: CarouselProps) {
   };
 
   return (
-    <div className='overflow-hidden relative max-w-[1024px] max-h-[576px] rounded-lg'>
+    <div className='overflow-hidden relative max-w-[64rem] max-h-[36rem] rounded-lg'>
       <div
         className={`flex transition ease-out duration-40`}
         style={{

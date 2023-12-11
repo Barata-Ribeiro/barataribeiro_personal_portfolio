@@ -17,13 +17,13 @@ export const Hero = () => {
               Barata Ribeiro
             </h1>
 
-            <p className='mb-1 font-Kanit text-2xl font-light dark:text-mistGray-200 text-mistGray-400'>
+            <p className='mb-1 font-Kanit text-2xl font-light dark:text-mistGray-300 text-mistGray-400'>
               Front-End Developer & UI Designer.
             </p>
 
             <p
               id='hero-description'
-              className='max-w-lg leading-relaxed text-mistGray-600 dark:text-mistGray-400'>
+              className='max-w-lg leading-relaxed text-mistGray-600 dark:text-mistGray-500'>
               Business grad passionate about bridging strategy and execution,
               expanding into front-end development and UI design for visually
               appealing, user-friendly interfaces.
@@ -51,10 +51,12 @@ export const Hero = () => {
       </div>
       <Image
         src='/assets/img/heroImage.jpg'
-        alt='Lights'
+        alt='Hero image of blue light ornaments'
         width={5760}
         height={3840}
-        className='w-full h-48 object-cover object-center sm:h-screen sm:w-4/12 sm:rounded-b-lg'
+        blurDataURL='/assets/img/heroImage.jpg'
+        placeholder='blur'
+        className='w-full h-72 object-cover object-center sm:h-[62.5rem] sm:w-4/12 sm:rounded-b-lg italic'
       />
     </section>
   );
