@@ -7,7 +7,7 @@ export const Hero = () => {
     <section className='flex flex-wrap' id='home'>
       <div className='w-full sm:w-8/12 mb-10'>
         <div className='container mx-auto h-full sm:p-10'>
-          <div className='container px-4 lg:flex lg:flex-col sm:mt-64 mt-24 items-start h-full'>
+          <div className='px-4 lg:flex lg:flex-col sm:mt-64 mt-24 items-start h-fit'>
             <h1
               id='hero-heading'
               className='font-Kanit text-5xl font-semibold uppercase tracking-wider dark:text-mistGray-50 text-mistGray-950'>
@@ -29,7 +29,7 @@ export const Hero = () => {
               appealing, user-friendly interfaces.
             </p>
 
-            <div className='mt-8 flex flex-wrap gap-4 text-center'>
+            <div className='mt-8 flex flex-wrap gap-4 items-start'>
               <LinkButton
                 href='https://github.barataribeiro.com/'
                 title='Visit my GitHub profile'
@@ -41,7 +41,7 @@ export const Hero = () => {
               </LinkButton>
               <LinkButton
                 href='/'
-                additionalStyles='font-Kanit border-2 tracking-wider bg-mistGray-100 text-mistGray-400 py-2 px-4 hover:border-mistGray-100 hover:bg-mistGray-400 hover:text-mistGray-100 border-mistGray-400'
+                additionalStyles='font-Kanit tracking-wider border-2 border-mistGray-300 bg-mistGray-50 hover:bg-mistGray-300 text-mistGray-300 hover:text-mistGray-50 py-2 px-4 whitespace-nowrap'
                 download>
                 Download C.V.
               </LinkButton>
