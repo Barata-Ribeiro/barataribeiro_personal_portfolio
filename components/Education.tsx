@@ -54,7 +54,7 @@ export const Education = ({
     index: number
   ) => {
     return (
-      <div className='p-4 md:w-1/3' key={`hec-${index + 1}`}>
+      <div className='sm:w-fit w-full lg:w-1/3 lg:p-2' key={`hec-${index + 1}`}>
         <div className='flex h-full flex-col rounded-lg bg-mistGray-200 dark:bg-mistGray-900 p-8 shadow-lg'>
           <div className='mb-3 flex items-center gap-2'>
             <div className='mr-3 inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-rioGrande-600 text-white'>
@@ -82,17 +82,17 @@ export const Education = ({
       id='education'
       aria-label='Education section'
       role='region'
-      className='flex items-center'>
+      className='flex items-center mb-4'>
       <h1 className='sr-only'>Education and Courses</h1>
       <div className='justify-center flex-1 max-w-6xl mx-auto'>
-        <div className='px-4 mb-4 md:text-center'>
+        <div className='px-4 mb-8 md:text-center'>
           <p className='mb-2 text-lg font-semibold text-rioGrande-800 dark:text-rioGrande-400'>
             Education
           </p>
           <h2 className='text-2xl md:text-4xl leading-tight text-mistGray-950 dark:text-mistGray-50'>
             How I learned things
           </h2>
-          <div className='flex w-32 mt-3 mb-6 overflow-hidden rounded md:mx-auto md:mb-14'>
+          <div className='flex w-32 mt-3 overflow-hidden rounded md:mx-auto'>
             <div className='flex-1 h-2 dark:bg-rioGrande-200 bg-rioGrande-700'></div>
             <div className='flex-1 h-2 dark:bg-rioGrande-400 bg-rioGrande-800'></div>
             <div className='flex-1 h-2 dark:bg-rioGrande-300 bg-rioGrande-600'></div>
@@ -128,7 +128,7 @@ export const Education = ({
 
           {/* Education */}
           <div
-            className='flex flex-wrap justify-center'
+            className='flex flex-wrap justify-center lg:gap-0 gap-4'
             aria-label='List of Higher Education'>
             {highEducationCourses?.map(renderHigherEducation)}
           </div>

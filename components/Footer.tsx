@@ -45,7 +45,7 @@ export const Footer = () => {
       <div className='container pb-4 pt-6 sm:pt-8'>
         {/* INTRO TEXT */}
         <div className='flex flex-col items-center justify-center gap-6'>
-          <h1 className='font-Kanit text-[2.5rem] uppercase leading-none text-mistGray-50'>
+          <h1 className='font-Kanit sm:text-[2.5rem] text-2xl uppercase leading-none text-mistGray-50'>
             Get in Touch
           </h1>
           <p className='max-w-md text-center leading-relaxed text-mistGray-50 max-sm:px-4'>

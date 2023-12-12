@@ -40,7 +40,7 @@ export const About = () => {
       role='region'
       className='flex items-center'>
       <div className='justify-center flex-1 max-w-6xl mx-auto'>
-        <div className='px-4 mb-4 md:text-center'>
+        <div className='px-4 mb-8 md:text-center'>
           <p className='mb-2 text-lg font-semibold text-rioGrande-800 dark:text-rioGrande-400'>
             About me
           </p>
@@ -51,7 +51,7 @@ export const About = () => {
               Barata Ribeiro
             </span>
           </h2>
-          <div className='flex w-32 mt-3 mb-6 overflow-hidden rounded md:mx-auto md:mb-14'>
+          <div className='flex w-32 mt-3 overflow-hidden rounded md:mx-auto'>
             <div className='flex-1 h-2 dark:bg-rioGrande-200 bg-rioGrande-700'></div>
             <div className='flex-1 h-2 dark:bg-rioGrande-400 bg-rioGrande-800'></div>
             <div className='flex-1 h-2 dark:bg-rioGrande-300 bg-rioGrande-600'></div>

@@ -39,7 +39,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
           <h2 className='text-2xl md:text-4xl leading-tight text-mistGray-950 dark:text-mistGray-50'>
             What I&apos;ve been up to
           </h2>
-          <div className='flex w-32 mt-3 mb-6 overflow-hidden rounded md:mx-auto md:mb-14'>
+          <div className='flex w-32 mt-3 overflow-hidden rounded md:mx-auto'>
             <div className='flex-1 h-2 dark:bg-rioGrande-200 bg-rioGrande-700'></div>
             <div className='flex-1 h-2 dark:bg-rioGrande-400 bg-rioGrande-800'></div>
             <div className='flex-1 h-2 dark:bg-rioGrande-300 bg-rioGrande-600'></div>
@@ -48,7 +48,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
         <div className='flex flex-col gap-4 items-center justify-center'>
           <div id='project-info' className='max-w-md text-center flex-1'>
             <h3 className='font-Kanit text-xl text-mistGray-950 dark:text-mistGray-100 font-semibold tracking-wide'>
-              <span className='mr-1 text-rioGrande-600'>.</span>{' '}
+              <span className='mr-1 text-rioGrande-600 text-4xl'>.</span>{' '}
               {currentProject.title}
             </h3>
             <p className='text-base font-light leading-relaxed text-mistGray-950 dark:text-mistGray-50'>
