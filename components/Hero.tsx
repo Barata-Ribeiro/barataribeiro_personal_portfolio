@@ -44,10 +44,10 @@ export const Hero = () => {
                 <IoLogoGithub size={18} /> GitHub
               </LinkButton>
               <LinkButton
-                href='/'
+                href='/barataribeiro_resume.pdf'
                 additionalStyles='font-Kanit tracking-wider border-2 border-mistGray-300 bg-mistGray-50 hover:bg-mistGray-300 text-mistGray-300 hover:text-mistGray-50 py-2 px-4 whitespace-nowrap'
-                download>
-                Download C.V.
+                download='barataribeiro_resume'>
+                Download CV
               </LinkButton>
             </div>
           </div>

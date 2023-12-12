@@ -112,22 +112,22 @@ export const Header = () => {
               isMenuOpen && isMobile && 'border-t-2 border-mistGray-400 pt-12'
             }`}>
             <LinkButton
-              href='/'
+              href='/barataribeiro_resume.pdf'
               tabIndex={isMenuOpen ? menuItems.length + 1 : -1}
               onClick={handleLinkClick}
-              download={true}
+              download='barataribeiro_resume'
               additionalStyles='font-Kanit !text-xl border-2 tracking-wider bg-royalBlue-600 text-royalBlue-50 py-4 px-8 hover:border-royalBlue-600 hover:bg-mistGray-50 hover:text-royalBlue-600 border-royalBlue-700'>
-              Download C.V.
+              Download CV
             </LinkButton>
           </li>
         </ul>
 
         <div className='flex gap-4'>
           <LinkButton
-            href='/'
-            download={true}
+            href='/barataribeiro_resume.pdf'
+            download='barataribeiro_resume'
             additionalStyles='font-Kanit border-2 tracking-wider bg-royalBlue-600 text-royalBlue-50 py-2 px-4 hover:border-royalBlue-600 hover:bg-mistGray-50 hover:text-royalBlue-600 border-royalBlue-700 max-sm:hidden'>
-            Download C.V.
+            Download CV
           </LinkButton>
           <button
             className='lg:hidden block z-50'
