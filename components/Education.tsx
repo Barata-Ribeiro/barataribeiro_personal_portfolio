@@ -21,62 +21,62 @@ interface HigherEducationProps {
 
 type DataEducation = IntensiveCourseProps & HigherEducationProps;
 
+const renderCourses = (course: IntensiveCourse, index: number) => {
+  return (
+    <li
+      data-course={`${index + 1}`}
+      className='courses relative w-full p-2 sm:w-1/2'
+      key={course.id}>
+      <div className='flex h-full items-center justify-between rounded bg-white dark:bg-mistGray-800 p-4'>
+        <div className='flex items-center'>
+          <FaCheckCircle
+            className='mr-4 h-6 w-6 flex-shrink-0 text-rioGrande-600'
+            aria-hidden='true'
+          />
+          <span className='font-semibold tracking-wide text-mistGray-950 dark:text-mistGray-50'>
+            {course.course}
+          </span>
+        </div>
+        <span className='max-xs:hidden font-semibold tracking-wide text-mistGray-300'>
+          {course.place}
+        </span>
+      </div>
+    </li>
+  );
+};
+
+const renderHigherEducation = (
+  course: HigherEducationCourse,
+  index: number
+) => {
+  return (
+    <div className='sm:w-fit w-full lg:w-1/3 lg:p-2' key={`hec-${index + 1}`}>
+      <div className='flex h-full flex-col rounded-lg bg-mistGray-200 dark:bg-mistGray-900 p-8 shadow-lg'>
+        <div className='mb-3 flex items-center gap-2'>
+          <div className='mr-3 inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-rioGrande-600 text-white'>
+            <FaGraduationCap size={20} />
+          </div>
+          <h2 className='text-2xl text-mistGray-950 dark:text-mistGray-50'>
+            {course.year}
+          </h2>
+        </div>
+        <div className='flex-grow'>
+          <p className='font-Kanit text-2xl font-semibold tracking-wide'>
+            {course.degree}
+          </p>
+          <p className='mt-3 inline-flex items-center text-mistGray-950 dark:text-mistGray-50'>
+            {course.university}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const Education = ({
   intensiveCourses,
   highEducationCourses,
 }: DataEducation) => {
-  const renderCourses = (course: IntensiveCourse, index: number) => {
-    return (
-      <li
-        data-course={`${index + 1}`}
-        className='courses relative w-full p-2 sm:w-1/2'
-        key={course.id}>
-        <div className='flex h-full items-center justify-between rounded bg-white dark:bg-mistGray-800 p-4'>
-          <div className='flex items-center'>
-            <FaCheckCircle
-              className='mr-4 h-6 w-6 flex-shrink-0 text-rioGrande-600'
-              aria-hidden='true'
-            />
-            <span className='font-semibold tracking-wide text-mistGray-950 dark:text-mistGray-50'>
-              {course.course}
-            </span>
-          </div>
-          <span className='max-xs:hidden font-semibold tracking-wide text-mistGray-300'>
-            {course.place}
-          </span>
-        </div>
-      </li>
-    );
-  };
-
-  const renderHigherEducation = (
-    course: HigherEducationCourse,
-    index: number
-  ) => {
-    return (
-      <div className='sm:w-fit w-full lg:w-1/3 lg:p-2' key={`hec-${index + 1}`}>
-        <div className='flex h-full flex-col rounded-lg bg-mistGray-200 dark:bg-mistGray-900 p-8 shadow-lg'>
-          <div className='mb-3 flex items-center gap-2'>
-            <div className='mr-3 inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-rioGrande-600 text-white'>
-              <FaGraduationCap size={20} />
-            </div>
-            <h2 className='text-2xl text-mistGray-950 dark:text-mistGray-50'>
-              {course.year}
-            </h2>
-          </div>
-          <div className='flex-grow'>
-            <p className='font-Kanit text-2xl font-semibold tracking-wide'>
-              {course.degree}
-            </p>
-            <p className='mt-3 inline-flex items-center text-mistGray-950 dark:text-mistGray-50'>
-              {course.university}
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <section
       id='education'

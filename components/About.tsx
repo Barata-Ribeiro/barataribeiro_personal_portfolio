@@ -1,6 +1,6 @@
 import { SocialButton } from '@/components/shared/SocialButton';
 import Image from 'next/image';
-import { ReactNode } from 'react';
+import { ReactNode, memo } from 'react';
 
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { SiMaildotru } from 'react-icons/si';
@@ -12,27 +12,30 @@ interface SocialButtonsItems {
   text: string;
 }
 
+const socialButtonsItems: SocialButtonsItems[] = [
+  {
+    href: 'https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/',
+    title: 'Visit my LinkedIn profile',
+    icon: <FaLinkedinIn size={25} aria-label='LinkedIn logo' />,
+    text: 'LinkedIn',
+  },
+  {
+    href: 'https://github.barataribeiro.com/',
+    title: 'Visit my GitHub profile',
+    icon: <FaGithub size={25} aria-label='GitHub logo' />,
+    text: 'GitHub',
+  },
+  {
+    href: 'mailto:j.mendes1920@gmail.com',
+    title: 'Send me an Email',
+    icon: <SiMaildotru size={25} aria-label='Email logo' />,
+    text: 'Email',
+  },
+];
+
+const SocialButtonMemo = memo(SocialButton);
+
 export const About = () => {
-  const socialButtonsItems: SocialButtonsItems[] = [
-    {
-      href: 'https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/',
-      title: 'Visit my LinkedIn profile',
-      icon: <FaLinkedinIn size={25} aria-label='LinkedIn logo' />,
-      text: 'LinkedIn',
-    },
-    {
-      href: 'https://github.barataribeiro.com/',
-      title: 'Visit my GitHub profile',
-      icon: <FaGithub size={25} aria-label='GitHub logo' />,
-      text: 'GitHub',
-    },
-    {
-      href: 'mailto:j.mendes1920@gmail.com',
-      title: 'Send me an Email',
-      icon: <SiMaildotru size={25} aria-label='Email logo' />,
-      text: 'Email',
-    },
-  ];
   return (
     <section
       id='about'
@@ -106,7 +109,7 @@ export const About = () => {
               aria-label='Social media links'
               className='flex items-center justify-start gap-2 sm:justify-start'>
               {socialButtonsItems.map((item, index) => (
-                <SocialButton
+                <SocialButtonMemo
                   key={`button-${index}-${item.title}`}
                   href={item.href}
                   icon={item.icon}
@@ -118,7 +121,7 @@ export const About = () => {
                   rel='noopener noreferrer'
                   target='_blank'>
                   {item.text}
-                </SocialButton>
+                </SocialButtonMemo>
               ))}
             </div>
           </div>

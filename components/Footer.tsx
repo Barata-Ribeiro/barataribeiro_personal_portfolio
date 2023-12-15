@@ -14,32 +14,32 @@ interface SocialLink {
   label: string;
 }
 
+const socialLinks: SocialLink[] = [
+  {
+    url: 'https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/',
+    icon: <FaLinkedinIn size={40} aria-label='LinkedIn' />,
+    label: 'LinkedIn',
+  },
+  {
+    url: 'https://github.barataribeiro.com/',
+    icon: <FaGithub size={40} aria-label='GitHub' />,
+    label: 'GitHub',
+  },
+  {
+    url: 'mailto:j.mendes1920@gmail.com',
+    icon: <FaMailBulk size={40} aria-label='Email' />,
+    label: 'Send Mail',
+  },
+];
+
+const menuLinks: MenuItem[] = [
+  { text: 'Home', url: '/#home' },
+  { text: 'About', url: '/#about' },
+  { text: 'Projects', url: '/#projects' },
+  { text: 'Education', url: '/#education' },
+];
+
 export const Footer = () => {
-  const socialLinks: SocialLink[] = [
-    {
-      url: 'https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/',
-      icon: <FaLinkedinIn size={40} aria-label='LinkedIn' />,
-      label: 'LinkedIn',
-    },
-    {
-      url: 'https://github.barataribeiro.com/',
-      icon: <FaGithub size={40} aria-label='GitHub' />,
-      label: 'GitHub',
-    },
-    {
-      url: 'mailto:j.mendes1920@gmail.com',
-      icon: <FaMailBulk size={40} aria-label='Email' />,
-      label: 'Send Mail',
-    },
-  ];
-
-  const menuLinks: MenuItem[] = [
-    { text: 'Home', url: '/#home' },
-    { text: 'About', url: '/#about' },
-    { text: 'Projects', url: '/#projects' },
-    { text: 'Education', url: '/#education' },
-  ];
-
   return (
     <footer className='bg-[#201F1D]'>
       <div className='container pb-4 pt-6 sm:pt-8'>

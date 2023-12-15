@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 export const ThemeSwitcher = () => {
@@ -20,9 +20,9 @@ export const ThemeSwitcher = () => {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
+  }, []);
 
   return (
     <button

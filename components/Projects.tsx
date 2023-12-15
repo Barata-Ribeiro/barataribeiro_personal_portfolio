@@ -2,7 +2,7 @@
 
 import Carousel from '@/components/Carousel';
 import Link from 'next/link';
-import { useState } from 'react';
+import { memo, useMemo, useState } from 'react';
 import { FaCode, FaRegPlayCircle } from 'react-icons/fa';
 
 interface Project {
@@ -20,9 +20,16 @@ interface ProjectsProps {
   projects: Project[];
 }
 
+const CarouselMemo = memo(Carousel);
+
 export const Projects = ({ projects }: ProjectsProps) => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const currentProject = projects[currentProjectIndex];
+
+  const carouselSlides = useMemo(
+    () => projects.map((project) => project),
+    [projects]
+  );
 
   return (
     <section
@@ -88,8 +95,8 @@ export const Projects = ({ projects }: ProjectsProps) => {
               </a>
             </div>
           </div>
-          <Carousel
-            slides={projects.map((project) => project)}
+          <CarouselMemo
+            slides={carouselSlides}
             onSlideChange={setCurrentProjectIndex}
           />
         </div>

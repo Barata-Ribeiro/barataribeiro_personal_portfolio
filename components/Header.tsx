@@ -3,8 +3,9 @@
 import { LinkButton } from '@/components/shared/LinkButton';
 import { Logo } from '@/components/shared/Logo';
 import { MiniLogo } from '@/components/shared/MiniLogo';
+import { debounce } from 'lodash';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 import { IoClose, IoMenu } from 'react-icons/io5';
 
 interface MenuItem {
@@ -12,39 +13,50 @@ interface MenuItem {
   url: string;
 }
 
+const menuItems: MenuItem[] = [
+  { text: 'Home', url: '/#home' },
+  { text: 'About', url: '/#about' },
+  { text: 'Projects', url: '/#projects' },
+  { text: 'Education', url: '/#education' },
+];
+
+const LinkButtonMemo = memo(LinkButton);
+const LogoMemo = memo(Logo);
+const MiniLogoMemo = memo(MiniLogo);
+
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isNarrowScreen, setIsNarrowScreen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const firstMenuItemRef = useRef<HTMLAnchorElement>(null);
-  const menuItems: MenuItem[] = [
-    { text: 'Home', url: '/#home' },
-    { text: 'About', url: '/#about' },
-    { text: 'Projects', url: '/#projects' },
-    { text: 'Education', url: '/#education' },
-  ];
 
   // Detect scrolling
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 90);
+    const handleScroll = debounce(
+      () => setIsScrolled(window.scrollY > 90),
+      100
+    );
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Detect screen width to resize logo
   useEffect(() => {
-    const checkScreenSize = () => setIsNarrowScreen(window.innerWidth < 315);
+    const checkScreenSize = debounce(
+      () => setIsNarrowScreen(window.innerWidth < 315),
+      100
+    );
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
   useEffect(() => {
-    const checkIfMobileScreen = () => {
+    const checkIfMobileScreen = debounce(() => {
       setIsMobile(window.innerWidth < 1024);
       setIsMenuOpen(false);
-    };
+    }, 100);
     checkIfMobileScreen();
     window.addEventListener('resize', checkIfMobileScreen);
     return () => window.removeEventListener('resize', checkIfMobileScreen);
