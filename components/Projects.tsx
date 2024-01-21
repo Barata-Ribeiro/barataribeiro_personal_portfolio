@@ -53,6 +53,10 @@ export const Projects = ({ projects }: ProjectsProps) => {
           </div>
         </div>
         <div className='flex flex-col gap-4 items-center justify-center'>
+          <CarouselMemo
+            slides={carouselSlides}
+            onSlideChange={setCurrentProjectIndex}
+          />
           <div id='project-info' className='max-w-md text-center flex-1'>
             <h3 className='font-Kanit text-xl text-mistGray-950 dark:text-mistGray-100 font-semibold tracking-wide'>
               <span className='mr-1 text-rioGrande-600 text-4xl'>.</span>{' '}
@@ -95,10 +99,6 @@ export const Projects = ({ projects }: ProjectsProps) => {
               </a>
             </div>
           </div>
-          <CarouselMemo
-            slides={carouselSlides}
-            onSlideChange={setCurrentProjectIndex}
-          />
         </div>
       </div>
     </section>
