@@ -1,6 +1,25 @@
 {
   "projects": [
     {
+      "id": "birdy-social-network",
+      "title": "Birdy",
+      "desc": "A full-stack Instagram-like social network for bird enthusiasts to share and explore various bird species through their photographs.",
+      "img": "/assets/img/projectsImages/birdy.jpg",
+      "alt": "Birdy - Social Network",
+      "tech": [
+        "Express",
+        "TypeScript",
+        "TypeORM",
+        "Vite.js",
+        "React",
+        "Redux",
+        "Redux Toolkit",
+        "Tailwind CSS"
+      ],
+      "repo": "https://github.com/Barata-Ribeiro/Birdy",
+      "demo": "https://birdy-social.vercel.app/"
+    },
+    {
       "id": "sector-67-blog",
       "title": "Sector 67 Blog",
       "desc": "A course project of a fictional blog incremented from the original for learning purposes of the Angular environment. It uses generative AI to simulate the fetched data.",
