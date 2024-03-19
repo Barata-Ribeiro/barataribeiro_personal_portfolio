@@ -63,9 +63,9 @@ export const Hero = () => {
         alt="Hero image of blue light ornaments"
         width={5760}
         height={3840}
-        blurDataURL="/assets/img/heroImage.jpg"
-        placeholder="blur"
         className="h-72 w-full object-cover object-center italic sm:h-[62.5rem] sm:w-4/12 sm:rounded-b-lg"
+        priority
+        sizes="100vw"
       />
     </section>
   )

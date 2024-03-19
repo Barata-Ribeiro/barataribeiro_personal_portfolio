@@ -6,18 +6,21 @@ const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
   subsets: ["latin"],
   variable: "--font-roboto",
+  display: "swap",
 })
 
 const comfortaa = Comfortaa({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-comfortaa",
+  display: "swap",
 })
 
 const kanit = Kanit({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   variable: "--font-kanit",
+  display: "swap",
 })
 
 export const metadata: Metadata = {
@@ -62,9 +65,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
   return (
     <html lang="en">
       <body

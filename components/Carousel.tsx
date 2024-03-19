@@ -59,7 +59,7 @@ export default function Carousel({ slides, onSlideChange }: CarouselProps) {
         <div
           onClick={() => changeSlide(i)}
           key={"circle" + i}
-          className={`h-5 w-5 cursor-pointer rounded-full ${
+          className={`h-3 w-3 cursor-pointer rounded-full md:h-5 md:w-5 ${
             i === current ? "bg-rioGrande-600" : "bg-rioGrande-950"
           }`}
         ></div>
@@ -68,7 +68,7 @@ export default function Carousel({ slides, onSlideChange }: CarouselProps) {
   )
 
   return (
-    <div className="relative max-h-[36rem] max-w-[64rem] overflow-hidden rounded-lg">
+    <div className="relative max-h-[36rem] max-w-[62rem] overflow-hidden rounded-lg">
       <div
         className={`duration-40 flex transition ease-out`}
         style={{
@@ -78,7 +78,7 @@ export default function Carousel({ slides, onSlideChange }: CarouselProps) {
         {slideImages}
       </div>
 
-      <div className="absolute top-0 flex h-full w-full items-center justify-between px-10 text-3xl text-royalBlue-600 md:text-4xl">
+      <div className="absolute top-0 flex h-full w-full items-center justify-between px-5 text-3xl text-royalBlue-600 md:px-10 md:text-4xl">
         <button
           onClick={previousSlide}
           aria-label="Go to left slide"

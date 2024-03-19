@@ -68,9 +68,8 @@ export const About = () => {
               alt="Photograph of a computer screen showing javascript code"
               width={1480}
               height={920}
-              blurDataURL="/assets/img/about-photo.jpg"
-              placeholder="blur"
               className="relative h-96 w-full object-cover italic sm:rounded-lg lg:h-full"
+              sizes="100vw"
             />
           </div>
           <div className="mb-10 w-full px-4 lg:mb-0 lg:mt-56 lg:w-1/2">
