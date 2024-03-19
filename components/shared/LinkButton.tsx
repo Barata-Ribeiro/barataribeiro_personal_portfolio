@@ -1,8 +1,8 @@
-import { AnchorHTMLAttributes, forwardRef } from 'react';
+import { AnchorHTMLAttributes, forwardRef } from "react"
 
 type LinkButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
-  additionalStyles?: string;
-};
+  additionalStyles?: string
+}
 
 /**
  * LinkButton component
@@ -20,11 +20,12 @@ export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps>(
       <a
         ref={ref}
         {...props}
-        className={`text-sm font-medium focus:outline-none focus:ring-4 rounded-lg select-none cursor-pointer transition-all ${additionalStyles}`}>
+        className={`cursor-pointer select-none rounded-lg text-sm font-medium transition-all focus:outline-none focus:ring-4 ${additionalStyles}`}
+      >
         {props.children}
       </a>
-    );
+    )
   }
-);
+)
 
-LinkButton.displayName = 'LinkButton';
+LinkButton.displayName = "LinkButton"
