@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Comfortaa, Kanit, Roboto } from "next/font/google"
 import "./globals.css"
+import { type ReactNode } from "react"
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -66,7 +67,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: ReactNode
 }>) {
   return (
     <html lang="en">

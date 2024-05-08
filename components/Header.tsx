@@ -87,9 +87,9 @@ export const Header = () => {
         className="container flex items-center justify-between"
       >
         {isNarrowScreen ? (
-          <MiniLogo aria-hidden="true" />
+          <MiniLogoMemo aria-hidden="true" />
         ) : (
-          <Logo aria-hidden="true" />
+          <LogoMemo aria-hidden="true" />
         )}
 
         <ul
@@ -126,7 +126,7 @@ export const Header = () => {
               isMenuOpen && isMobile && "border-t-2 border-mistGray-400 pt-12"
             }`}
           >
-            <LinkButton
+            <LinkButtonMemo
               href="/barataribeiro_resume.pdf"
               tabIndex={isMenuOpen ? menuItems.length + 1 : -1}
               onClick={handleLinkClick}
@@ -134,18 +134,18 @@ export const Header = () => {
               additionalStyles="font-Kanit !text-xl border-2 tracking-wider bg-royalBlue-600 text-royalBlue-50 py-4 px-8 hover:border-royalBlue-600 hover:bg-mistGray-50 hover:text-royalBlue-600 border-royalBlue-700"
             >
               Download CV
-            </LinkButton>
+            </LinkButtonMemo>
           </li>
         </ul>
 
         <div className="flex gap-4">
-          <LinkButton
+          <LinkButtonMemo
             href="/barataribeiro_resume.pdf"
             download="barataribeiro_resume"
             additionalStyles="font-Kanit border-2 tracking-wider bg-royalBlue-600 text-royalBlue-50 py-2 px-4 hover:border-royalBlue-600 hover:bg-mistGray-50 hover:text-royalBlue-600 border-royalBlue-700 max-sm:hidden"
           >
             Download CV
-          </LinkButton>
+          </LinkButtonMemo>
           <button
             className="z-50 block lg:hidden"
             tabIndex={isMenuOpen ? 0 : -1}
