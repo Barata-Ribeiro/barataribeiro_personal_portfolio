@@ -71,9 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${roboto.variable} ${comfortaa.variable} ${kanit.variable}`}
-      >
+      <body className={`${roboto.variable} ${comfortaa.variable} ${kanit.variable}`}>
         {children}
       </body>
     </html>

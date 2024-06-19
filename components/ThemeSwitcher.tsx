@@ -3,15 +3,13 @@
 import { useCallback, useEffect, useState } from "react"
 import { MdDarkMode, MdLightMode } from "react-icons/md"
 
-export const ThemeSwitcher = () => {
+export default function ThemeSwitcher() {
   const [theme, setTheme] = useState("light")
 
   useEffect(() => {
     const savedTheme =
       localStorage.getItem("theme") ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light")
+      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
     setTheme(savedTheme)
   }, [])
 

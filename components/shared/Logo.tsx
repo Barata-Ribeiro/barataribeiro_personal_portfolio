@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export const Logo = () => {
+export default function Logo() {
   return (
     <Link className="py-5" href="/">
       <h1

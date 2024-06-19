@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export const MiniLogo = () => {
+export default function MiniLogo() {
   return (
     <Link
       className="flex items-center py-5 font-Kanit text-2xl font-semibold uppercase"
