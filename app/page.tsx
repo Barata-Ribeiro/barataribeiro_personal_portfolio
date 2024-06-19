@@ -1,4 +1,5 @@
 import { promises as fs } from "fs"
+import Header from "@/components/header"
 
 export default async function Home() {
   const file = await fs.readFile(process.cwd() + "/app/data/data.json", "utf8")
@@ -6,7 +7,7 @@ export default async function Home() {
 
   return (
     <>
-      <h1>Hero!</h1>
+      <Header />
     </>
   )
 }
