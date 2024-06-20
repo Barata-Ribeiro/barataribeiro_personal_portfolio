@@ -6,6 +6,8 @@ import { useEffect, useState } from "react"
 import MiniLogo from "@/components/general/mini-logo"
 import tw from "@/utils/tw"
 import LinkButton from "@/components/general/link-button"
+import { FaBars, FaXmark } from "react-icons/fa6"
+import Button from "@/components/general/button"
 
 interface MenuItem {
   text: string
@@ -21,6 +23,7 @@ const MENU_ITEMS: MenuItem[] = [
 
 export default function Header() {
   const [isNarrowScreen, setIsNarrowScreen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const checkScreenSize = debounce(
@@ -43,7 +46,7 @@ export default function Header() {
         role="navigation"
       >
         {isNarrowScreen ? <MiniLogo aria-hidden="true" /> : <Logo aria-hidden="true" />}
-        <ul className="flex items-center gap-5 font-Comfortaa font-bold">
+        <ul className="hidden items-center gap-5 font-Comfortaa font-bold lg:flex">
           {MENU_ITEMS.map((item, index) => (
             <li key={"nav-" + item.text}>
               <LinkButton href={item.url} className={navButtonStyle}>
@@ -61,6 +64,13 @@ export default function Header() {
             </LinkButton>
           </li>
         </ul>
+        <Button
+          className="block text-mistGray-50 lg:hidden"
+          aria-label={isMenuOpen ? "Close Menu" : "Close Menu"}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <FaXmark size={26} /> : <FaBars size={26} />}
+        </Button>
       </nav>
     </header>
   )

@@ -8,7 +8,7 @@ export default async function Home() {
   const { projects, higherEducationCourses, intensiveCourses } = JSON.parse(file)
 
   return (
-    <main role="main">
+    <main role="main" className="snap-y snap-mandatory">
       <Header />
 
       {/*SECTIONS*/}

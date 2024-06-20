@@ -1,11 +1,11 @@
-import Link from "next/link"
+import LinkButton from "@/components/general/link-button"
 
 export default function Logo() {
   return (
-    <Link className="py-5" href="/">
+    <LinkButton className="py-5" href="/">
       <h1
         title="Barata Ribeiro Logo"
-        className="font-Kanit font-semibold uppercase tracking-widest text-mistGray-950 sm:text-2xl md:text-4xl"
+        className="flex items-center gap-1 font-Kanit text-2xl font-semibold uppercase tracking-widest text-mistGray-950 md:text-3xl lg:text-4xl"
       >
         Barata{" "}
         <span className="font-Comfortaa font-bold tracking-normal text-rioGrande-600">
@@ -13,6 +13,6 @@ export default function Logo() {
         </span>{" "}
         Ribeiro
       </h1>
-    </Link>
+    </LinkButton>
   )
 }
