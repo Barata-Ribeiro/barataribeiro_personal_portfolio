@@ -5,7 +5,7 @@ export default function Logo() {
     <LinkButton className="py-5" href="/">
       <h1
         title="Barata Ribeiro Logo"
-        className="flex items-center gap-1 font-Kanit text-2xl font-semibold uppercase tracking-widest text-mistGray-950 md:text-3xl lg:text-4xl"
+        className="flex items-center gap-1 font-Kanit text-xl font-semibold uppercase tracking-widest text-mistGray-950 xs:text-2xl sm:text-4xl"
       >
         Barata{" "}
         <span className="font-Comfortaa font-bold tracking-normal text-rioGrande-600">

@@ -24,7 +24,7 @@ export default function Hero() {
           Full-stack Developer
         </h2>
         <div className="flex w-full items-center justify-center gap-5 sm:gap-10 md:gap-20">
-          <hr className="h-1 max-w-80 flex-grow rounded bg-mistGray-50" aria-hidden />
+          <hr className="h-1 max-w-96 flex-grow rounded bg-mistGray-50" aria-hidden />
           <LinkButton
             href="https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/"
             className="flex-shrink"
@@ -45,7 +45,7 @@ export default function Hero() {
           >
             <FaGithub size={24} />
           </LinkButton>
-          <hr className="h-1 max-w-80 flex-grow rounded bg-mistGray-50" aria-hidden />
+          <hr className="h-1 max-w-96 flex-grow rounded bg-mistGray-50" aria-hidden />
         </div>
         <p className="max-w-lg font-Roboto leading-7">
           Business grad passionate about bridging strategy and execution, expanding into
