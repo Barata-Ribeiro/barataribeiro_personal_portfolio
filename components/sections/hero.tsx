@@ -7,7 +7,9 @@ export default function Hero() {
   return (
     <section
       id="home"
+      role="region"
       className="relative flex h-screen flex-grow snap-center flex-col md:snap-start"
+      aria-label="Hero/Home section"
       aria-labelledby="hero-title"
     >
       <div className="container m-auto flex flex-col items-center justify-center gap-10 px-1 text-center font-Kanit text-mistGray-50 md:gap-20 md:px-0">

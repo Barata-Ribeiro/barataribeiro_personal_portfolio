@@ -5,6 +5,8 @@ export default function About() {
   return (
     <section
       id="about"
+      role="region"
+      aria-label="About section"
       className="container my-40 flex max-w-6xl snap-center flex-wrap items-center justify-center gap-5 px-1 md:snap-start md:px-0 lg:justify-between"
       aria-labelledby="about-title"
     >
