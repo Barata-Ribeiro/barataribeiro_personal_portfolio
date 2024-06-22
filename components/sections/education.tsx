@@ -102,7 +102,7 @@ export default function Education({
             </div>
           </div>
 
-          <div>
+          <div className="mx-auto w-max sm:mx-0">
             <h2
               className={twMerge(
                 pseudoElement,
@@ -112,20 +112,25 @@ export default function Education({
               Intensive Courses
             </h2>
             <ul className="flex flex-col gap-4">
-              {intensiveCourses.map((item, index) => (
-                <li className="text-mistGray-50" key={item + "-" + index}>
+              {intensiveCourses.reverse().map((item, index) => (
+                <li
+                  className="font-medium tracking-wide text-mistGray-50"
+                  key={item + "-" + index}
+                >
                   {item.course}{" "}
-                  <span className="ml-5 text-mistGray-700">/ {item.place}</span>
+                  <span className="ml-5 hidden text-mistGray-700 sm:inline-block">
+                    / {item.place}
+                  </span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
       </div>
-      <div className="container py-6">
+      <div className="container flex items-center justify-center py-8">
         <LinkButton
           href="https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/"
-          className="transation-colors m-auto text-base font-semibold text-mistGray-100 underline underline-offset-4 hover:text-royalBlue-600 focus:text-royalBlue-700 active:text-royalBlue-800 sm:text-xl"
+          className="transation-colors text-base font-semibold text-mistGray-100 underline underline-offset-4 hover:text-royalBlue-600 focus:text-royalBlue-700 active:text-royalBlue-800 sm:text-xl"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
