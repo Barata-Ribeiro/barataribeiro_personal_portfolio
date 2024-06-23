@@ -76,11 +76,11 @@ export const Footer = () => {
           <ul className="flex gap-2 self-center max-sm:text-sm">
             {menuLinks.map((link, index) => (
               <li
-                className="border-r pr-2 leading-none text-mistGray-50 last:border-none last:pr-0"
+                className="border-r pr-2 leading-none last:border-none last:pr-0"
                 key={`nav-${index}-${link.url}`}
               >
                 <LinkButton
-                  className={`cursor-pointer hover:text-royalBlue-100`}
+                  className="cursor-pointer font-Comfortaa text-mistGray-50 hover:text-royalBlue-500"
                   href={link.url}
                 >
                   {link.text}

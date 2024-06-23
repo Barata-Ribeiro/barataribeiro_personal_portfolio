@@ -118,7 +118,7 @@ export default function Education({
                   key={item + "-" + index}
                 >
                   {item.course}{" "}
-                  <span className="ml-5 hidden text-mistGray-700 sm:inline-block">
+                  <span className="ml-5 hidden select-none font-Comfortaa text-mistGray-700 sm:inline-block">
                     / {item.place}
                   </span>
                 </li>
@@ -130,7 +130,7 @@ export default function Education({
       <div className="container flex items-center justify-center py-8">
         <LinkButton
           href="https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/"
-          className="transation-colors text-base font-semibold text-mistGray-100 underline underline-offset-4 hover:text-royalBlue-600 focus:text-royalBlue-700 active:text-royalBlue-800 sm:text-xl"
+          className="transation-colors font-Comfortaa text-base font-semibold text-mistGray-100 underline underline-offset-4 hover:text-royalBlue-600 focus:text-royalBlue-700 active:text-royalBlue-800 sm:text-xl"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
