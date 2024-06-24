@@ -31,11 +31,11 @@ export default function ProjectCard({ project }: Readonly<{ project: Project }>)
           </LinkButton>
         </div>
       </div>
-      <div className="h-max w-full justify-self-end px-6 pb-2 pt-4">
+      <div className="flex h-max w-full flex-wrap gap-2 justify-self-end px-6 pb-6">
         {project.tech.map((tech, index) => (
           <span
             key={tech + "-" + index}
-            className="mb-2 mr-2 inline-block select-none rounded-full bg-mistGray-200 px-3 py-1 text-sm font-semibold text-mistGray-700"
+            className="block flex-grow select-none rounded-full bg-mistGray-200 px-3 py-1 text-center text-sm font-semibold text-mistGray-700"
           >
             #{tech}
           </span>

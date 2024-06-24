@@ -40,7 +40,7 @@ export default function Education({
     >
       <div className="container grid grid-cols-1 items-start justify-center md:grid-cols-2">
         <h1
-          className="w-max place-self-center font-Kanit text-7xl font-semibold uppercase leading-none tracking-wide sm:text-8xl md:place-self-auto md:text-9xl"
+          className="w-max place-self-center text-right font-Kanit text-7xl font-semibold uppercase leading-none tracking-wide text-mistGray-950 sm:text-8xl md:place-self-auto md:text-9xl"
           aria-label="Education"
           title="Education"
         >
