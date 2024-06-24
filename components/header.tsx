@@ -66,7 +66,7 @@ export default function Header() {
       resizeObserver.observe(headerElement)
 
       return () => {
-        if (headerElement) resizeObserver.unobserve(headerElement)
+        if (headerElement !== null) resizeObserver.unobserve(headerElement)
       }
     }
   }, [])
@@ -93,7 +93,7 @@ export default function Header() {
         {isNarrowScreen ? <MiniLogo aria-hidden="true" /> : <Logo aria-hidden="true" />}
         <ul className="hidden items-center gap-5 font-Comfortaa font-bold lg:flex">
           {MENU_ITEMS.map((item, index) => (
-            <li key={"nav-" + item.text}>
+            <li key={"nav-" + item.text + "-" + index}>
               <LinkButton href={item.url} className={navButtonStyle}>
                 {item.text}
               </LinkButton>
@@ -113,7 +113,7 @@ export default function Header() {
         {/*MOBILE MENU*/}
         <Button
           className="block text-mistGray-50 lg:hidden"
-          aria-label={isMenuOpen ? "Close Menu" : "Close Menu"}
+          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
           onClick={handleMenuClick}
         >
           {isMenuOpen ? <FaXmark size={26} /> : <FaBars size={26} />}
@@ -128,7 +128,7 @@ export default function Header() {
           style={{ top: `${headerHeight}px` }}
         >
           {MENU_ITEMS.map((item, index) => (
-            <li key={"nav-" + item.text}>
+            <li key={"nav-" + item.text + "-" + index}>
               <LinkButton
                 href={item.url}
                 className={tw`block px-4 py-3 text-xl text-mistGray-200 duration-300 hover:bg-mistGray-500 hover:text-mistGray-50 active:bg-mistGray-800`}

@@ -15,12 +15,11 @@ export interface ProjectProps {
   projects: Project[]
 }
 
-export default function Projects({ projects }: ProjectProps) {
+export default function Projects({ projects }: Readonly<ProjectProps>) {
   return (
     <section
       id="projects"
       aria-label="Project section"
-      role="region"
       className="h-full w-full bg-mistGray-300"
     >
       <div

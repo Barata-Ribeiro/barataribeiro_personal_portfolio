@@ -36,7 +36,6 @@ export default function Education({
     <section
       id="education"
       aria-label="Education section"
-      role="region"
       className="bg-mistGray-900 px-1 pt-32 md:px-0"
     >
       <div className="container grid grid-cols-1 items-start justify-center md:grid-cols-2">
@@ -89,7 +88,7 @@ export default function Education({
                     <h2 className="font-Kanit text-lg font-bold leading-tight tracking-wide text-mistGray-50">
                       <span className="text-rioGrande-600">.</span>
                       {course.degree.split("\n").map((line, index) => (
-                        <Fragment key={index}>
+                        <Fragment key={line + "-" + index}>
                           {line}
                           {index < course.degree.split("\n").length - 1 && <br />}
                         </Fragment>
@@ -112,10 +111,10 @@ export default function Education({
               Intensive Courses
             </h2>
             <ul className="flex flex-col gap-4">
-              {intensiveCourses.reverse().map((item, index) => (
+              {intensiveCourses.toReversed().map((item, index) => (
                 <li
                   className="font-medium tracking-wide text-mistGray-50"
-                  key={item + "-" + index}
+                  key={item.id + "-" + index}
                 >
                   {item.course}{" "}
                   <span className="ml-5 hidden select-none font-Comfortaa text-mistGray-700 sm:inline-block">

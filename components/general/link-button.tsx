@@ -8,7 +8,7 @@ export default function LinkButton({
   children,
   className,
   ...props
-}: AnchorHTMLAttributes<HTMLAnchorElement>) {
+}: Readonly<AnchorHTMLAttributes<HTMLAnchorElement>>) {
   const sortedClasses = tw`cursor-pointer select-none`
   const mergedClassName = twMerge(sortedClasses, className)
 

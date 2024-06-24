@@ -2,7 +2,7 @@ import { Project } from "@/components/sections/projects"
 import Image from "next/image"
 import LinkButton from "@/components/general/link-button"
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project }: Readonly<{ project: Project }>) {
   return (
     <article className="flex max-w-sm flex-col items-start justify-between overflow-hidden rounded bg-mistGray-50 shadow-lg">
       <div className="">

@@ -8,7 +8,7 @@ export default function ThemeSwitcher() {
 
   useEffect(() => {
     const savedTheme =
-      localStorage.getItem("theme") ||
+      localStorage.getItem("theme") ??
       (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
     setTheme(savedTheme)
   }, [])

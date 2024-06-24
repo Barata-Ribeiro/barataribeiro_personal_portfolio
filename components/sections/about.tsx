@@ -5,7 +5,6 @@ export default function About() {
   return (
     <section
       id="about"
-      role="region"
       aria-label="About section"
       className="container my-40 flex max-w-6xl snap-center flex-wrap items-center justify-center gap-5 px-1 md:snap-start md:px-0 lg:justify-between"
       aria-labelledby="about-title"
@@ -31,10 +30,7 @@ export default function About() {
           </div>
         </div>
         {/*PARAGRAPHS*/}
-        <div
-          className="w-full max-w-md whitespace-normal break-words font-Roboto leading-7 text-mistGray-700"
-          role="contentinfo"
-        >
+        <div className="w-full max-w-md whitespace-normal break-words font-Roboto leading-7 text-mistGray-700">
           <p className="mb-4">
             With a solid academic foundation in{" "}
             <em
@@ -72,6 +68,8 @@ export default function About() {
             <em title="UI Design" className="font-medium not-italic text-mistGray-950">
               UI Design
             </em>
+            {/*
+             */}
             , aiming to design eye-catching interfaces that prioritize user experience
             and satisfaction. I can’t wait to use my developing set of skills to
             contribute to the success of forward-thinking teams and organizations.
@@ -82,6 +80,8 @@ export default function About() {
             <em title="Brazil" className="font-medium not-italic text-mistGray-950">
               Brazil
             </em>
+            {/*
+             */}
             , I will let you know that I am ready to be part of your project no matter
             where I am.
           </p>
