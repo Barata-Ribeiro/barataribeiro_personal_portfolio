@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/project-card"
+import LinkButton from "@/components/general/link-button"
 
 export interface Project {
   id: string
@@ -20,7 +21,7 @@ export default function Projects({ projects }: Readonly<ProjectProps>) {
     <section
       id="projects"
       aria-label="Project section"
-      className="bg-mistGray-300 px-1 py-32 md:px-0"
+      className="bg-mistGray-300 px-1 pt-32 md:px-0"
     >
       <div className="container grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div className="col-span-full grid grid-cols-1 gap-5 justify-self-center lg:col-span-2 lg:grid-cols-2">
@@ -39,9 +40,21 @@ export default function Projects({ projects }: Readonly<ProjectProps>) {
         </h1>
       </div>
       <div className="container mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {projects.slice(2).map((project, index) => (
+        {projects.slice(2, 6).map((project, index) => (
           <ProjectCard project={project} key={project.id + "-" + index} />
         ))}
+      </div>
+      <div className="container flex items-center justify-center pb-32 pt-16">
+        <LinkButton
+          href="https://github.barataribeiro.com/"
+          className="transation-colors font-Comfortaa text-base font-semibold text-mistGray-600 underline underline-offset-4 hover:text-royalBlue-600 focus:text-royalBlue-700 active:text-royalBlue-800 sm:text-xl"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          title="GitHub"
+        >
+          Check GitHub for not listed projects...
+        </LinkButton>
       </div>
     </section>
   )

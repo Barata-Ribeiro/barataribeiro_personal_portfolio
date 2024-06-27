@@ -83,7 +83,7 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 z-10 w-full bg-mistGray-600/60 backdrop-blur backdrop-filter"
+      className="fixed top-0 z-10 w-full border-b border-mistGray-400/80 bg-mistGray-600 bg-opacity-60 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] backdrop-blur backdrop-saturate-200 backdrop-filter"
     >
       <nav
         className="flex items-center justify-between px-1 lg:container sm:px-5 lg:px-0"
@@ -118,12 +118,27 @@ export default function Header() {
         >
           {isMenuOpen ? <FaXmark size={26} /> : <FaBars size={26} />}
         </Button>
+        <div
+          style={{ top: `${headerHeight}px` }}
+          aria-hidden
+          className={
+            isMenuOpen
+              ? tw`fixed inset-0 -mx-1 h-screen w-screen bg-black/60`
+              : tw`hidden`
+          }
+        ></div>
         <ul
           ref={mobileMenuRef}
           className={
             isMenuOpen
-              ? twMerge(menuMobileCommonStyles, "right-0 bg-mistGray-600/90 lg:hidden")
-              : twMerge(menuMobileCommonStyles, "-right-full w-3/4 bg-mistGray-600/30")
+              ? twMerge(
+                  menuMobileCommonStyles,
+                  "right-0 border-l border-mistGray-400/80 bg-mistGray-600 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] lg:hidden"
+                )
+              : twMerge(
+                  menuMobileCommonStyles,
+                  "-right-full w-3/4 bg-mistGray-600 bg-opacity-30"
+                )
           }
           style={{ top: `${headerHeight}px` }}
         >

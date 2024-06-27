@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer"
 import About from "@/components/sections/about"
 import Projects from "@/components/sections/projects"
 import Education from "@/components/sections/education"
+import ThemeSwitcher from "@/components/theme-switcher"
 
 export default async function Home() {
   const file = await fs.readFile(process.cwd() + "/app/data/data.json", "utf8")
@@ -24,6 +25,7 @@ export default async function Home() {
       />
 
       <Footer />
+      <ThemeSwitcher />
     </main>
   )
 }

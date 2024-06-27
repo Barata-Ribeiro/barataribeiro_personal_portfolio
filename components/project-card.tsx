@@ -4,7 +4,7 @@ import LinkButton from "@/components/general/link-button"
 
 export default function ProjectCard({ project }: Readonly<{ project: Project }>) {
   return (
-    <article className="flex max-w-sm flex-col items-start justify-between overflow-hidden rounded bg-mistGray-50 shadow-lg">
+    <article className="flex max-w-sm flex-col items-start justify-between overflow-hidden rounded bg-mistGray-50 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] dark:bg-mistGray-900">
       <div className="">
         <div className="relative h-56 w-full">
           <Image
@@ -20,7 +20,9 @@ export default function ProjectCard({ project }: Readonly<{ project: Project }>)
             <span className="text-rioGrande-600">.</span>
             {project.title}
           </div>
-          <p className="text-base text-gray-700">{project.desc}</p>
+          <p className="text-base text-mistGray-700 dark:text-mistGray-400">
+            {project.desc}
+          </p>
           <LinkButton
             href={project.repo}
             target="_blank"

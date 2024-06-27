@@ -14,13 +14,16 @@ export default function About() {
         alt="Avatar"
         className="aspect-square h-full w-full max-w-96 justify-self-center md:justify-self-auto"
       />
-      <article className="w-max justify-self-center font-Kanit text-mistGray-950 md:justify-self-end">
+      <article className="w-max justify-self-center font-Kanit md:justify-self-end">
         {/*TITLE*/}
-        <h1 id="about-title" className="mb-10 text-4xl font-medium leading-none">
+        <h1
+          id="about-title"
+          className="mb-10 text-4xl font-medium leading-none text-mistGray-950 dark:text-mistGray-50"
+        >
           <span className="text-rioGrande-600">.</span>About me
         </h1>
         {/*INTRO*/}
-        <div className="mb-5 flex gap-4">
+        <div className="mb-5 flex gap-4 text-mistGray-950 dark:text-mistGray-50">
           <span aria-hidden className="mb-1 h-24 w-1 bg-rioGrande-700"></span>
           <div className="self-end">
             <h2 className="text-4xl font-light leading-none">Hello, there...</h2>
@@ -30,26 +33,26 @@ export default function About() {
           </div>
         </div>
         {/*PARAGRAPHS*/}
-        <div className="w-full max-w-md whitespace-normal break-words font-Roboto leading-7 text-mistGray-700">
+        <div className="w-full max-w-md whitespace-normal break-words font-Roboto leading-7 text-mistGray-700 dark:text-mistGray-400">
           <p className="mb-4">
             With a solid academic foundation in{" "}
             <em
               title="Business Administration"
-              className="font-medium not-italic text-mistGray-950"
+              className="font-medium not-italic text-mistGray-950 dark:text-mistGray-50"
             >
               Business Administration
             </em>{" "}
             and graduate courses in{" "}
             <em
               title="Strategic People Management"
-              className="font-medium not-italic text-mistGray-950"
+              className="font-medium not-italic text-mistGray-950 dark:text-mistGray-50"
             >
               Strategic People Management
             </em>{" "}
             and{" "}
             <em
               title="Project Management"
-              className="font-medium not-italic text-mistGray-950"
+              className="font-medium not-italic text-mistGray-950 dark:text-mistGray-50"
             >
               Project Management
             </em>
@@ -60,12 +63,15 @@ export default function About() {
             Right now, I&apos;m diving into the world of{" "}
             <em
               title="Full-stack Development"
-              className="font-medium not-italic text-mistGray-950"
+              className="font-medium not-italic text-mistGray-950 dark:text-mistGray-50"
             >
               Full-stack Development
             </em>{" "}
             and{" "}
-            <em title="UI Design" className="font-medium not-italic text-mistGray-950">
+            <em
+              title="UI Design"
+              className="font-medium not-italic text-mistGray-950 dark:text-mistGray-50"
+            >
               UI Design
             </em>
             {/*
@@ -77,7 +83,10 @@ export default function About() {
           </p>
           <p>
             I’ve learned quite a lot throughout my projects. Based in{" "}
-            <em title="Brazil" className="font-medium not-italic text-mistGray-950">
+            <em
+              title="Brazil"
+              className="font-medium not-italic text-mistGray-950 dark:text-mistGray-50"
+            >
               Brazil
             </em>
             {/*
