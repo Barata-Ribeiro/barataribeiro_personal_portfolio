@@ -116,7 +116,7 @@ export default function Education({
               Intensive Courses
             </h2>
             <ul className="flex flex-col gap-4">
-              {intensiveCourses.toReversed().map((item, index) => (
+              {[...intensiveCourses].reverse().map((item, index) => (
                 <li
                   className="font-medium tracking-wide text-mistGray-50"
                   key={item.id + "-" + index}
