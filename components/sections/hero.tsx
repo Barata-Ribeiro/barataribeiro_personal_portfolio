@@ -1,6 +1,6 @@
 import Image from "next/image"
 import HeroImage from "../../public/assets/img/hero-image.jpg"
-import { FaGithub, FaLinkedinIn } from "react-icons/fa6"
+import { FaAnglesDown, FaGithub, FaLinkedinIn } from "react-icons/fa6"
 import LinkButton from "@/components/general/link-button"
 
 export default function Hero() {
@@ -53,6 +53,15 @@ export default function Hero() {
           Full-stack development and UI design for visually appealing, user-friendly
           interfaces.
         </p>
+        <LinkButton
+          href="#projects"
+          aria-label="Check Projects Bellow"
+          title="Check Projects Bellow"
+          className="flex items-center gap-2 rounded-md border-2 bg-mistGray-950/20 px-5 py-3 font-Comfortaa text-mistGray-50 hover:bg-mistGray-950/30 focus:bg-mistGray-950/40 active:bg-mistGray-950/50 sm:px-8 sm:py-4 md:px-10 md:py-5"
+        >
+          Check Projects Bellow{" "}
+          <FaAnglesDown size={24} className="animate-bounce max-md:hidden" />
+        </LinkButton>
       </div>
       <div className="absolute inset-0 -z-10 rounded-md bg-mistGray-950 opacity-30"></div>
       <Image src={HeroImage} alt="Hero Image" className="-z-20 object-cover" fill />

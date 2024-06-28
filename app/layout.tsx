@@ -73,7 +73,7 @@ export default function RootLayout({
   const bodyStyles = tw`bg-mistGray-50 text-mistGray-950`
 
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth md:scroll-auto">
       <body
         className={`${roboto.variable} ${comfortaa.variable} ${kanit.variable} ${bodyStyles}`}
       >

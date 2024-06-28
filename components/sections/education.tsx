@@ -36,7 +36,7 @@ export default function Education({
     <section
       id="education"
       aria-label="Education section"
-      className="bg-mistGray-900 px-1 pt-32 md:px-0"
+      className="snap-center bg-mistGray-900 px-1 pt-32 md:snap-start md:px-0"
     >
       <div className="container grid grid-cols-1 items-start justify-center md:grid-cols-2">
         <h1
@@ -79,7 +79,7 @@ export default function Education({
               {highEducationCourses.map((course) => (
                 <div
                   key={course.degree}
-                  className="flex h-full w-full flex-col gap-12 place-self-center rounded-lg bg-mistGray-950 p-5 sm:w-1/2 md:w-full"
+                  className="flex h-full w-full flex-col gap-12 place-self-center rounded-lg bg-mistGray-950 p-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] sm:w-1/2 md:w-full"
                 >
                   <div className="w-full max-w-[200px] flex-grow">
                     <h4 className="font-roboto mb-3 text-sm leading-tight text-mistGray-300">
@@ -95,7 +95,12 @@ export default function Education({
                       ))}
                     </h2>
                   </div>
-                  <p className="text-mistGray-300">UNESA</p>
+                  <p className="flex items-center justify-between text-mistGray-300">
+                    UNESA{" "}
+                    <span className="text-xs leading-none text-mistGray-800">
+                      {course.year}
+                    </span>
+                  </p>
                 </div>
               ))}
             </div>
