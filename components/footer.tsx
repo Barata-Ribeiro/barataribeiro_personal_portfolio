@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ReactElement } from "react"
 import { IconType } from "react-icons"
 import { FaGithub, FaLinkedinIn, FaMailBulk } from "react-icons/fa"
+import LinkButton from "@/components/general/link-button"
 
 interface MenuItem {
   text: string
@@ -49,9 +50,9 @@ export const Footer = () => {
             Get in Touch
           </h1>
           <p className="max-w-md text-center leading-relaxed text-mistGray-50 max-sm:px-4">
-            Feel free to take an in-depth look at my projects, and let&apos;s
-            discuss the possibility of working together. I am eager to
-            collaborate with fellow professionals in the industry.
+            Feel free to take an in-depth look at my projects, and let&apos;s discuss
+            the possibility of working together. I am eager to collaborate with fellow
+            professionals in the industry.
           </p>
         </div>
 
@@ -75,16 +76,15 @@ export const Footer = () => {
           <ul className="flex gap-2 self-center max-sm:text-sm">
             {menuLinks.map((link, index) => (
               <li
-                className="border-r pr-2 leading-none text-mistGray-50 last:border-none last:pr-0"
+                className="border-r pr-2 leading-none last:border-none last:pr-0"
                 key={`nav-${index}-${link.url}`}
               >
-                <Link
-                  className={`cursor-pointer hover:text-royalBlue-100`}
+                <LinkButton
+                  className="cursor-pointer font-Comfortaa text-mistGray-50 hover:text-royalBlue-500"
                   href={link.url}
-                  scroll={true}
                 >
                   {link.text}
-                </Link>
+                </LinkButton>
               </li>
             ))}
           </ul>
@@ -97,7 +97,7 @@ export const Footer = () => {
         >
           {socialLinks.map(({ url, icon, label }) => (
             <li key={`social-${label}-${url}`}>
-              <Link
+              <LinkButton
                 href={url}
                 aria-label={label}
                 rel="noreferrer noopener"
@@ -106,16 +106,17 @@ export const Footer = () => {
               >
                 {icon}
                 <span className="sr-only">{label}</span>
-              </Link>
+              </LinkButton>
             </li>
           ))}
         </ul>
 
         {/* END MENU */}
         <p className="text-center text-xs text-mistGray-600">
-          <span className="block">Copyright &copy; 2023 - Barata Ribeiro</span>{" "}
-          All content referenced herein are the properties of their respective
-          owners.
+          <span className="block">
+            Copyright &copy; 2023 ~ {new Date().getFullYear()} - Barata Ribeiro
+          </span>{" "}
+          All content referenced herein are the properties of their respective owners.
         </p>
       </div>
     </footer>

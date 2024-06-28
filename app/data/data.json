@@ -25,7 +25,10 @@
       "desc": "A course project of a fictional blog incremented from the original for learning purposes of the Angular environment. It uses generative AI to simulate the fetched data.",
       "img": "/assets/img/projectsImages/sector-67-blog.jpg",
       "alt": "Sector 67 Blog",
-      "tech": ["Angular", "TypeScript"],
+      "tech": [
+        "Angular",
+        "TypeScript"
+      ],
       "repo": "https://github.com/Barata-Ribeiro/dio_angular_blog",
       "demo": "https://dio-angular-blog-delta.vercel.app/"
     },
@@ -51,7 +54,12 @@
       "desc": "Website for a fictitious dessert shop that creates gourmet desserts for couples. Created from Figma to code, emphasizing the application of React Router.",
       "img": "/assets/img/projectsImages/delightful-indulgence.jpg",
       "alt": "Delightful Indulgence",
-      "tech": ["React", "React Router", "CSS Modules", "Vite.js"],
+      "tech": [
+        "React",
+        "React Router",
+        "CSS Modules",
+        "Vite.js"
+      ],
       "repo": "https://github.com/Barata-Ribeiro/delightful_indulgence",
       "demo": "https://delightful-indulgence.vercel.app/"
     },
@@ -61,7 +69,12 @@
       "desc": "Website for a fictional rock band. Its goals to display typography concepts I've learned, also showcasing contemporary web tec to enhance the user experience.",
       "img": "/assets/img/projectsImages/spectre_band.jpg",
       "alt": "Spectre Band",
-      "tech": ["HTML", "CSS", "JavaScript", "Vite.js"],
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Vite.js"
+      ],
       "repo": "https://github.com/Barata-Ribeiro/spectre_band",
       "demo": "https://barata-ribeiro.github.io/spectre_band/"
     },
@@ -71,7 +84,11 @@
       "desc": "A user-friendly web app that displays trending GitHub repositories and profile stats by leveraging the GitHub API. An insightful tool for exploring coding prowess.",
       "img": "/assets/img/projectsImages/gitpop.jpg",
       "alt": "gitpop",
-      "tech": ["React", "Tailwind CSS", "Vite.js"],
+      "tech": [
+        "React",
+        "Tailwind CSS",
+        "Vite.js"
+      ],
       "repo": "https://github.com/Barata-Ribeiro/GitPop",
       "demo": "https://barata-ribeiro.github.io/GitPop/"
     },
@@ -81,7 +98,11 @@
       "desc": "A course project which showcases front-end skills by creating effects from scratch with JavaScript. It demonstrates creativity and practical coding applications.",
       "img": "/assets/img/projectsImages/animais-fantasticos.jpg",
       "alt": "Fantastic Beasts",
-      "tech": ["JavaScript", "HTML", "CSS"],
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
       "repo": "https://github.com/Barata-Ribeiro/animais-fantasticos",
       "demo": "https://barata-ribeiro.github.io/animais-fantasticos/"
     },
@@ -91,7 +112,11 @@
       "desc": "Project from an advanced UI design course, dedicated to a fictional surf school, which I coded from scratch for an enhanced learning experience of other technologies.",
       "img": "/assets/img/projectsImages/surfbot.jpg",
       "alt": "Surfbot",
-      "tech": ["JavaScript", "HTML", "CSS"],
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
       "repo": "https://github.com/Barata-Ribeiro/surfbot",
       "demo": "https://barata-ribeiro.github.io/surfbot/"
     },
@@ -101,25 +126,32 @@
       "desc": "Course project showcasing customized motorcycles for a fictional brand, created during a UI design and HTML/CSS beginner's course. It demonstrates originality and customization.",
       "img": "/assets/img/projectsImages/steelManeMotors.jpg",
       "alt": "SteelMane Motorcycles",
-      "tech": ["HTML", "CSS", "JavaScript"],
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
       "repo": "https://github.com/Barata-Ribeiro/steelmane-motorcycles",
       "demo": "https://barata-ribeiro.github.io/steelmane-motorcycles/"
     }
   ],
   "higherEducationCourses": [
     {
-      "year": "2018 - Bachelor's Degree",
-      "degree": "Business Administration",
+      "year": "2018",
+      "type": "Bachelor's Degree",
+      "degree": "Business\nAdministration",
       "university": "Estácio de Sá University"
     },
     {
-      "year": "2020 - Graduate Course",
-      "degree": "Strategic People Management",
+      "year": "2020",
+      "type": "Graduate Course",
+      "degree": "Strategic People\nManagement",
       "university": "Estácio de Sá University"
     },
     {
-      "year": "2022 - Gradute Course",
-      "degree": "Project Management",
+      "year": "2022",
+      "type": "Graduate Course",
+      "degree": "Project\nManagement",
       "university": "Estácio de Sá University"
     }
   ],
@@ -139,17 +171,41 @@
       "course": "CSS Grid Layout & CSS Flexbox",
       "place": "Origamid"
     },
-    { "id": "course4", "course": "Programming Logic", "place": "Udemy" },
+    {
+      "id": "course4",
+      "course": "Programming Logic",
+      "place": "Udemy"
+    },
     {
       "id": "course5",
       "course": "Responsive Web Design",
       "place": "freeCodeCamp"
     },
-    { "id": "course6", "course": "Algorithms", "place": "Curso em Video" },
-    { "id": "course7", "course": "Advanced UI Design", "place": "Origamid" },
-    { "id": "course8", "course": "JavaScript ES6+", "place": "Origamid" },
-    { "id": "course9", "course": "Advanced Typography", "place": "Origamid" },
-    { "id": "course10", "course": "Complete React JS", "place": "Origamid" },
+    {
+      "id": "course6",
+      "course": "Algorithms",
+      "place": "Curso em Video"
+    },
+    {
+      "id": "course7",
+      "course": "Advanced UI Design",
+      "place": "Origamid"
+    },
+    {
+      "id": "course8",
+      "course": "JavaScript ES6+",
+      "place": "Origamid"
+    },
+    {
+      "id": "course9",
+      "course": "Advanced Typography",
+      "place": "Origamid"
+    },
+    {
+      "id": "course10",
+      "course": "Complete React JS",
+      "place": "Origamid"
+    },
     {
       "id": "course11",
       "course": "Angular Dev Training",

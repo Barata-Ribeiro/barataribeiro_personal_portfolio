@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Comfortaa, Kanit, Roboto } from "next/font/google"
 import "./globals.css"
 import { type ReactNode } from "react"
+import tw from "@/utils/tw"
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -69,10 +70,12 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode
 }>) {
+  const bodyStyles = tw`bg-mistGray-50 text-mistGray-950`
+
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth md:scroll-auto">
       <body
-        className={`${roboto.variable} ${comfortaa.variable} ${kanit.variable}`}
+        className={`${roboto.variable} ${comfortaa.variable} ${kanit.variable} ${bodyStyles}`}
       >
         {children}
       </body>

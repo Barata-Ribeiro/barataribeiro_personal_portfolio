@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 const nextConfig = {
   images: {
     minimumCacheTTL: 60,
@@ -7,6 +7,8 @@ const nextConfig = {
     removeConsole: true,
   },
   compress: true,
-};
+  swcMinify: true,
+  reactStrictMode: true,
+}
 
-export default nextConfig;
+export default nextConfig
