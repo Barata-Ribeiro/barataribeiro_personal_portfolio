@@ -8,24 +8,21 @@ import Education from "@/components/sections/education"
 import ThemeSwitcher from "@/components/theme-switcher"
 
 export default async function Home() {
-  const file = await fs.readFile(process.cwd() + "/app/data/data.json", "utf8")
-  const { projects, higherEducationCourses, intensiveCourses } = JSON.parse(file)
+    const file = await fs.readFile(process.cwd() + "/app/data/data.json", "utf8")
+    const { projects, higherEducationCourses, intensiveCourses } = JSON.parse(file)
 
-  return (
-    <main role="main" className="snap-y snap-mandatory">
-      <Header />
+    return (
+        <main role="main" className="snap-y snap-mandatory">
+            <Header />
 
-      {/*SECTIONS*/}
-      <Hero />
-      <About />
-      <Projects projects={projects} />
-      <Education
-        intensiveCourses={intensiveCourses}
-        highEducationCourses={higherEducationCourses}
-      />
+            {/*SECTIONS*/}
+            <Hero />
+            <About />
+            <Projects projects={projects} />
+            <Education intensiveCourses={intensiveCourses} highEducationCourses={higherEducationCourses} />
 
-      <Footer />
-      <ThemeSwitcher />
-    </main>
-  )
+            <Footer />
+            <ThemeSwitcher />
+        </main>
+    )
 }

@@ -5,16 +5,16 @@ import { twMerge } from "tailwind-merge"
 import tw from "@/utils/tw"
 
 export default function LinkButton({
-  children,
-  className,
-  ...props
+    children,
+    className,
+    ...props
 }: Readonly<AnchorHTMLAttributes<HTMLAnchorElement>>) {
-  const sortedClasses = tw`cursor-pointer select-none`
-  const mergedClassName = twMerge(sortedClasses, className)
+    const sortedClasses = tw`cursor-pointer select-none`
+    const mergedClassName = twMerge(sortedClasses, className)
 
-  return (
-    <Link href={props.href as Url} className={mergedClassName} {...props}>
-      {children}
-    </Link>
-  )
+    return (
+        <Link href={props.href as Url} className={mergedClassName} {...props}>
+            {children}
+        </Link>
+    )
 }
