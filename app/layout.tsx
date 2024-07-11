@@ -27,7 +27,7 @@ const kanit = Kanit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://barataribeiro.com/"),
-  title: "Barata Ribeiro | Portfolio",
+  title: "Barata Ribeiro",
   description:
     "Welcome to Barata Ribeiro's personal portfolio, a showcase of my work as a Front-End Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions.",
   authors: {
@@ -35,33 +35,19 @@ export const metadata: Metadata = {
     url: "https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/",
   },
   openGraph: {
-    title: "Barata Ribeiro | Portfolio",
+    title: "Barata Ribeiro",
     url: "https://barataribeiro.com/",
     description:
       "Welcome to Barata Ribeiro's personal portfolio, a showcase of my work as a Front-End Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions.",
-    images: [
-      {
-        url: "https://github.com/Barata-Ribeiro/barataribeiro_personal_portfolio/blob/main/public/assets/og-picture.jpg?raw=true",
-        width: 800,
-        height: 600,
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Barata Ribeiro | Portfolio",
+    title: "Barata Ribeiro",
     site: "https://barataribeiro.com/",
     description:
       "Welcome to Barata Ribeiro's personal portfolio, a showcase of my work as a Front-End Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions.",
-    images: [
-      {
-        url: "https://github.com/Barata-Ribeiro/barataribeiro_personal_portfolio/blob/main/public/assets/og-picture.jpg?raw=true",
-        width: 800,
-        height: 600,
-      },
-    ],
   },
 }
 
