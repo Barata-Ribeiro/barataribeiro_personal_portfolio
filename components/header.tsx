@@ -83,7 +83,7 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 z-10 w-full border-b border-mistGray-400/80 bg-mistGray-600 bg-opacity-60 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] backdrop-blur backdrop-saturate-200 backdrop-filter"
+      className="fixed top-0 z-10 w-full border-b border-mistGray-400/80 bg-mistGray-600 bg-opacity-60 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] backdrop-blur backdrop-brightness-125 backdrop-saturate-150"
     >
       <nav
         className="flex items-center justify-between px-1 lg:container sm:px-5 lg:px-0"

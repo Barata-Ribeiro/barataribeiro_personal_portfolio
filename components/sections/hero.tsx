@@ -57,7 +57,7 @@ export default function Hero() {
           href="#projects"
           aria-label="Check Projects Bellow"
           title="Check Projects Bellow"
-          className="flex items-center gap-2 rounded-md border-2 bg-mistGray-950/20 px-5 py-3 font-Comfortaa text-mistGray-50 hover:bg-mistGray-950/30 focus:bg-mistGray-950/40 active:bg-mistGray-950/50 sm:px-8 sm:py-4 md:px-10 md:py-5"
+          className="flex items-center gap-2 rounded-md bg-transparent px-5 py-3 font-Comfortaa text-mistGray-50 shadow-[rgba(247,_247,_245,_1)_0px_0px_0px_2px,_rgba(39,_38,_35,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] backdrop-blur hover:backdrop-brightness-125 active:backdrop-brightness-90 sm:px-8 sm:py-4 md:px-10 md:py-5"
         >
           Check Projects Bellow{" "}
           <FaAnglesDown size={24} className="animate-bounce max-md:hidden" />

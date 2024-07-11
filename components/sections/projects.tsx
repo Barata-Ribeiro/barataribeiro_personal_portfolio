@@ -24,7 +24,7 @@ export default function Projects({ projects }: Readonly<ProjectProps>) {
       className="snap-center bg-mistGray-300 px-1 pt-32 md:snap-start md:px-0"
     >
       <div className="container grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div className="col-span-full grid grid-cols-1 gap-5 justify-self-center lg:col-span-2 lg:grid-cols-2">
+        <div className="col-span-full grid grid-cols-1 gap-5 justify-self-center sm:grid-cols-2 lg:col-span-2">
           {projects.slice(0, 2).map((project, index) => (
             <ProjectCard project={project} key={project.id + "-" + index} />
           ))}
@@ -39,7 +39,7 @@ export default function Projects({ projects }: Readonly<ProjectProps>) {
           ects
         </h1>
       </div>
-      <div className="container mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="container mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {projects.slice(2, 6).map((project, index) => (
           <ProjectCard project={project} key={project.id + "-" + index} />
         ))}

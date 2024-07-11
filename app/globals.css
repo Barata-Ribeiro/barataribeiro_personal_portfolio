@@ -11,22 +11,31 @@
     @apply dark:text-mistGray-50;
     @apply dark:bg-mistGray-950;
   }
-}
 
-.courses {
-  &::after {
-    content: attr(data-course);
-    @apply text-mistGray-50;
-    @apply bg-royalBlue-600;
-    position: absolute;
-    right: 1%;
-    top: 1%;
-    font-size: 60%;
-    padding: 0.6em;
-    border-radius: 50%;
-    line-height: 1em;
-    text-align: center;
-    min-width: 2em;
-    font-weight: 700;
+  /* width */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-mistGray-50;
+    @apply dark:bg-mistGray-950;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-mistGray-400;
+    @apply rounded-none;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-mistGray-500;
+  }
+
+  /* Handle on active */
+  ::-webkit-scrollbar-thumb:active {
+    @apply bg-mistGray-600;
   }
 }
