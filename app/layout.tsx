@@ -27,27 +27,44 @@ const kanit = Kanit({
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://barataribeiro.com/"),
-    title: "Barata Ribeiro",
+    title: "Barata Ribeiro | Portfolio",
     description:
-        "Welcome to Barata Ribeiro's personal portfolio, a showcase of my work as a Front-End Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions.",
+        "Welcome to my portfolio, where I display my work as a Full-stack Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions.",
     authors: {
         name: "João Mendes J. B. Ribeiro",
         url: "https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/"
     },
+    keywords: [
+        "portfolio",
+        "full-stack developer",
+        "ui designer",
+        "web developer",
+        "react",
+        "nextjs",
+        "tailwindcss",
+        "typescript",
+        "javascript",
+        "html",
+        "css",
+        "web design",
+        "user experience",
+        "user interface",
+        "digital solutions"
+    ],
     openGraph: {
-        title: "Barata Ribeiro",
+        title: "Barata Ribeiro | Portfolio",
         url: "https://barataribeiro.com/",
         description:
-            "Welcome to Barata Ribeiro's personal portfolio, a showcase of my work as a Front-End Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions.",
+            "Welcome to my portfolio, where I display my work as a Full-stack Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions.",
         locale: "en_US",
         type: "website"
     },
     twitter: {
         card: "summary_large_image",
-        title: "Barata Ribeiro",
+        title: "Barata Ribeiro | Portfolio",
         site: "https://barataribeiro.com/",
         description:
-            "Welcome to Barata Ribeiro's personal portfolio, a showcase of my work as a Front-End Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions."
+            "Welcome to my portfolio, where I display my work as a Full-stack Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions."
     }
 }
 

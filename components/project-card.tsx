@@ -21,14 +21,24 @@ export default function ProjectCard({ project }: Readonly<{ project: Project }>)
                         {project.title}
                     </div>
                     <p className="text-base text-mistGray-700 dark:text-mistGray-400">{project.desc}</p>
-                    <LinkButton
-                        href={project.repo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-6 inline-block rounded-lg bg-royalBlue-600 px-6 py-3 font-Comfortaa text-sm text-mistGray-50 hover:bg-royalBlue-700 hover:text-mistGray-50 active:bg-royalBlue-800"
-                    >
-                        Repository
-                    </LinkButton>
+                    <div className="flex gap-2">
+                        <LinkButton
+                            href={project.repo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-6 inline-block rounded-lg bg-royalBlue-600 px-6 py-3 font-Comfortaa text-sm text-mistGray-50 hover:bg-royalBlue-700 hover:text-mistGray-50 active:bg-royalBlue-800"
+                        >
+                            Repo
+                        </LinkButton>
+                        <LinkButton
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-6 inline-block rounded-lg bg-royalBlue-600 px-6 py-3 font-Comfortaa text-sm text-mistGray-50 hover:bg-royalBlue-700 hover:text-mistGray-50 active:bg-royalBlue-800"
+                        >
+                            Demo
+                        </LinkButton>
+                    </div>
                 </div>
             </div>
             <div className="flex h-max w-full flex-wrap gap-2 justify-self-end px-6 pb-6">
