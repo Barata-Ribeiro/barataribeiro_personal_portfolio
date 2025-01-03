@@ -1,8 +1,12 @@
-import { Project } from "@/components/sections/projects"
-import Image from "next/image"
 import LinkButton from "@/components/general/link-button"
+import { Project } from "@/components/sections/projects"
+import tw from "@/utils/tw"
+import Image from "next/image"
+import { twMerge } from "tailwind-merge"
 
 export default function ProjectCard({ project }: Readonly<{ project: Project }>) {
+    const buttonClasses = tw`mt-6 inline-block rounded-lg bg-royalBlue-600 px-6 py-3 font-Comfortaa text-sm text-mistGray-50 hover:bg-royalBlue-700 hover:text-mistGray-50 active:bg-royalBlue-800`
+    const isDemoEmpty = project.demo === ""
     return (
         <article className="flex max-w-sm flex-col items-start justify-between overflow-hidden rounded bg-mistGray-50 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] dark:bg-mistGray-900">
             <div className="">
@@ -26,7 +30,7 @@ export default function ProjectCard({ project }: Readonly<{ project: Project }>)
                             href={project.repo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-6 inline-block rounded-lg bg-royalBlue-600 px-6 py-3 font-Comfortaa text-sm text-mistGray-50 hover:bg-royalBlue-700 hover:text-mistGray-50 active:bg-royalBlue-800"
+                            className={buttonClasses}
                         >
                             Repo
                         </LinkButton>
@@ -34,7 +38,10 @@ export default function ProjectCard({ project }: Readonly<{ project: Project }>)
                             href={project.demo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-6 inline-block rounded-lg bg-royalBlue-600 px-6 py-3 font-Comfortaa text-sm text-mistGray-50 hover:bg-royalBlue-700 hover:text-mistGray-50 active:bg-royalBlue-800"
+                            className={twMerge(
+                                buttonClasses,
+                                isDemoEmpty ? "pointer-events-none opacity-50 grayscale" : ""
+                            )}
                         >
                             Demo
                         </LinkButton>
