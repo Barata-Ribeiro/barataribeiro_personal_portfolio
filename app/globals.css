@@ -2,40 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply font-Roboto;
-    @apply text-mistGray-950;
-    @apply bg-mistGray-50;
+body {
+  @apply bg-mistGray-50 font-Roboto text-mistGray-950 dark:bg-mistGray-950 dark:text-mistGray-50;
+}
 
-    @apply dark:text-mistGray-50;
-    @apply dark:bg-mistGray-950;
-  }
+/* width */
+::-webkit-scrollbar {
+  @apply w-2;
+}
 
-  /* width */
-  ::-webkit-scrollbar {
-    @apply w-2;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-mistGray-50;
+  @apply dark:bg-mistGray-950;
+}
 
-  /* Track */
-  ::-webkit-scrollbar-track {
-    @apply bg-mistGray-50;
-    @apply dark:bg-mistGray-950;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-mistGray-400;
+  @apply rounded-none;
+}
 
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    @apply bg-mistGray-400;
-    @apply rounded-none;
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-mistGray-500;
+}
 
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-mistGray-500;
-  }
-
-  /* Handle on active */
-  ::-webkit-scrollbar-thumb:active {
-    @apply bg-mistGray-600;
-  }
+/* Handle on active */
+::-webkit-scrollbar-thumb:active {
+  @apply bg-mistGray-600;
 }
