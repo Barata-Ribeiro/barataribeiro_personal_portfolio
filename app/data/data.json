@@ -1,6 +1,56 @@
 {
   "projects": [
     {
+      "id": "taskr",
+      "title": "Taskr",
+      "desc": "A task management application designed to help you organize, prioritize, and collaborate on your projects seamlessly.",
+      "img": "/assets/img/projectsImages/taskr.jpg",
+      "alt": "Taskr - A task management application",
+      "tech": [
+        "Next.js",
+        "Tailwind CSS",
+        "NextAuth.js",
+        "Spring Boot",
+        "PostgreSQL",
+        "WebSocket"
+      ],
+      "repo": "https://github.com/Barata-Ribeiro/Taskr",
+      "demo": ""
+    },
+    {
+      "id": "medimanage",
+      "title": "MediManage",
+      "desc": "A full-stack application designed to streamline the management of small clinics. It handles patient records, scheduling appointments, and some administrative tasks.",
+      "img": "/assets/img/projectsImages/medimanage.jpg",
+      "alt": "MediManage - A management application for clinics",
+      "tech": [
+        "Next.js",
+        "Tailwind CSS",
+        "NextAuth.js",
+        "Spring Boot",
+        "PostgreSQL",
+        "Spring WebFlux"
+      ],
+      "repo": "https://github.com/Barata-Ribeiro/MediManage",
+      "demo": ""
+    },
+    {
+      "id": "taskr-mini",
+      "title": "Taskr Mini",
+      "desc": "A simple, lightweight, and user-friendly TODO list application that runs entirely in your browser using IndexedDB.",
+      "img": "/assets/img/projectsImages/taskr-mini.jpg",
+      "alt": "Taskr Mini - A minimalist TODO list application",
+      "tech": [
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "IndexedDB",
+        "Vite"
+      ],
+      "repo": "https://github.com/Barata-Ribeiro/Taskr_mini",
+      "demo": "https://taskr-mini.vercel.app/"
+    },
+    {
       "id": "sabia-social-network",
       "title": "Sabiá",
       "desc": "A full-stack micro blogging social network based on X (former Twitter), where users can post, like, and comment on posts.",
@@ -230,6 +280,11 @@
     {
       "id": "course15",
       "course": "Next.js",
+      "place": "Origamid"
+    },
+    {
+      "id": "course16",
+      "course": "Tailwind CSS",
       "place": "Origamid"
     }
   ]
