@@ -1,85 +1,96 @@
-import type { Metadata } from "next"
+import tw                           from "@/utils/tw"
+import type { Metadata }            from "next"
 import { Comfortaa, Kanit, Roboto } from "next/font/google"
 import "./globals.css"
-import { type ReactNode } from "react"
-import tw from "@/utils/tw"
+import { type ReactNode }           from "react"
 
 const roboto = Roboto({
-    weight: ["100", "300", "400", "500", "700", "900"],
-    subsets: ["latin"],
-    variable: "--font-roboto",
-    display: "swap"
-})
+                        weight: [ "100", "300", "400", "500", "700", "900" ],
+                        subsets: [ "latin" ],
+                        variable: "--font-roboto",
+                        display: "swap"
+                      })
 
 const comfortaa = Comfortaa({
-    weight: ["300", "400", "500", "600", "700"],
-    subsets: ["latin"],
-    variable: "--font-comfortaa",
-    display: "swap"
-})
+                              weight: [ "300", "400", "500", "600", "700" ],
+                              subsets: [ "latin" ],
+                              variable: "--font-comfortaa",
+                              display: "swap"
+                            })
 
 const kanit = Kanit({
-    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-    subsets: ["latin"],
-    variable: "--font-kanit",
-    display: "swap"
-})
+                      weight: [ "100", "200", "300", "400", "500", "600", "700", "800", "900" ],
+                      subsets: [ "latin" ],
+                      variable: "--font-kanit",
+                      display: "swap"
+                    })
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://barataribeiro.com/"),
+  metadataBase: new URL("https://barataribeiro.com/"),
+  title: "Barata Ribeiro | Portfolio",
+  description:
+    "Welcome to my portfolio, where I display my work as a Full-stack Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions.",
+  authors: {
+    name: "João Mendes J. B. Ribeiro",
+    url: "https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/"
+  },
+  keywords: [
+    "portfolio",
+    "full-stack developer",
+    "ui designer",
+    "web developer",
+    "react",
+    "nextjs",
+    "tailwindcss",
+    "typescript",
+    "javascript",
+    "html",
+    "css",
+    "web design",
+    "user experience",
+    "user interface",
+    "digital solutions"
+  ],
+  openGraph: {
     title: "Barata Ribeiro | Portfolio",
+    url: "https://barataribeiro.com/",
     description:
-        "Welcome to my portfolio, where I display my work as a Full-stack Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions.",
-    authors: {
-        name: "João Mendes J. B. Ribeiro",
-        url: "https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/"
-    },
-    keywords: [
-        "portfolio",
-        "full-stack developer",
-        "ui designer",
-        "web developer",
-        "react",
-        "nextjs",
-        "tailwindcss",
-        "typescript",
-        "javascript",
-        "html",
-        "css",
-        "web design",
-        "user experience",
-        "user interface",
-        "digital solutions"
-    ],
-    openGraph: {
-        title: "Barata Ribeiro | Portfolio",
-        url: "https://barataribeiro.com/",
-        description:
-            "Welcome to my portfolio, where I display my work as a Full-stack Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions.",
-        locale: "en_US",
-        type: "website"
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "Barata Ribeiro | Portfolio",
-        site: "https://barataribeiro.com/",
-        description:
-            "Welcome to my portfolio, where I display my work as a Full-stack Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions."
+      "Welcome to my portfolio, where I display my work as a Full-stack Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions.",
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Barata Ribeiro | Portfolio",
+    site: "https://barataribeiro.com/",
+    description:
+      "Welcome to my portfolio, where I display my work as a Full-stack Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions."
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
     }
+  }
 }
 
 export default function RootLayout({
-    children
-}: Readonly<{
-    children: ReactNode
+                                     children
+                                   }: Readonly<{
+  children: ReactNode
 }>) {
-    const bodyStyles = tw`bg-mistGray-50 text-mistGray-950`
-
-    return (
-        <html lang="en" className="!scroll-smooth md:scroll-auto">
-            <body className={`${roboto.variable} ${comfortaa.variable} ${kanit.variable} ${bodyStyles}`}>
-                {children}
+  const bodyStyles = tw`bg-mistGray-50 text-mistGray-950`
+  
+  return (
+    <html lang="en" className="!scroll-smooth md:scroll-auto">
+            <body className={ `${ roboto.variable } ${ comfortaa.variable } ${ kanit.variable } ${ bodyStyles }` }>
+                { children }
             </body>
         </html>
-    )
+  )
 }
