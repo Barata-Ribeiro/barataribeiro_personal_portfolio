@@ -72,7 +72,7 @@ export default function Education({ intensiveCourses, highEducationCourses }: Da
                                     key={ course.degree }
                                     className="flex h-full w-full flex-col gap-12 place-self-center rounded-lg bg-mist-gray-950 p-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] sm:w-1/2 md:w-full"
                                 >
-                                    <div className="w-full max-w-[200px] flex-grow">
+                                    <div className="w-full max-w-[200px] grow">
                                         <h4 className="font-roboto mb-3 text-sm leading-tight text-mist-gray-300">
                                             { course.type }
                                         </h4>

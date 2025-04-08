@@ -19,15 +19,14 @@ export default function ThemeSwitcher() {
     }, [ theme ])
     
     const toggleTheme = useCallback(() => {
-        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"))
+        setTheme(prevTheme => (prevTheme === "light" ? "dark" : "light"))
     }, [])
     
     return (
         <button
             onClick={ toggleTheme }
-            className="fixed bottom-0 left-0 z-[1000] m-4 rounded-full bg-royal-blue-500/60 p-2 text-mist-gray-50 shadow-lg dark:bg-rio-grande-600/60"
-            aria-label="Toggle Theme"
-        >
+            className="bg-royal-blue-500/60 text-mist-gray-50 dark:bg-rio-grande-600/60 fixed bottom-0 left-0 z-1000 m-4 rounded-full p-2 shadow-lg"
+            aria-label="Toggle Theme">
             { theme === "light" ? <MdLightMode /> : <MdDarkMode /> }
         </button>
     )
