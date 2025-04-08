@@ -1,34 +1,94 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-stone-200, currentColor);
+    }
+}
+
+@theme inline {
+    --color-*: initial;
+    --color-rio-grande-50: #f8fee8;
+    --color-rio-grande-100: #eefec3;
+    --color-rio-grande-200: #e3fe8a;
+    --color-rio-grande-300: #d9fd47;
+    --color-rio-grande-400: #d6fa15;
+    --color-rio-grande-500: #d1ea08;
+    --color-rio-grande-600: #d2d904;
+    --color-rio-grande-700: #a19907;
+    --color-rio-grande-800: #85770e;
+    --color-rio-grande-900: #716112;
+    --color-rio-grande-950: #423506;
+
+    --color-royal-blue-50: #f0f8fe;
+    --color-royal-blue-100: #dceffd;
+    --color-royal-blue-200: #c1e4fc;
+    --color-royal-blue-300: #97d4f9;
+    --color-royal-blue-400: #66bcf4;
+    --color-royal-blue-500: #429fef;
+    --color-royal-blue-600: #2b81e3;
+    --color-royal-blue-700: #246cd1;
+    --color-royal-blue-800: #2458a9;
+    --color-royal-blue-900: #224b86;
+    --color-royal-blue-950: #192f52;
+
+    --color-mist-gray-50: #f7f7f5;
+    --color-mist-gray-100: #ecece8;
+    --color-mist-gray-200: #d7d7d1;
+    --color-mist-gray-300: #c4c4bb;
+    --color-mist-gray-400: #a2a195;
+    --color-mist-gray-500: #908e7f;
+    --color-mist-gray-600: #838073;
+    --color-mist-gray-700: #6e6b60;
+    --color-mist-gray-800: #5b5951;
+    --color-mist-gray-900: #4b4943;
+    --color-mist-gray-950: #272623;
+
+    --breakpoint-xs: 320px;
+
+    --font-Roboto: var(--font-roboto);
+    --font-Kanit: var(--font-kanit);
+    --font-Comfortaa: var(--font-comfortaa);
+}
+
+@utility container {
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
 
 body {
-  @apply bg-mistGray-50 font-Roboto text-mistGray-950 dark:bg-mistGray-950 dark:text-mistGray-50;
+    @apply bg-mist-gray-50 font-Roboto text-mist-gray-950 dark:bg-mist-gray-950 dark:text-mist-gray-50;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  @apply w-2;
+    @apply w-2;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply bg-mistGray-50;
-  @apply dark:bg-mistGray-950;
+    @apply bg-mist-gray-50;
+    @apply dark:bg-mist-gray-950;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-mistGray-400;
-  @apply rounded-none;
+    @apply bg-mist-gray-400;
+    @apply rounded-none;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-mistGray-500;
+    @apply bg-mist-gray-500;
 }
 
 /* Handle on active */
 ::-webkit-scrollbar-thumb:active {
-  @apply bg-mistGray-600;
+    @apply bg-mist-gray-600;
 }
