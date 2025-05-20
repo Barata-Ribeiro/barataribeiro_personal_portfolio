@@ -1,29 +1,29 @@
-import tw                           from "@/utils/tw"
-import type { Metadata }            from "next"
+import tw from "@/utils/tw"
+import type { Metadata } from "next"
 import { Comfortaa, Kanit, Roboto } from "next/font/google"
 import "./globals.css"
-import { type ReactNode }           from "react"
+import { type ReactNode } from "react"
 
 const roboto = Roboto({
-                          weight: [ "100", "300", "400", "500", "700", "900" ],
-                          subsets: [ "latin" ],
-                          variable: "--font-roboto",
-                          display: "swap",
-                      })
+    weight: ["100", "300", "400", "500", "700", "900"],
+    subsets: ["latin"],
+    variable: "--font-roboto",
+    display: "swap",
+})
 
 const comfortaa = Comfortaa({
-                                weight: [ "300", "400", "500", "600", "700" ],
-                                subsets: [ "latin" ],
-                                variable: "--font-comfortaa",
-                                display: "swap",
-                            })
+    weight: ["300", "400", "500", "600", "700"],
+    subsets: ["latin"],
+    variable: "--font-comfortaa",
+    display: "swap",
+})
 
 const kanit = Kanit({
-                        weight: [ "100", "200", "300", "400", "500", "600", "700", "800", "900" ],
-                        subsets: [ "latin" ],
-                        variable: "--font-kanit",
-                        display: "swap",
-                    })
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+    subsets: ["latin"],
+    variable: "--font-kanit",
+    display: "swap",
+})
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://barataribeiro.com/"),
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         "Welcome to my portfolio, where I display my work as a Full-stack Developer and UI Designer. Explore my projects and my approach to creating user-friendly, visually appealing digital solutions.",
     authors: {
         name: "João Mendes J. B. Ribeiro",
-        url: "https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/",
+        url: "https://www.linkedin.com/in/barataribeiro/",
     },
     keywords: [
         "portfolio",
@@ -80,16 +80,16 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
+    children,
+}: Readonly<{
     children: ReactNode
 }>) {
     const bodyStyles = tw`bg-mist-gray-50 text-mist-gray-950`
-    
+
     return (
         <html lang="en" className="scroll-smooth! md:scroll-auto">
-            <body className={ `${ roboto.variable } ${ comfortaa.variable } ${ kanit.variable } ${ bodyStyles }` }>
-                { children }
+            <body className={`${roboto.variable} ${comfortaa.variable} ${kanit.variable} ${bodyStyles}`}>
+                {children}
             </body>
         </html>
     )

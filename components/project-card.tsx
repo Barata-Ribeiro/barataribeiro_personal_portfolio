@@ -1,7 +1,7 @@
-import LinkButton  from "@/components/general/link-button"
+import LinkButton from "@/components/general/link-button"
 import { Project } from "@/components/sections/projects"
-import tw          from "@/utils/tw"
-import Image       from "next/image"
+import tw from "@/utils/tw"
+import Image from "next/image"
 import { twMerge } from "tailwind-merge"
 
 export default function ProjectCard({ project }: Readonly<{ project: Project }>) {
@@ -12,8 +12,8 @@ export default function ProjectCard({ project }: Readonly<{ project: Project }>)
             <div className="">
                 <div className="relative h-56 w-full">
                     <Image
-                        src={ project.img }
-                        alt={ project.alt }
+                        src={project.img}
+                        alt={project.alt}
                         className="object-cover object-top"
                         sizes="(min-width: 808px) 50vw, 100vw"
                         fill
@@ -22,38 +22,38 @@ export default function ProjectCard({ project }: Readonly<{ project: Project }>)
                 <div className="px-6 py-4">
                     <div className="font-Kanit mb-2 text-xl font-bold tracking-wide">
                         <span className="text-rio-grande-600">.</span>
-                        { project.title }
+                        {project.title}
                     </div>
-                    <p className="text-mist-gray-700 dark:text-mist-gray-400 text-base">{ project.desc }</p>
+                    <p className="text-mist-gray-700 dark:text-mist-gray-400 text-base">{project.desc}</p>
                     <div className="flex gap-2">
                         <LinkButton
-                            href={ project.repo }
+                            href={project.repo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={ buttonClasses }>
+                            className={buttonClasses}>
                             Repo
                         </LinkButton>
                         <LinkButton
-                            href={ project.demo }
+                            href={project.demo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={ twMerge(
+                            className={twMerge(
                                 buttonClasses,
                                 isDemoEmpty ? "pointer-events-none opacity-50 grayscale" : "",
-                            ) }>
+                            )}>
                             Demo
                         </LinkButton>
                     </div>
                 </div>
             </div>
             <div className="flex h-max w-full flex-wrap gap-2 justify-self-end px-6 pb-6">
-                { project.tech.map((tech, index) => (
+                {project.tech.map((tech, index) => (
                     <span
-                        key={ tech + "-" + index }
+                        key={tech + "-" + index}
                         className="bg-mist-gray-200 text-mist-gray-700 block grow rounded-full px-3 py-1 text-center text-sm font-semibold select-none">
-                        #{ tech }
+                        #{tech}
                     </span>
-                )) }
+                ))}
             </div>
         </article>
     )

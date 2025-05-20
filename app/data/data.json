@@ -286,6 +286,21 @@
       "id": "course16",
       "course": "Tailwind CSS",
       "place": "Origamid"
+    },
+    {
+      "id": "course17",
+      "course": "jQuery",
+      "place": "Origamid"
+    },
+    {
+      "id": "course18",
+      "course": "SASS",
+      "place": "Origamid"
+    },
+    {
+      "id": "course19",
+      "course": "Bootstrap",
+      "place": "Origamid"
     }
   ]
 }

@@ -115,7 +115,7 @@ export default function Education({ intensiveCourses, highEducationCourses }: Da
             </div>
             <div className="container flex items-center justify-center py-8">
                 <LinkButton
-                    href="https://www.linkedin.com/in/jo%C3%A3o-mendes-jorge-barata-ribeiro-645073118/"
+                    href="https://www.linkedin.com/in/barataribeiro/details/certifications/"
                     className="transation-colors font-Comfortaa text-mist-gray-100 hover:text-royal-blue-600 focus:text-royal-blue-700 active:text-royal-blue-800 text-base font-semibold underline underline-offset-4 sm:text-xl"
                     target="_blank"
                     rel="noopener noreferrer"
