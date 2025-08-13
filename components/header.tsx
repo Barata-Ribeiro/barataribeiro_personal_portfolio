@@ -1,14 +1,14 @@
 "use client"
 
-import Button from "@/components/general/button"
-import LinkButton from "@/components/general/link-button"
-import Logo from "@/components/general/logo"
-import MiniLogo from "@/components/general/mini-logo"
-import tw from "@/utils/tw"
-import { debounce } from "lodash"
+import Button                                           from "@/components/general/button"
+import LinkButton                                       from "@/components/general/link-button"
+import Logo                                             from "@/components/general/logo"
+import MiniLogo                                         from "@/components/general/mini-logo"
+import tw                                               from "@/utils/tw"
+import { debounce }                                     from "lodash"
 import { type MouseEvent, useEffect, useRef, useState } from "react"
-import { FaBars, FaXmark } from "react-icons/fa6"
-import { twMerge } from "tailwind-merge"
+import { FaBars, FaXmark }                              from "react-icons/fa6"
+import { twMerge }                                      from "tailwind-merge"
 
 interface MenuItem {
     text: string
@@ -70,6 +70,22 @@ export default function Header() {
         setIsMenuOpen(!isMenuOpen)
     }
 
+    // Smooth scroll handler for anchor links
+    function handleSmoothScroll(event: React.MouseEvent<HTMLAnchorElement>, url: string, closeMenu?: () => void) {
+        const match = RegExp(/\/?#(.+)/).exec(url)
+        if (match) {
+            event.preventDefault()
+            const targetId = match[1]
+            const targetElement = document.getElementById(targetId)
+            if (targetElement) {
+                const yOffset = -headerHeight // offset for fixed header
+                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset
+                window.scrollTo({ top: y, behavior: "smooth" })
+                if (closeMenu) closeMenu()
+            }
+        }
+    }
+
     const navButtonStyle = tw`text-mist-gray-200 hover:bg-mist-gray-500 hover:text-mist-gray-50 active:bg-mist-gray-800 rounded-lg p-3`
     const downloadButtonStyle = tw`bg-royal-blue-600 text-mist-gray-50 hover:bg-royal-blue-700 hover:text-mist-gray-50 active:bg-royal-blue-800 rounded-lg p-3`
     const menuMobileCommonStyles = tw`fixed z-30 h-screen w-3/4 duration-500 ease-in-out`
@@ -86,7 +102,10 @@ export default function Header() {
                 <ul className="font-Comfortaa hidden items-center gap-5 font-bold lg:flex">
                     {MENU_ITEMS.map((item, index) => (
                         <li key={"nav-" + item.text + "-" + index}>
-                            <LinkButton href={item.url} className={navButtonStyle}>
+                            <LinkButton
+                                href={item.url}
+                                className={navButtonStyle}
+                                onClick={e => handleSmoothScroll(e, item.url)}>
                                 {item.text}
                             </LinkButton>
                         </li>
@@ -136,7 +155,7 @@ export default function Header() {
                             <LinkButton
                                 href={item.url}
                                 className={tw`text-mist-gray-200 hover:bg-mist-gray-500 hover:text-mist-gray-50 active:bg-mist-gray-800 block px-4 py-3 text-xl duration-300`}
-                                onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                                onClick={e => handleSmoothScroll(e, item.url, () => setIsMenuOpen(false))}>
                                 {item.text}
                             </LinkButton>
                         </li>

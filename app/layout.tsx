@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Comfortaa, Kanit, Roboto } from "next/font/google"
 import "./globals.css"
 import { type ReactNode } from "react"
+import { twMerge } from "tailwind-merge"
 
 const roboto = Roboto({
     weight: ["100", "300", "400", "500", "700", "900"],
@@ -84,13 +85,14 @@ export default function RootLayout({
 }: Readonly<{
     children: ReactNode
 }>) {
-    const bodyStyles = tw`bg-mist-gray-50 text-mist-gray-950`
+    const bodyStyles = tw`bg-mist-gray-50 text-mist-gray-950 antialiased`
+    const fontVariables = `${roboto.variable} ${comfortaa.variable} ${kanit.variable}`
+
+    const mergedClasses = twMerge(bodyStyles, fontVariables)
 
     return (
         <html lang="en" className="scroll-smooth! md:scroll-auto">
-            <body className={`${roboto.variable} ${comfortaa.variable} ${kanit.variable} ${bodyStyles}`}>
-                {children}
-            </body>
+            <body className={mergedClasses}>{children}</body>
         </html>
     )
 }
