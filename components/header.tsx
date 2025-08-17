@@ -5,7 +5,6 @@ import LinkButton                                       from "@/components/gener
 import Logo                                             from "@/components/general/logo"
 import MiniLogo                                         from "@/components/general/mini-logo"
 import tw                                               from "@/utils/tw"
-import { debounce }                                     from "lodash"
 import { type MouseEvent, useEffect, useRef, useState } from "react"
 import { FaBars, FaXmark }                              from "react-icons/fa6"
 import { twMerge }                                      from "tailwind-merge"
@@ -29,7 +28,7 @@ export default function Header() {
     const headerRef = useRef<HTMLHeadingElement | null>(null)
     const mobileMenuRef = useRef<HTMLUListElement | null>(null)
 
-    // Event Listeners for the mobile menu
+    // Event Listener and resizeObserver for the mobile menu
     useEffect(() => {
         const handleClickOutside = (event: Event) => {
             if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
@@ -37,15 +36,17 @@ export default function Header() {
             }
         }
 
-        const checkScreenSize = debounce(() => setIsNarrowScreen(window.innerWidth < 315), 100)
+        const resizeObserver = new ResizeObserver(entries => {
+            for (const entry of entries) setIsNarrowScreen(entry.contentRect.width < 315)
+        })
+        resizeObserver.observe(document.body)
 
-        checkScreenSize()
+        setIsNarrowScreen(window.innerWidth < 315)
 
         window.addEventListener("click", handleClickOutside)
-        window.addEventListener("resize", checkScreenSize)
         return () => {
             window.removeEventListener("click", handleClickOutside)
-            window.removeEventListener("resize", checkScreenSize)
+            resizeObserver.disconnect()
         }
     }, [])
 
@@ -86,9 +87,18 @@ export default function Header() {
         }
     }
 
-    const navButtonStyle = tw`text-mist-gray-200 hover:bg-mist-gray-500 hover:text-mist-gray-50 active:bg-mist-gray-800 rounded-lg p-3`
-    const downloadButtonStyle = tw`bg-royal-blue-600 text-mist-gray-50 hover:bg-royal-blue-700 hover:text-mist-gray-50 active:bg-royal-blue-800 rounded-lg p-3`
-    const menuMobileCommonStyles = tw`fixed z-30 h-screen w-3/4 duration-500 ease-in-out`
+    const buttonStyles = {
+        nav: tw`text-mist-gray-200 hover:bg-mist-gray-500 hover:text-mist-gray-50 active:bg-mist-gray-800 rounded-lg p-3`,
+        download: tw`bg-royal-blue-600 text-mist-gray-50 hover:bg-royal-blue-700 hover:text-mist-gray-50 active:bg-royal-blue-800 rounded-lg p-3`,
+    }
+
+    const mobileStyles = {
+        default: tw`fixed z-30 h-screen w-3/4 duration-500 ease-in-out`,
+        state: {
+            open: tw`border-mist-gray-400 bg-mist-gray-600/90 right-0 border-l shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] lg:hidden`,
+            close: tw`bg-mist-gray-600 -right-full w-3/4`,
+        },
+    }
 
     return (
         <header
@@ -104,7 +114,7 @@ export default function Header() {
                         <li key={"nav-" + item.text + "-" + index}>
                             <LinkButton
                                 href={item.url}
-                                className={navButtonStyle}
+                                className={buttonStyles.nav}
                                 onClick={e => handleSmoothScroll(e, item.url)}>
                                 {item.text}
                             </LinkButton>
@@ -114,7 +124,7 @@ export default function Header() {
                         <LinkButton
                             href="/barataribeiro_resume.pdf"
                             download="barataribeiro_resume"
-                            className={downloadButtonStyle}>
+                            className={buttonStyles.download}>
                             Curriculum
                         </LinkButton>
                     </li>
@@ -128,7 +138,7 @@ export default function Header() {
                     aria-expanded={isMenuOpen}
                     aria-controls="mobile-menu"
                     onClick={handleMenuClick}>
-                    {isMenuOpen ? <FaXmark size={26} /> : <FaBars size={26} />}
+                    {isMenuOpen ? <FaXmark aria-hidden size={26} /> : <FaBars aria-hidden size={26} />}
                 </Button>
                 <div
                     style={{ top: `${headerHeight}px` }}
@@ -138,23 +148,18 @@ export default function Header() {
                     ref={mobileMenuRef}
                     id="mobile-menu"
                     aria-label="Mobile Navigation"
-                    aria-hidden={!isMenuOpen}
-                    role="navigation"
+                    inert={!isMenuOpen}
                     className={
                         isMenuOpen
-                            ? twMerge(
-                                  menuMobileCommonStyles,
-                                  "border-mist-gray-400 bg-mist-gray-600/90 right-0 border-l" +
-                                      " shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] lg:hidden",
-                              )
-                            : twMerge(menuMobileCommonStyles, "bg-mist-gray-600 -right-full w-3/4")
+                            ? twMerge(mobileStyles.default, mobileStyles.state.open)
+                            : twMerge(mobileStyles.default, mobileStyles.state.close)
                     }
                     style={{ top: `${headerHeight}px` }}>
                     {MENU_ITEMS.map((item, index) => (
                         <li key={"nav-" + item.text + "-" + index}>
                             <LinkButton
                                 href={item.url}
-                                className={tw`text-mist-gray-200 hover:bg-mist-gray-500 hover:text-mist-gray-50 active:bg-mist-gray-800 block px-4 py-3 text-xl duration-300`}
+                                className="text-mist-gray-200 hover:bg-mist-gray-500 hover:text-mist-gray-50 active:bg-mist-gray-800 block px-4 py-3 text-xl duration-300"
                                 onClick={e => handleSmoothScroll(e, item.url, () => setIsMenuOpen(false))}>
                                 {item.text}
                             </LinkButton>
@@ -164,7 +169,7 @@ export default function Header() {
                         <LinkButton
                             href="/barataribeiro_resume.pdf"
                             download="barataribeiro_resume"
-                            className={tw`text-mist-gray-200 hover:bg-royal-blue-500 hover:text-mist-gray-50 active:bg-royal-blue-800 block px-4 py-3 text-xl`}
+                            className="text-mist-gray-200 hover:bg-royal-blue-500 hover:text-mist-gray-50 active:bg-royal-blue-800 block px-4 py-3 text-xl"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}>
                             Curriculum
                         </LinkButton>
