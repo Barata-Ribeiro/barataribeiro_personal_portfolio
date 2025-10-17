@@ -1,5 +1,6 @@
 import { FileData } from '@/app/types/index';
 import Footer from '@/components/layout/footer';
+import Hero from '@/components/sections/hero';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 
@@ -11,6 +12,7 @@ export default async function Home() {
 
     return (
         <main role="main" className="snap-y snap-mandatory">
+            <Hero />
             <Footer />
         </main>
     );
