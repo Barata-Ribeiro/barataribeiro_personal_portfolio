@@ -39,7 +39,6 @@
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) + 4px);
-    --font-serif: 'Lora', serif;
     --radius: 0.5rem;
     --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
     --tracking-tight: calc(var(--tracking-normal) - 0.025em);
@@ -178,7 +177,8 @@
 }
 
 @utility container {
-    @apply mx-auto px-[1rem];
+    margin-inline: 100px;
+    padding-inline: 1rem;
 }
 
 @layer base {
