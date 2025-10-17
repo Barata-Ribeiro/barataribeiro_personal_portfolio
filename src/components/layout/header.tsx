@@ -2,10 +2,15 @@
 
 import Logo from '@/components/layout/logo';
 import MiniLogo from '@/components/layout/mini-logo';
-import { NavigationMenu, NavigationMenuList } from '@/components/ui/navigation-menu';
-import { NavigationMenuItem } from '@radix-ui/react-navigation-menu';
-import { MouseEvent, useEffect, useRef, useState } from 'react';
-import { LiquidButton } from '../ui/shadcn-io/liquid-button';
+import { Button } from '@/components/ui/button';
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '@/components/ui/navigation-menu';
+import { LiquidButton } from '@/components/ui/shadcn-io/liquid-button';
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from '@/components/ui/sheet';
+import useIsMobile from '@/hooks/useIsMobile';
+import { DialogDescription, DialogTitle } from '@radix-ui/react-dialog';
+import { MenuIcon } from 'lucide-react';
+import Link from 'next/link';
+import { type MouseEvent, useEffect, useRef, useState } from 'react';
 
 interface MenuItem {
     title: string;
@@ -20,33 +25,9 @@ const MENU_ITEMS: MenuItem[] = [
 ];
 
 export default function Header() {
-    const [isNarrowScreen, setIsNarrowScreen] = useState<boolean>(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { isMobile, isLoading } = useIsMobile();
     const [headerHeight, setHeaderHeight] = useState(0);
     const headerRef = useRef<HTMLHeadingElement | null>(null);
-    const mobileMenuRef = useRef<HTMLUListElement | null>(null);
-
-    // Event Listener and resizeObserver for the mobile menu
-    useEffect(() => {
-        const handleClickOutside = (event: Event) => {
-            if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
-                setIsMenuOpen(false);
-            }
-        };
-
-        const resizeObserver = new ResizeObserver((entries) => {
-            for (const entry of entries) setIsNarrowScreen(entry.contentRect.width < 315);
-        });
-        resizeObserver.observe(document.body);
-
-        setIsNarrowScreen(globalThis.window.innerWidth < 315);
-
-        globalThis.window.addEventListener('click', handleClickOutside);
-        return () => {
-            globalThis.window.removeEventListener('click', handleClickOutside);
-            resizeObserver.disconnect();
-        };
-    }, []);
 
     // Resize Observer to get the header height
     useEffect(() => {
@@ -63,11 +44,6 @@ export default function Header() {
             };
         }
     }, []);
-
-    function handleMenuClick(event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) {
-        event.stopPropagation();
-        setIsMenuOpen(!isMenuOpen);
-    }
 
     // Smooth scroll handler for anchor links
     function handleSmoothScroll(
@@ -95,23 +71,53 @@ export default function Header() {
             className="fixed top-0 z-50 w-full border-b border-black/30 bg-foreground/90 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] backdrop-blur-md backdrop-brightness-125 backdrop-saturate-150"
         >
             <nav
-                className="flex items-center justify-between px-1 sm:px-5 lg:container lg:px-0"
+                className="flex items-center justify-between not-lg:px-4 lg:container"
                 aria-label="Main Navigation"
                 role="navigation"
             >
-                {isNarrowScreen ? <MiniLogo aria-hidden="true" /> : <Logo aria-hidden="true" />}
+                {isMobile ? <MiniLogo aria-hidden /> : <Logo aria-hidden />}
 
-                <NavigationMenu className="hidden font-Comfortaa lg:flex">
-                    <NavigationMenuList className="gap-3">
-                        {MENU_ITEMS.map((item) => (
-                            <NavigationMenuItem key={item.title}>
-                                <LiquidButton variant="secondary" onClick={(e) => handleSmoothScroll(e, item.href)}>
-                                    {item.title}
-                                </LiquidButton>
+                {!isMobile && !isLoading && (
+                    <NavigationMenu className="font-Comfortaa">
+                        <NavigationMenuList className="gap-3">
+                            {MENU_ITEMS.map((item, index) => (
+                                <NavigationMenuItem key={`nav-${item.title}-${index}`}>
+                                    <LiquidButton variant="secondary" onClick={(e) => handleSmoothScroll(e, item.href)}>
+                                        {item.title}
+                                    </LiquidButton>
+                                </NavigationMenuItem>
+                            ))}
+                            <NavigationMenuItem>
+                                <Button className="animate-heartbeat hover:bg-blue-600/70" asChild>
+                                    <Link
+                                        href="/barataribeiro_resume.pdf"
+                                        download="barataribeiro_resume"
+                                        title="Download Barata Ribeiro's Resume"
+                                        aria-label="Download Barata Ribeiro's Resume"
+                                    >
+                                        Download
+                                    </Link>
+                                </Button>
                             </NavigationMenuItem>
-                        ))}
-                    </NavigationMenuList>
-                </NavigationMenu>
+                        </NavigationMenuList>
+                    </NavigationMenu>
+                )}
+
+                {isMobile && !isLoading && (
+                    <Sheet>
+                        <SheetTrigger className="block cursor-pointer rounded-md p-2 transition-colors hover:bg-background/10 lg:hidden">
+                            <MenuIcon aria-hidden size={24} className="text-background" />
+                        </SheetTrigger>
+                        <SheetContent className="bg-sidebar">
+                            <SheetHeader>
+                                <MiniLogo isSidebar aria-hidden />
+                                <DialogTitle className="sr-only">Menu</DialogTitle>
+                                <DialogDescription className="sr-only">Navigation Menu</DialogDescription>
+                            </SheetHeader>
+                            {/* TODO: Menu items for mobile */}
+                        </SheetContent>
+                    </Sheet>
+                )}
             </nav>
         </header>
     );
