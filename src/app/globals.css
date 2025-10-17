@@ -69,6 +69,23 @@
     --font-Roboto: var(--font-roboto);
     --font-Kanit: var(--font-kanit);
     --font-Comfortaa: var(--font-comfortaa);
+
+    --animate-heartbeat: heartbeat 2s infinite ease-in-out;
+
+    @keyframes heartbeat {
+        0% {
+            box-shadow: 0 0 0 0 var(--primary-softer);
+            transform: scale(1);
+        }
+        50% {
+            box-shadow: 0 0 0 7px transparent;
+            transform: scale(1.05);
+        }
+        100% {
+            box-shadow: 0 0 0 0 transparent;
+            transform: scale(1);
+        }
+    }
 }
 
 :root {
@@ -81,6 +98,7 @@
     --popover-foreground: oklch(0.5986 0.0195 96.2617);
     --primary: oklch(0.6038 0.169 254.7014);
     --primary-foreground: oklch(1 0 0);
+    --primary-softer: oklch(0.8038 0.1 254.7014);
     --secondary: oklch(0.8513 0.1881 112.1191);
     --secondary-foreground: oklch(0 0 0);
     --muted: oklch(0.9699 0.0013 106.4238);
@@ -177,8 +195,8 @@
 }
 
 @utility container {
-    margin-inline: 100px;
-    padding-inline: 1rem;
+    margin-inline: auto;
+    padding-inline: calc(var(--spacing) /* var(--spacing) */ * 4);
 }
 
 @layer base {
