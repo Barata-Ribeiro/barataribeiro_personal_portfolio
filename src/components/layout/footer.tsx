@@ -74,12 +74,9 @@ export default function Footer() {
                         </h1>
                     </Link>
 
-                    <ul className="flex gap-2 self-center max-sm:text-sm">
+                    <ul className="flex flex-wrap justify-center gap-2 divide-background/10 not-sm:text-sm sm:divide-x">
                         {MENU_ITEMS.map((item) => (
-                            <li
-                                key={item.title}
-                                className="border-r border-background/10 pr-2 leading-none last:border-none last:pr-0"
-                            >
+                            <li key={item.title} className="pr-2 leading-none last:pr-0">
                                 <Link
                                     className="block p-3 font-Comfortaa text-background hover:text-primary"
                                     href={item.href}
@@ -92,7 +89,7 @@ export default function Footer() {
                 </nav>
 
                 {/* SOCIAL */}
-                <ul aria-label="Social and email" className="my-10 flex items-center justify-center gap-6">
+                <ul aria-label="Social and email" className="my-10 flex flex-wrap items-center justify-center gap-6">
                     {SOCIAL_LINKS.map((link) => (
                         <li key={link.title}>
                             <Link
