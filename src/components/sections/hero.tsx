@@ -66,7 +66,7 @@ export default function Hero() {
             </div>
 
             <div className="absolute inset-0 -z-10 rounded-md bg-secondary-foreground opacity-20"></div>
-            <Image src={heroImage} alt="Hero Image" quality={100} className="-z-20 object-cover" fill />
+            <Image src={heroImage} alt="Hero Image" quality={100} className="-z-20 object-cover" fill priority />
         </section>
     );
 }
