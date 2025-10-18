@@ -1,28 +1,25 @@
-import type { NextConfig } from "next"
+import type { NextConfig } from 'next';
+
+const allowedDevOrigins = process.env.ALLOWED_DEV_ORIGINS?.split(',') ?? [];
 
 const nextConfig: NextConfig = {
     reactStrictMode: true,
-    trailingSlash: false,
-    skipTrailingSlashRedirect: true,
+    allowedDevOrigins,
     images: {
-        minimumCacheTTL: 60,
+        minimumCacheTTL: 31536000,
+        qualities: [50, 75, 100],
         remotePatterns: [
             {
-                protocol: "https",
-                hostname: "**",
-                port: "",
+                protocol: 'https',
+                hostname: '**',
             },
         ],
     },
-    compiler: {
-        removeConsole: true,
-    },
+    compiler: { removeConsole: true },
     experimental: {
         reactCompiler: true,
-        optimizePackageImports: [
-            "tailwindcss", "react-icons/fa", "react-icons/fa6", "react-icons/md",
-        ],
+        optimizePackageImports: ['tailwindcss'],
     },
-}
+};
 
-export default nextConfig
+export default nextConfig;
