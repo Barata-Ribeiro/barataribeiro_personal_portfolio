@@ -9,11 +9,12 @@ export default function Hero() {
     return (
         <section
             id="home"
+            style={{ paddingTop: 'var(--header-height, 0px)' }}
             className="relative flex h-screen grow snap-center flex-col md:snap-start"
             aria-label="Hero/Home section"
             aria-labelledby="hero-title"
         >
-            <div className="container m-auto flex flex-col items-center justify-center gap-10 px-1 text-center font-Kanit text-background md:gap-20 md:px-0">
+            <div className="container m-auto flex flex-col items-center justify-center gap-10 text-center font-Kanit text-background md:gap-20 md:px-0">
                 <h1
                     id="hero-title"
                     className="text-4xl font-semibold tracking-widest sm:text-4xl md:text-6xl lg:text-7xl"

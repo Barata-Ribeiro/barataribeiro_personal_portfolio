@@ -45,6 +45,16 @@ export default function Header() {
         }
     }, []);
 
+    // Update CSS variable for header height
+    useEffect(() => {
+        const root = globalThis.document?.documentElement;
+        if (!root) return;
+
+        root.style.setProperty('--header-height', `${headerHeight}px`);
+
+        return () => root.style.setProperty('--header-height', `0px`);
+    }, [headerHeight]);
+
     // Smooth scroll handler for anchor links
     function handleSmoothScroll(
         event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>,
