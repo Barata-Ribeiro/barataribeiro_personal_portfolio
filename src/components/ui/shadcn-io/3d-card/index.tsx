@@ -36,12 +36,14 @@ export const CardContainer = ({ children, className, containerClassName }: CardC
         containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
     };
 
-    const handleMouseEnter = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const handleMouseEnter = (_e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
         setIsMouseEntered(true);
         if (!containerRef.current) return;
     };
 
-    const handleMouseLeave = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const handleMouseLeave = (_e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
         if (!containerRef.current) return;
         setIsMouseEntered(false);
         containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
@@ -98,7 +100,7 @@ export type CardItemProps = {
     rotateX?: number | string;
     rotateY?: number | string;
     rotateZ?: number | string;
-} & Record<string, any>;
+} & Record<string, unknown>;
 
 export const CardItem = ({
     as: Tag = 'div',
@@ -112,12 +114,8 @@ export const CardItem = ({
     rotateZ = 0,
     ...rest
 }: CardItemProps) => {
-    const ref = useRef<any>(null);
+    const ref = useRef<HTMLElement | null>(null);
     const [isMouseEntered] = useMouseEnter();
-
-    useEffect(() => {
-        handleAnimations();
-    }, [isMouseEntered]);
 
     const handleAnimations = () => {
         if (!ref.current) return;
@@ -127,6 +125,8 @@ export const CardItem = ({
             ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
         }
     };
+
+    useEffect(() => handleAnimations(), [isMouseEntered]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return createElement(
         Tag,
