@@ -63,6 +63,7 @@
     --shadow-opacity: var(--shadow-opacity);
     --color-shadow-color: var(--shadow-color);
     --color-destructive-foreground: var(--destructive-foreground);
+    --color-foreground-slightly-dark: oklch(0.4053 0.0102 91.61);
     --color-foreground-darker: oklch(0.1408 0.0044 285.8229);
 
     --breakpoint-xs: 320px;
