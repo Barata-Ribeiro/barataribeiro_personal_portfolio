@@ -1,9 +1,15 @@
+'use client';
+
 import { Project } from '@/app/types';
 import { Badge } from '@/components/ui/badge';
 import { CardBody, CardContainer, CardItem } from '@/components/ui/shadcn-io/3d-card';
+import useIsMobile from '@/hooks/useIsMobile';
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import { ImageZoom } from './ui/shadcn-io/image-zoom';
 
 export default function ProjectCard(project: Readonly<Project>) {
+    const { isMobile } = useIsMobile();
     return (
         <CardContainer className="inter-var h-full" containerClassName="py-0 items-stretch">
             <CardBody className="group/card relative flex h-full flex-col justify-between rounded-xl border border-foreground-darker/[0.1] bg-background p-4">
@@ -21,14 +27,21 @@ export default function ProjectCard(project: Readonly<Project>) {
                     </CardItem>
 
                     <CardItem translateZ="100" className="mt-4 w-full">
-                        <Image
-                            src={project.img}
-                            height={1000}
-                            width={1000}
-                            className="h-48 w-full rounded-xl object-cover group-hover/card:shadow-xl"
-                            alt={project.alt}
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
+                        <ImageZoom
+                            zoomMargin={isMobile ? 8 : 100}
+                            backdropClassName={cn(
+                                '[&_[data-rmiz-modal-overlay="visible"]]:bg-foreground-slightly-dark/60 [&_[data-rmiz-modal-overlay="visible"]]:backdrop-blur-md [&_[data-rmiz-modal-overlay="visible"]]:backdrop-brightness-125 [&_[data-rmiz-modal-overlay="visible"]]:backdrop-saturate-150',
+                            )}
+                        >
+                            <Image
+                                src={project.img}
+                                height={1024}
+                                width={1024}
+                                className="h-48 w-full overflow-hidden rounded-xl object-cover group-hover/card:shadow-xl"
+                                alt={project.alt}
+                                unoptimized
+                            />
+                        </ImageZoom>
                     </CardItem>
 
                     <CardItem translateZ="80" className="mt-4 flex w-full flex-wrap gap-2">
