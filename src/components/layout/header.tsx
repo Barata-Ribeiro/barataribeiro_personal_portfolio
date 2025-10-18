@@ -5,9 +5,8 @@ import MiniLogo from '@/components/layout/mini-logo';
 import { Button } from '@/components/ui/button';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '@/components/ui/navigation-menu';
 import { LiquidButton } from '@/components/ui/shadcn-io/liquid-button';
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import useIsMobile from '@/hooks/useIsMobile';
-import { DialogDescription, DialogTitle } from '@radix-ui/react-dialog';
 import { MenuIcon } from 'lucide-react';
 import Link from 'next/link';
 import { type MouseEvent, useEffect, useRef, useState } from 'react';
@@ -56,11 +55,7 @@ export default function Header() {
     }, [headerHeight]);
 
     // Smooth scroll handler for anchor links
-    function handleSmoothScroll(
-        event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>,
-        url: string,
-        closeMenu?: () => void,
-    ) {
+    function handleSmoothScroll(event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>, url: string) {
         const match = new RegExp(/\/?#(.+)/).exec(url);
         if (match) {
             event.preventDefault();
@@ -70,7 +65,12 @@ export default function Header() {
                 const yOffset = -headerHeight; // offset for fixed header
                 const y = targetElement.getBoundingClientRect().top + globalThis.window.pageYOffset + yOffset;
                 globalThis.window.scrollTo({ top: y, behavior: 'smooth' });
-                if (closeMenu) closeMenu();
+
+                if (isMobile) {
+                    const dialog = globalThis.document.querySelector('div[role="dialog"]');
+                    const closeButton = dialog?.querySelector('[data-slot="sheet-close"]') as HTMLButtonElement | null;
+                    closeButton?.click();
+                }
             }
         }
     }
@@ -121,10 +121,37 @@ export default function Header() {
                         <SheetContent className="bg-sidebar">
                             <SheetHeader>
                                 <MiniLogo isSidebar aria-hidden />
-                                <DialogTitle className="sr-only">Menu</DialogTitle>
-                                <DialogDescription className="sr-only">Navigation Menu</DialogDescription>
+                                <SheetTitle className="sr-only">Menu</SheetTitle>
+                                <SheetDescription className="sr-only">Navigation Menu</SheetDescription>
                             </SheetHeader>
-                            {/* TODO: Menu items for mobile */}
+                            <div className="flex w-full flex-col gap-4 px-2">
+                                {MENU_ITEMS.map((item, index) => (
+                                    <Button
+                                        key={`mobile-nav-${item.title}-${index}`}
+                                        variant="ghost"
+                                        size="lg"
+                                        className="w-full justify-start font-Comfortaa text-lg"
+                                        onClick={(e) => handleSmoothScroll(e, item.href)}
+                                    >
+                                        {item.title}
+                                    </Button>
+                                ))}
+                                <Button
+                                    className="mx-2 animate-heartbeat hover:bg-blue-600/70"
+                                    asChild
+                                    size="lg"
+                                    variant="default"
+                                >
+                                    <Link
+                                        href="/barataribeiro_resume.pdf"
+                                        download="barataribeiro_resume"
+                                        title="Download Barata Ribeiro's Resume"
+                                        aria-label="Download Barata Ribeiro's Resume"
+                                    >
+                                        Download
+                                    </Link>
+                                </Button>
+                            </div>
                         </SheetContent>
                     </Sheet>
                 )}
