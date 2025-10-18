@@ -3,6 +3,7 @@ import Footer from '@/components/layout/footer';
 import Header from '@/components/layout/header';
 import About from '@/components/sections/about';
 import Hero from '@/components/sections/hero';
+import Projects from '@/components/sections/projects';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 
@@ -17,6 +18,7 @@ export default async function Home() {
             <Header />
             <Hero />
             <About />
+            <Projects projects={data.projects} />
             <Footer />
         </main>
     );
