@@ -63,6 +63,7 @@
     --shadow-opacity: var(--shadow-opacity);
     --color-shadow-color: var(--shadow-color);
     --color-destructive-foreground: var(--destructive-foreground);
+    --color-foreground-darker: oklch(0.1408 0.0044 285.8229);
 
     --breakpoint-xs: 320px;
 
@@ -220,16 +221,16 @@
 
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        @apply rounded-none bg-sidebar-border;
+        @apply rounded-none bg-foreground;
     }
 
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-        @apply bg-border;
+        @apply bg-foreground-darker/60;
     }
 
     /* Handle on active */
     ::-webkit-scrollbar-thumb:active {
-        @apply bg-ring;
+        @apply bg-foreground-darker/80;
     }
 }
