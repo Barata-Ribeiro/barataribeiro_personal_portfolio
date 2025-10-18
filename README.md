@@ -4,51 +4,55 @@
 
 I developed this portfolio starting with the UI Design using Figma, and then the code was written using NextJs with
 TypeScript, alongside Tailwind CSS as the style framework. I've used a combination of fonts, such as `Roboto` and
-`Kanit`, with `Comfortaa` for the decorator. I chose the color palette using the following as a base: ![#838073]
-(https://placehold.co/15x15/838073/838073.png) `#838073`, ![#2b81e3](https://placehold.co/15x15/2b81e3/2b81e3.png)
+`Kanit`, with `Comfortaa` for the decorator. I chose the color palette using the following as a base: ![#838073](https://placehold.co/15x15/838073/838073.png) `#838073`, ![#2b81e3](https://placehold.co/15x15/2b81e3/2b81e3.png)
 `#2b81e3`,![#d2d904](https://placehold.co/15x15/d2d904/d2d904.png) `#d2d904`. The images used in both the hero and
 about sections are from Unsplash.
 Check out my projects and education, and let's discuss working together!
 
-## 🚀 Portfolio Built With
+## 🚀 Built with (high level)
 
-This portfolio has been built using:
+- Next.js (v15) with Turbopack
+- React (v19)
+- TypeScript
+- Tailwind CSS
 
-- [NextJS](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
+## 🛠️ Project setup
 
-## 🛠️ Project Setup
-
-You'll need to have [Node.js](https://nodejs.org/en/download/) and [pnpm](https://pnpm.io/installation) installed on
-your machine.
+You need Node.js and pnpm installed. This project uses pnpm as the package manager and the repository's scripts
+are configured to run with Turbopack by default.
 
 1. Clone the repository:
 
-    ```shell
-    git clone https://github.com/Barata-Ribeiro/barataribeiro_personal_portfolio.git
-    ```
+```powershell
+git clone https://github.com/Barata-Ribeiro/barataribeiro_personal_portfolio.git
+```
 
-2. Navigate to the project folder:
+2. Change into the project directory:
 
-    ```shell
-    cd barataribeiro_personal_portfolio
-    ```
+```powershell
+cd barataribeiro_personal_portfolio
+```
 
-3. Install dependencies:
+3. Install dependencies (pnpm):
 
-    ```shell
-    pnpm install
-    ```
+```powershell
+pnpm install
+```
 
-4. Start the local development server:
-    ```shell
-    npm run dev
-    ```
+4. Start the local development server (recommended):
+
+```powershell
+pnpm dev
+```
+
+Notes:
+- The package.json includes a "dev" script that runs `next dev --turbopack`. If you prefer npm you can still use
+  `npm run dev`, but `pnpm` is the project's intended package manager.
+- The development server will be available at `http://localhost:3000`.
 
 ## 🤝 Contributing
 
-If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+If you find issues or have suggestions, open an issue or submit a pull request. Keep changes small and focused.
 
 ## 🔮 Future Goals
 
@@ -56,12 +60,12 @@ I'm constantly expanding my skill set and venturing further into the realms of f
 goal is to create visually appealing, user-friendly interfaces that enhance user experience and effectively translate
 business strategy into digital solutions.
 
-## 📬 Get in Touch
+## 📬 Get in touch
 
-Feel free to contact me with any questions or if you are interested in collaborating on a project.
+If you'd like to collaborate or have questions, reach out on LinkedIn:
 
-🔗 [LinkedIn](https://www.linkedin.com/in/barataribeiro/)
+🔗 https://www.linkedin.com/in/barataribeiro/
 
 ## 📜 License
 
-This project is free software available under the [GPLv3](LICENSE) license.
+This project is available under the GPLv3 license. See the [GPLv3](LICENSE) for details.
