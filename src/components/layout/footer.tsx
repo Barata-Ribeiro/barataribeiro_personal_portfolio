@@ -14,6 +14,7 @@ interface SocialLink {
 interface MenuItem {
     title: string;
     href: string;
+    label: string;
 }
 
 const SOCIAL_LINKS: SocialLink[] = [
@@ -38,10 +39,10 @@ const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 const MENU_ITEMS: MenuItem[] = [
-    { title: 'Home', href: '/#home' },
-    { title: 'About', href: '/#about' },
-    { title: 'Projects', href: '/#projects' },
-    { title: 'Education', href: '/#education' },
+    { title: 'Home', href: '#home', label: 'Home Section' },
+    { title: 'About', href: '#about', label: 'About Section' },
+    { title: 'Projects', href: '#projects', label: 'Projects Section' },
+    { title: 'Education', href: '#education', label: 'Education Section' },
 ];
 
 export default function Footer() {
@@ -80,6 +81,8 @@ export default function Footer() {
                                 <Link
                                     className="block p-3 font-Comfortaa text-background hover:text-primary"
                                     href={item.href}
+                                    aria-label={item.label}
+                                    title={item.label}
                                 >
                                     {item.title}
                                 </Link>
@@ -97,6 +100,7 @@ export default function Footer() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label={link.label}
+                                title={link.label}
                                 className="cursor-pointer text-background transition-colors select-none hover:text-primary"
                             >
                                 {link.icon}
