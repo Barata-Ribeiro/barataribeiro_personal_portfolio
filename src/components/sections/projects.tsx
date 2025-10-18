@@ -11,7 +11,7 @@ export default function Projects({ projects }: Readonly<ProjectProps>) {
         <section
             id="projects"
             aria-label="Project section"
-            className="snap-center bg-foreground/50 px-1 pt-40 md:snap-start md:px-0"
+            className="snap-center bg-foreground/50 pt-40 md:snap-start md:px-0"
         >
             <div className="container grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 <div className="col-span-full grid grid-cols-1 gap-5 justify-self-center sm:grid-cols-2 lg:col-span-2">

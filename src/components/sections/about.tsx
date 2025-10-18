@@ -6,7 +6,7 @@ export default function About() {
         <section
             id="about"
             aria-label="About section"
-            className="container my-40 flex max-w-6xl snap-center flex-wrap items-center justify-center gap-5 px-1 md:snap-start md:px-0 lg:justify-between"
+            className="container my-40 flex max-w-6xl snap-center flex-wrap items-center justify-center gap-5 md:snap-start md:px-0 lg:justify-between"
             aria-labelledby="about-title"
         >
             <Image

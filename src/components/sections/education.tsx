@@ -21,7 +21,7 @@ export default function Education({ intensiveCourses, highEducationCourses }: Da
         <section
             id="education"
             aria-label="Education section"
-            className="snap-center bg-foreground-slightly-dark px-1 pt-20 md:snap-start md:px-0"
+            className="snap-center bg-foreground-slightly-dark pt-20 md:snap-start md:px-0"
         >
             <div className="container grid grid-cols-1 items-start justify-center md:grid-cols-2">
                 <h1
