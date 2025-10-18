@@ -2,6 +2,7 @@ import { FileData } from '@/app/types/index';
 import Footer from '@/components/layout/footer';
 import Header from '@/components/layout/header';
 import About from '@/components/sections/about';
+import Education from '@/components/sections/education';
 import Hero from '@/components/sections/hero';
 import Projects from '@/components/sections/projects';
 import { readFile } from 'node:fs/promises';
@@ -19,6 +20,7 @@ export default async function Home() {
             <Hero />
             <About />
             <Projects projects={data.projects} />
+            <Education intensiveCourses={data.intensiveCourses} highEducationCourses={data.higherEducationCourses} />
             <Footer />
         </main>
     );
