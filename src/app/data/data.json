@@ -1,22 +1,32 @@
 {
     "projects": [
         {
+            "id": "utilities-webapp",
+            "title": "Utilities Web App",
+            "desc": "A collection of focused utilities. Features converters, calculators and practical utilities using Shadcn/ui, with PWA/offline support and theming.",
+            "img": "/assets/img/projectsImages/utilities-webapp.jpg",
+            "alt": "Utilities Web App - converters and calculators",
+            "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/ui", "Workbox (PWA)"],
+            "repo": "https://github.com/Barata-Ribeiro/utilities_webapp",
+            "demo": "https://utilities-webapp.vercel.app/"
+        },
+        {
             "id": "taskr",
             "title": "Taskr",
             "desc": "A task management application designed to help you organize, prioritize, and collaborate on your projects seamlessly.",
             "img": "/assets/img/projectsImages/taskr.jpg",
             "alt": "Taskr - A task management application",
-            "tech": ["Next.js", "Tailwind CSS", "NextAuth.js", "Spring Boot", "PostgreSQL", "WebSocket"],
+            "tech": ["Next.js", "Tailwind CSS", "NextAuth.js", "Spring Boot", "PostgreSQL", "Redis", "WebSocket"],
             "repo": "https://github.com/Barata-Ribeiro/Taskr",
             "demo": ""
         },
         {
             "id": "medimanage",
             "title": "MediManage",
-            "desc": "A full-stack application designed to streamline the management of small clinics. It handles patient records, scheduling appointments, and some administrative tasks.",
+            "desc": "A clinic management application for small clinics: patient & employee info, appointment scheduling, medical records, and prescription management.",
             "img": "/assets/img/projectsImages/medimanage.jpg",
-            "alt": "MediManage - A management application for clinics",
-            "tech": ["Next.js", "Tailwind CSS", "NextAuth.js", "Spring Boot", "PostgreSQL", "Spring WebFlux"],
+            "alt": "MediManage - Clinic management application",
+            "tech": ["PHP", "TypeScript", "Laravel 12", "MySQL", "Inertia.js", "React", "Tailwind CSS", "Shadcn/ui"],
             "repo": "https://github.com/Barata-Ribeiro/MediManage",
             "demo": ""
         },
@@ -234,7 +244,12 @@
         },
         {
             "id": "course19",
-            "course": "Bootstrap",
+            "course": "Bootstrap 4/5",
+            "place": "Origamid"
+        },
+        {
+            "id": "course20",
+            "course": "SQLite Database",
             "place": "Origamid"
         }
     ]
