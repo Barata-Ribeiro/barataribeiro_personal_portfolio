@@ -105,7 +105,7 @@ export default function Header() {
                                         title="Download Barata Ribeiro's Resume"
                                         aria-label="Download Barata Ribeiro's Resume"
                                     >
-                                        Download
+                                        Download C.V.
                                     </Link>
                                 </Button>
                             </NavigationMenuItem>
@@ -148,7 +148,7 @@ export default function Header() {
                                         title="Download Barata Ribeiro's Resume"
                                         aria-label="Download Barata Ribeiro's Resume"
                                     >
-                                        Download
+                                        Download C.V.
                                     </Link>
                                 </Button>
                             </div>
