@@ -9,12 +9,11 @@ const buttonVariants = cva(
     {
         variants: {
             variant: {
-                default:
-                    '!bg-transparent text-primary [--liquid-button-color:var(--primary)] hover:text-primary-foreground',
+                default: '!bg-muted text-primary [--liquid-button-color:var(--primary)] hover:text-primary-foreground',
                 outline:
                     'border !bg-background [--liquid-button-color:var(--primary)] dark:border-input dark:!bg-input/30',
                 secondary:
-                    '!bg-transparent text-secondary [--liquid-button-color:var(--secondary)] hover:text-secondary-foreground',
+                    '!bg-muted text-secondary [--liquid-button-color:var(--secondary)] hover:text-secondary-foreground',
             },
             size: {
                 default: 'h-10 px-4 py-2 has-[>svg]:px-3',
@@ -32,7 +31,7 @@ const buttonVariants = cva(
 
 type LiquidButtonProps = HTMLMotionProps<'button'> & VariantProps<typeof buttonVariants>;
 
-function LiquidButton({ className, variant, size, ...props }: LiquidButtonProps) {
+function LiquidButton({ className, variant, size, ...props }: Readonly<LiquidButtonProps>) {
     return (
         <motion.button
             whileTap={{ scale: 0.95 }}

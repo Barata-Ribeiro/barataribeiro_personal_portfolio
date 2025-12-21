@@ -3,7 +3,6 @@
 import { cn } from '@/lib/utils';
 import {
     createContext,
-    createElement,
     type Dispatch,
     type ElementType,
     type MouseEvent,
@@ -11,18 +10,18 @@ import {
     type SetStateAction,
     useContext,
     useEffect,
-    useMemo,
+    useEffectEvent,
     useRef,
     useState,
 } from 'react';
 
 const MouseEnterContext = createContext<[boolean, Dispatch<SetStateAction<boolean>>] | undefined>(undefined);
 
-export type CardContainerProps = {
+export interface CardContainerProps {
     children?: ReactNode;
     className?: string;
     containerClassName?: string;
-};
+}
 
 export const CardContainer = ({ children, className, containerClassName }: CardContainerProps) => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -36,28 +35,24 @@ export const CardContainer = ({ children, className, containerClassName }: CardC
         containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const handleMouseEnter = (_e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
+    const handleMouseEnter = () => {
         setIsMouseEntered(true);
         if (!containerRef.current) return;
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const handleMouseLeave = (_e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
+    const handleMouseLeave = () => {
         if (!containerRef.current) return;
         setIsMouseEntered(false);
         containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
     };
-    const memoizedValue = useMemo<[boolean, Dispatch<SetStateAction<boolean>>]>(
-        () => [isMouseEntered, setIsMouseEntered],
-        [isMouseEntered],
-    );
 
     return (
-        <MouseEnterContext.Provider value={memoizedValue}>
+        <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
             <div
                 className={cn('flex items-center justify-center py-20', containerClassName)}
-                style={{ perspective: '1000px' }}
+                style={{
+                    perspective: '1000px',
+                }}
             >
                 <div
                     ref={containerRef}
@@ -68,7 +63,9 @@ export const CardContainer = ({ children, className, containerClassName }: CardC
                         'relative flex items-center justify-center transition-all duration-200 ease-linear',
                         className,
                     )}
-                    style={{ transformStyle: 'preserve-3d' }}
+                    style={{
+                        transformStyle: 'preserve-3d',
+                    }}
                 >
                     {children}
                 </div>
@@ -77,10 +74,10 @@ export const CardContainer = ({ children, className, containerClassName }: CardC
     );
 };
 
-export type CardBodyProps = {
+export interface CardBodyProps {
     children: ReactNode;
     className?: string;
-};
+}
 
 export const CardBody = ({ children, className }: CardBodyProps) => {
     return (
@@ -117,25 +114,23 @@ export const CardItem = ({
     const ref = useRef<HTMLElement | null>(null);
     const [isMouseEntered] = useMouseEnter();
 
-    const handleAnimations = () => {
+    const handleAnimations = useEffectEvent(() => {
         if (!ref.current) return;
         if (isMouseEntered) {
             ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
         } else {
             ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
         }
-    };
+    });
 
-    useEffect(() => handleAnimations(), [isMouseEntered]); // eslint-disable-line react-hooks/exhaustive-deps
+    useEffect(() => handleAnimations(), [isMouseEntered]);
 
-    return createElement(
-        Tag,
-        {
-            ref,
-            className: cn('w-fit transition duration-200 ease-linear', className),
-            ...rest,
-        },
-        children,
+    const Component = Tag as ElementType;
+
+    return (
+        <Component ref={ref} className={cn('w-fit transition duration-200 ease-linear', className)} {...rest}>
+            {children}
+        </Component>
     );
 };
 
