@@ -261,6 +261,16 @@
             "id": "course20",
             "course": "SQLite Database",
             "place": "Origamid"
+        },
+        {
+            "id": "course21",
+            "course": "GitHub Copilot",
+            "place": "DIO"
+        },
+        {
+            "id": "course22",
+            "course": "Back End Node.js",
+            "place": "Origamid"
         }
     ]
 }
