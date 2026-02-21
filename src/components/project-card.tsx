@@ -1,18 +1,18 @@
 'use client';
 
 import { Project } from '@/app/types';
+import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 import { Badge } from '@/components/ui/badge';
-import { CardBody, CardContainer, CardItem } from '@/components/ui/shadcn-io/3d-card';
+import { ImageZoom } from '@/components/ui/shadcn-io/image-zoom';
 import useIsMobile from '@/hooks/useIsMobile';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import { ImageZoom } from './ui/shadcn-io/image-zoom';
 
 export default function ProjectCard(project: Readonly<Project>) {
     const { isMobile } = useIsMobile();
     return (
-        <CardContainer className="inter-var h-full" containerClassName="py-0 items-stretch">
-            <CardBody className="group/card relative flex h-full flex-col justify-between rounded-xl border border-foreground-darker/[0.1] bg-background p-4">
+        <CardContainer containerClassName="p-0 items-stretch">
+            <CardBody className="group/card relative flex h-full w-auto flex-col justify-between rounded-xl border border-foreground-darker/10 bg-background p-4">
                 <div>
                     <CardItem
                         translateZ="50"
@@ -30,7 +30,7 @@ export default function ProjectCard(project: Readonly<Project>) {
                         <ImageZoom
                             zoomMargin={isMobile ? 8 : 100}
                             backdropClassName={cn(
-                                '[&_[data-rmiz-modal-overlay="visible"]]:bg-foreground-slightly-dark/60 [&_[data-rmiz-modal-overlay="visible"]]:backdrop-blur-md [&_[data-rmiz-modal-overlay="visible"]]:backdrop-brightness-125 [&_[data-rmiz-modal-overlay="visible"]]:backdrop-saturate-150',
+                                '**:data-[rmiz-modal-overlay="visible"]:bg-foreground-slightly-dark/60 **:data-[rmiz-modal-overlay="visible"]:backdrop-blur-md **:data-[rmiz-modal-overlay="visible"]:backdrop-brightness-125 **:data-[rmiz-modal-overlay="visible"]:backdrop-saturate-150',
                             )}
                         >
                             <Image
