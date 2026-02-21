@@ -3,7 +3,7 @@
 import { Project } from '@/app/types';
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 import { Badge } from '@/components/ui/badge';
-import { ImageZoom } from '@/components/ui/shadcn-io/image-zoom';
+import { ImageZoom } from '@/components/ui/image-zoom';
 import useIsMobile from '@/hooks/useIsMobile';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
