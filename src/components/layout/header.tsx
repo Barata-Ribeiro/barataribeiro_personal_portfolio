@@ -3,8 +3,8 @@
 import Logo from '@/components/layout/logo';
 import MiniLogo from '@/components/layout/mini-logo';
 import { Button } from '@/components/ui/button';
+import { LiquidButton } from '@/components/ui/liquid-button';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '@/components/ui/navigation-menu';
-import { LiquidButton } from '@/components/ui/shadcn-io/liquid-button';
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import useIsMobile from '@/hooks/useIsMobile';
 import { MenuIcon } from 'lucide-react';
@@ -78,7 +78,7 @@ export default function Header() {
     return (
         <header
             ref={headerRef}
-            className="fixed top-0 z-50 w-full border-b border-black/30 bg-foreground/90 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] backdrop-blur-md backdrop-brightness-125 backdrop-saturate-150"
+            className="fixed top-0 z-50 w-full border-b border-black/30 bg-foreground/90 shadow-[rgba(0,0,0,0.25)_0px_25px_50px_-12px] backdrop-blur-md backdrop-brightness-125 backdrop-saturate-150"
         >
             <nav
                 className="flex items-center justify-between not-lg:px-4 lg:container"
