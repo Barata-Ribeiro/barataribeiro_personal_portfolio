@@ -1,6 +1,16 @@
 {
     "projects": [
         {
+            "id": "openaxis",
+            "title": "OpenAxis",
+            "desc": "OpenAxis ERP is a modern, open-source ERP system built with Laravel 12 and React. It offers comprehensive business management features, including inventory, sales, finance, and more.",
+            "img": "/assets/img/projectsImages/openaxis.jpg",
+            "alt": "OpenAxis - A modern, open-source ERP system",
+            "tech": ["PHP", "TypeScript", "Laravel 12", "MySQL", "Inertia.js", "React", "Tailwind CSS", "Shadcn/ui"],
+            "repo": "https://github.com/Barata-Ribeiro/OpenAxis",
+            "demo": ""
+        },
+        {
             "id": "utilities-webapp",
             "title": "Utilities Web App",
             "desc": "A collection of focused utilities. Features converters, calculators and practical utilities using Shadcn/ui, with PWA/offline support and theming.",
