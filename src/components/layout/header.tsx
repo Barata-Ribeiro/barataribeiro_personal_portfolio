@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { LiquidButton } from '@/components/ui/liquid-button';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '@/components/ui/navigation-menu';
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import useIsMobile from '@/hooks/useIsMobile';
+import useIsMobile from '@/hooks/use-mobile';
 import { MenuIcon } from 'lucide-react';
 import Link from 'next/link';
 import { type MouseEvent, useEffect, useRef, useState } from 'react';
