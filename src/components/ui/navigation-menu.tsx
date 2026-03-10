@@ -10,9 +10,11 @@ function NavigationMenu({
     children,
     viewport = true,
     ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Root> & {
-    viewport?: boolean;
-}) {
+}: Readonly<
+    React.ComponentProps<typeof NavigationMenuPrimitive.Root> & {
+        viewport?: boolean;
+    }
+>) {
     return (
         <NavigationMenuPrimitive.Root
             data-slot="navigation-menu"
@@ -29,7 +31,10 @@ function NavigationMenu({
     );
 }
 
-function NavigationMenuList({ className, ...props }: React.ComponentProps<typeof NavigationMenuPrimitive.List>) {
+function NavigationMenuList({
+    className,
+    ...props
+}: Readonly<React.ComponentProps<typeof NavigationMenuPrimitive.List>>) {
     return (
         <NavigationMenuPrimitive.List
             data-slot="navigation-menu-list"
@@ -39,7 +44,10 @@ function NavigationMenuList({ className, ...props }: React.ComponentProps<typeof
     );
 }
 
-function NavigationMenuItem({ className, ...props }: React.ComponentProps<typeof NavigationMenuPrimitive.Item>) {
+function NavigationMenuItem({
+    className,
+    ...props
+}: Readonly<React.ComponentProps<typeof NavigationMenuPrimitive.Item>>) {
     return (
         <NavigationMenuPrimitive.Item
             data-slot="navigation-menu-item"
@@ -57,7 +65,7 @@ function NavigationMenuTrigger({
     className,
     children,
     ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Trigger>) {
+}: Readonly<React.ComponentProps<typeof NavigationMenuPrimitive.Trigger>>) {
     return (
         <NavigationMenuPrimitive.Trigger
             data-slot="navigation-menu-trigger"
@@ -73,7 +81,10 @@ function NavigationMenuTrigger({
     );
 }
 
-function NavigationMenuContent({ className, ...props }: React.ComponentProps<typeof NavigationMenuPrimitive.Content>) {
+function NavigationMenuContent({
+    className,
+    ...props
+}: Readonly<React.ComponentProps<typeof NavigationMenuPrimitive.Content>>) {
     return (
         <NavigationMenuPrimitive.Content
             data-slot="navigation-menu-content"
@@ -89,13 +100,13 @@ function NavigationMenuContent({ className, ...props }: React.ComponentProps<typ
 function NavigationMenuViewport({
     className,
     ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>) {
+}: Readonly<React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>>) {
     return (
         <div className={cn('absolute top-full left-0 isolate z-50 flex justify-center')}>
             <NavigationMenuPrimitive.Viewport
                 data-slot="navigation-menu-viewport"
                 className={cn(
-                    'origin-top-center relative mt-1.5 h-(--radix-navigation-menu-viewport-height) w-full overflow-hidden rounded-lg bg-popover text-popover-foreground shadow ring-1 ring-foreground/10 duration-100 md:w-(--radix-navigation-menu-viewport-width) data-open:animate-in data-open:zoom-in-90 data-closed:animate-out data-closed:zoom-out-95',
+                    'origin-top-center relative mt-1.5 h-(--radix-navigation-menu-viewport-height) w-full overflow-hidden rounded-lg bg-popover text-popover-foreground shadow ring-1 ring-foreground/10 duration-100 md:w-(--radix-navigation-menu-viewport-width) data-open:animate-in data-open:zoom-in-90 data-closed:animate-out data-closed:zoom-out-90',
                     className,
                 )}
                 {...props}
@@ -104,7 +115,10 @@ function NavigationMenuViewport({
     );
 }
 
-function NavigationMenuLink({ className, ...props }: React.ComponentProps<typeof NavigationMenuPrimitive.Link>) {
+function NavigationMenuLink({
+    className,
+    ...props
+}: Readonly<React.ComponentProps<typeof NavigationMenuPrimitive.Link>>) {
     return (
         <NavigationMenuPrimitive.Link
             data-slot="navigation-menu-link"
@@ -120,7 +134,7 @@ function NavigationMenuLink({ className, ...props }: React.ComponentProps<typeof
 function NavigationMenuIndicator({
     className,
     ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Indicator>) {
+}: Readonly<React.ComponentProps<typeof NavigationMenuPrimitive.Indicator>>) {
     return (
         <NavigationMenuPrimitive.Indicator
             data-slot="navigation-menu-indicator"
